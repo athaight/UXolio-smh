@@ -37,15 +37,11 @@
     }
 
     #aboutMe article {
-      margin-top: 8em;
-    }
-
-    #aboutMe li {
-      margin-left: 0.4em;
+      margin: 8em 20% 4em 20%;
     }
 
     #aboutMe p {
-      margin: 2em;
+      margin: em;
     }
 
     #aboutMeButton {
@@ -121,7 +117,7 @@
     }
 
     #intro {
-      margin: 2em 2em 10em 2em;
+      margin: 2em 20% 10em 20%;
     }
 
     #intro span {
@@ -166,6 +162,19 @@
     .greetings {
       font-size: 20px;
     }
+
+    @media screen and (max-width: 739px) {
+      #intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #aboutMe article {
+      margin-top: 8em;
+    }
+
+}
   </style>
 </head>
 
@@ -211,12 +220,15 @@
       </div>
 
 
-      <div id="whiteSpacer"></div>
+      
+      <div>
       <img id="mePhoto" src="./assets/images/meRoundProfessional.png" alt="mePhoto" />
       <div id="contactResumeButtons">
         <a href="#contactForm" id="contactButton">Contact</a>
         <a href="#" id="resumeButton">Resume</a>
       </div>
+    </div>
+
       <article>
         <p>
           Recently,<br />

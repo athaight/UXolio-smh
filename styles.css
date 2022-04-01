@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  background-image: url("./assets/images/foggyMist.png");
+  background-image: url("./assets/images/portfolio-background.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-overflow: hidden;
@@ -49,11 +49,11 @@ body > header {
 body > header div {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   margin-top: 2rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 body > header img {
@@ -130,7 +130,6 @@ footer {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
   }
   
   body > header nav li {
