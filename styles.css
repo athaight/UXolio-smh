@@ -15,7 +15,7 @@ html {
 
 body {
   background-image: url("./assets/images/foggyMist.png");
-  background-size: 900px;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-overflow: hidden;
   background-color: var(--bodyBg);
@@ -41,18 +41,24 @@ a:hover {
 
 body > header {
   margin-bottom: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 body > header div {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 body > header img {
   max-height: 100%;
+  margin-right: 5em;
 }
 
 body > header div ul {
@@ -92,7 +98,61 @@ footer {
     margin: 3em 0 1em 0;
 }
 
-@media
+
+@media screen and (max-width: 739px) {
+  body {
+    background-size: 900px;
+  }
+
+  body > header {
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  body > header div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  body > header img {
+    max-height: 100%;
+    margin-right: 0em;
+  }
+  
+  body > header div ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  body > header nav li {
+    margin: 1em;
+  }
+  
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-size: 900px;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    background-size: cover;
+  }
+
+}
+
 
 /* footer img{
     margin-right: 1em;
