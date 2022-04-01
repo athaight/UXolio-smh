@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="reset.css" />
+  <title>Document</title>
+
+  <!-- TODO Have drew look at z-index of clouds, are negative margins the right way to go? -->
+  <style>
+    section>img {
+      z-index: 99;
+      filter: drop-shadow(0 0.75rem 0.75rem var(--text-link));
+    }
+
+    #mePhoto {
+      margin-top: 5em;
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      z-index: 99;
+    }
+
+    #aboutMe {
+      background-color: white;
+      width: 100%;
+      color: var(--bodyBg);
+      z-index: 0;
+    }
+
+    #aboutMe article {
+      margin-top: 8em;
+    }
+
+    #aboutMe li {
+      margin-left: 0.4em;
+    }
+
+    #aboutMe p {
+      margin: 2em;
+    }
+
+    #aboutMeButton {
+      margin: 5em auto 12em auto;
+      text-align: center;
+    }
+
+    #aboutMeButton a {
+      background-color: var(--bodyBg);
+      padding: 15px;
+      border-radius: 25px;
+    }
+
+    #cloud1 {
+      margin-top: -6em;
+      z-index: 99;
+      width: 300px;
+    }
+
+    #cloud2 {
+      margin-top: -12em;
+      margin-left: -10em;
+      z-index: 99;
+      width: 300px;
+    }
+
+    #contactResumeButtons {
+      margin: 3em 0 0 -3em;
+      text-align: center;
+    }
+
+    #contactResumeButtons a {
+      background-color: var(--bodyBg);
+      padding: 15px 20px;
+      border-radius: 25px;
+      margin-left: 2em;
+    }
+
+    #contactForm div {
+      padding: .3em;
+
+    }
+
+    #contactForm {
+      padding: 2em 3em;
+      display: flex;
+      flex-direction: column;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #contactForm form {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #contactForm>div button {
+      justify-content: center;
+      align-items: center;
+    }
+
+    #contactForm h2 {
+      max-width: 450px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #contactForm input,
+    textarea {
+      width: 250px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #intro {
+      margin: 2em 2em 10em 2em;
+    }
+
+    #intro span {
+      font-weight: 900;
+    }
+
+    #uxWork {
+      margin: 1em 2em;
+      padding: 1em;
+    }
+
+    #uxWork:hover {
+      background-color: aqua;
+      color: var(--bodyBg)
+    }
+
+    #uxBgText {
+      font-size: 72px;
+      font-weight: 900;
+      width: 80px;
+      color: var(--bodyBg);
+      transform: rotate(-90deg);
+      margin-left: -0.22em;
+    }
+
+    #workBgText {
+      font-size: 72px;
+      font-weight: 900;
+      margin-top: -0.45em;
+      margin-left: -0.2em;
+      color: var(--alt-color);
+    }
+
+    #whiteSpacer {
+      background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 26%, rgba(212, 212, 212, 0.7260479041916168) 64%, rgba(110, 110, 110, 0) 100%);
+      height: 100px;
+      width: 100%;
+      margin-top: -80px;
+      z-index: 0;
+    }
+
+    .greetings {
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="top">
+    <div>
+      <a href="#home"><img src="/assets/images/whiteLogo.png" alt="Andrew Haight logo" /></a>
+      <nav>
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#work">WORK</a></li>
+          <li><a href="#aboutMe">ABOUT</a></li>
+          <li><a href="#contactForm">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section id="intro">
+      <p>HI THERE, I'M ANDREW</p>
+      <p class="greetings">
+        I'm a <span>UX Designer</span> and <span>Developer</span>.
+      </p>
+      <p class="blurb">
+        I’m an <span>adapter</span> with an
+        <span>actively inquiring mind</span> and a
+        <span>lively imagination</span>. <br /><br />
+        I have a strong interest in the technical aspects of work that I’m
+        involved with, and a need to know and learn more about the
+        <span>systems, techniques, facts,</span> and
+        <span>concepts</span> involved in it.
+      </p>
+      <!-- TODO - PARALLAX -->
+    </section>
+
+    <section id="aboutMe">
+
+      <div id="cloud1">
+        <img src="./assets/images/cloud1.png" />
+      </div>
+      <div id="cloud2">
+        <img src="./assets/images/cloud2.png" />
+      </div>
+
+
+      <div id="whiteSpacer"></div>
+      <img id="mePhoto" src="./assets/images/meRoundProfessional.png" alt="mePhoto" />
+      <div id="contactResumeButtons">
+        <a href="#contactForm" id="contactButton">Contact</a>
+        <a href="#" id="resumeButton">Resume</a>
+      </div>
+      <article>
+        <p>
+          Recently,<br />
+          I’ve been spending virtually all my time
+          designing and developing.
+        <p>
+          I’m a career switcher who spent a decade in the commercial print industry.
+        </p>
+        <p>
+          In 2020, I made the choice to change paths and began learning Web Development.
+        </p>
+        <p>
+          Web Dev turned me onto UI Development, UX Research, and Information Architecture.
+        </p>
+        <p>
+          This is the perfect field for me because it seems that as far back as I can recall I’ve always loved
+        <ul>
+          <li>Drawing</li>
+          <li>Designing</li>
+          <li>Information</li>
+          <li>Questioning</li>
+        </ul>
+        </p>
+      </article>
+      <div id="aboutMeButton"><a href="/aboutMe.html">WANT TO KNOW MORE?</a></div>
+    </section>
+
+    <section id="work">
+      <div id="workBgText">WORK</div>
+      <div id="uxWork">
+        <div id="uxBgText">UX</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia animi earum, numquam voluptates neque natus
+          temporibus sint culpa velit, iure qui voluptatum repellendus et libero error consequatur recusandae minima
+          suscipit.</p>
+      </div>
+    </section>
+
+    <section id="contactForm">
+      <h2>Let's Work Together <a href="#top" title="back to top"></a></h2>
+      <form>
+        <div>
+          <label>
+            <input type="text" value="" placeholder="First" />
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="text" value="" placeholder="Last" />
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="email" value="" placeholder="Email" />
+          </label>
+        </div>
+        <div>
+          <label>
+            <textarea placeholder="Write me a message..."></textarea>
+          </label>
+        </div>
+        <div>
+          <button type="submit">Send Message</button>
+        </div>
+      </form>
+    </section>
+
+
+  </main>
+
+  <footer>
+    <a href="#top" title="logo"><img src="./assets/images/whiteLogo.png"></img></a>
+    <p>&copy; athaight | 2022</p>
+  </footer>
+
+  <script>
+    // in-page navigation smooth scrolling
+    (function () {
+      document.querySelectorAll('a[href^="#"]')
+        .forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+            });
+          });
+        });
+    })();
+  </script>
+</body>
+
+</html>
