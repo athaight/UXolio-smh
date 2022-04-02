@@ -14,11 +14,12 @@ html {
 }
 
 body {
-  background-image: url("./assets/images/portfolio-background.png");
-  background-size: 100%;
+  background-image: url("./assets/images/portfolioCloudsBG_HOME.png");
+  background-size: contain;
   background-repeat: no-repeat;
   background-overflow: hidden;
-  background-color: var(--bodyBg);
+  background-attachment: fixed;
+  background-color: var(--alt-color);
   font-family: "Raleway", sans-serif;
   min-width: 350px;
   color: white;
@@ -88,6 +89,7 @@ main {
   justify-content: flex-start;
   padding: 0;
   align-items: flex-start;
+  
 }
 
 footer {

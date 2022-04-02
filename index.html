@@ -21,12 +21,9 @@
       filter: drop-shadow(0 0.75rem 0.75rem var(--text-link));
     }
 
-    #mePhoto {
-      margin-top: 5em;
-      width: 300px;
-      margin-left: auto;
-      margin-right: auto;
-      z-index: 99;
+    footer{
+      background-color: var(--bodyBg);
+      margin: 0;
     }
 
     #aboutMe {
@@ -37,16 +34,21 @@
     }
 
     #aboutMe article {
-      margin: 8em 20% 4em 20%;
+      margin: 8em 20% 5em 20%;
     }
 
-    #aboutMe p {
-      margin: em;
+    #aboutMeMore {
+      margin: 0 auto 0em auto;
+      display: flex;
+      padding: 1em 0 10em 0;
+      background-color: white;
+      width: 100%;
     }
 
     #aboutMeButton {
-      margin: 5em auto 12em auto;
+      margin: 0em auto 0 auto;
       text-align: center;
+      
     }
 
     #aboutMeButton a {
@@ -55,17 +57,22 @@
       border-radius: 25px;
     }
 
+    #aboutMeClouds {
+      background-image: url('/assets/images/portfolioCloudsBG_HOME_AboutMeSection.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 600px;
+    }
+
     #cloud1 {
-      margin-top: -6em;
       z-index: 99;
-      width: 300px;
+      margin-bottom: -30em;
     }
 
     #cloud2 {
-      margin-top: -12em;
-      margin-left: -10em;
-      z-index: 99;
-      width: 300px;
+      margin-top: -10em;
+      z-index: 98;
     }
 
     #contactResumeButtons {
@@ -80,9 +87,13 @@
       margin-left: 2em;
     }
 
+    #contactForm {
+      background-color: var(--bodyBg);
+      width: 100%;
+    }
+
     #contactForm div {
       padding: .3em;
-
     }
 
     #contactForm {
@@ -124,6 +135,19 @@
       font-weight: 900;
     }
 
+    #meBug{
+      padding-bottom: 10em;
+    }
+
+    #mePhoto {
+      margin-top: 0em;
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      z-index: 99;
+      filter: drop-shadow(0px 6px 4px var(--text-link));
+    }
+    
     #uxWork {
       margin: 1em 2em;
       padding: 1em;
@@ -141,6 +165,11 @@
       color: var(--bodyBg);
       transform: rotate(-90deg);
       margin-left: -0.22em;
+    }
+
+    #work {
+      background-color: var(--bodyBg);
+      width: 100%;
     }
 
     #workBgText {
@@ -184,7 +213,6 @@
       <a href="#home"><img src="/assets/images/whiteLogo.png" alt="Andrew Haight logo" /></a>
       <nav>
         <ul>
-          <li><a href="#">HOME</a></li>
           <li><a href="#work">WORK</a></li>
           <li><a href="#aboutMe">ABOUT</a></li>
           <li><a href="#contactForm">CONTACT</a></li>
@@ -210,18 +238,24 @@
       <!-- TODO - PARALLAX -->
     </section>
 
+    <!-- <div id="cloud1">
+      <img src="./assets/images/cloud1.png" />
+    </div>
+    <div id="cloud2">
+      <img src="./assets/images/cloud2.png" />
+    </div> -->
+
+    <section class="content" id="aboutMeClouds">
+      <div id="cloud1" class="rellax" data-rellax-speed="10">
+        <img src="./assets/images/cloud1.png"/>
+      </div>
+      <div id="cloud2" class="rellax" data-rellax-speed="5">
+        <img src="./assets/images/cloud2.png"/>
+      </div>
+    </section>
+
     <section id="aboutMe">
-
-      <div id="cloud1">
-        <img src="./assets/images/cloud1.png" />
-      </div>
-      <div id="cloud2">
-        <img src="./assets/images/cloud2.png" />
-      </div>
-
-
-      
-      <div>
+      <div class="rellax" data-rellax-speed="-2.5" id="meBug">
       <img id="mePhoto" src="./assets/images/meRoundProfessional.png" alt="mePhoto" />
       <div id="contactResumeButtons">
         <a href="#contactForm" id="contactButton">Contact</a>
@@ -229,7 +263,7 @@
       </div>
     </div>
 
-      <article>
+      <article id="meArticle">
         <p>
           Recently,<br />
           I’ve been spending virtually all my time
@@ -253,7 +287,10 @@
         </ul>
         </p>
       </article>
-      <div id="aboutMeButton"><a href="/aboutMe.html">WANT TO KNOW MORE?</a></div>
+    </section>
+
+    <section id="aboutMeMore">
+      <div class="rellax" data-rellax-speed=".5" id="aboutMeButton"><a href="/aboutMe.html">WANT TO KNOW MORE?</a></div>
     </section>
 
     <section id="work">
@@ -302,8 +339,9 @@
     <a href="#top" title="logo"><img src="./assets/images/whiteLogo.png"></img></a>
     <p>&copy; athaight | 2022</p>
   </footer>
-
+  <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
   <script>
+    var rellax = new Rellax('.rellax');
     // in-page navigation smooth scrolling
     (function () {
       document.querySelectorAll('a[href^="#"]')
