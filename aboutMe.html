@@ -12,13 +12,17 @@
         rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="reset.css" />
-    <title>Document</title>
+    <title>About Me</title>
 
     <!-- TODO Have drew look at z-index of clouds, are negative margins the right way to go? -->
     <style>
 
         body {
             background-image: url('./assets/images/portfolioCloudsBG_aboutMEPAGE.png');
+        }
+
+        body > header {
+            margin-left: 2%;
         }
 
         header nav li a {
@@ -32,7 +36,7 @@
         }
         footer {
             background-color: var(--bodyBg);
-            margin: 15em 0 0 0;
+            margin: 5em 0 0 0;
         }
 
         #aboutMe {
@@ -40,11 +44,11 @@
             width: 100%;
             color: var(--bodyBg);
             z-index: 0;
-            margin-top: 15em;
+            margin-top: 0em;
         }
 
         #aboutMe article {
-            margin-top: 8em;
+            margin-top: 0;
         }
 
         #aboutMe li {
@@ -57,8 +61,10 @@
 
         #aboutMeInfo {
             background-color: white;
-            padding-top: em;
+            margin-top: -10em;
             width: 100%;
+            padding-left: 20%;
+            padding-right: 20%;
         }
 
         #aboutMeInfo > div h2, article {
@@ -114,6 +120,12 @@
             align-self: flex-end;
             font-size: 128px;
         }
+
+        #art {
+            margin: 10em auto 10em auto;
+            width: 600px;
+            color: #202020;
+        }
         
         #contactForm {
             padding: 2em 3em;
@@ -121,7 +133,7 @@
             flex-direction: column;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 5em;
+            margin-top: 1em;
         }
 
         #contactForm div {
@@ -153,7 +165,7 @@
         }
         
         #mePhoto {
-            margin-top: 5em;
+            margin-top: 10em;
             width: 300px;
             margin-left: auto;
             margin-right: auto;
@@ -190,9 +202,12 @@
             width: 100%;
             margin-top: 3em;
             z-index: 3;
-            
         }
         
+        /* #parallax {
+            margin-bottom: -900px;
+        } */
+
         #pinkBlock {
             display: flex;
             background-color: var(--hotPink);
@@ -202,8 +217,8 @@
             font-weight: 900;
             font-size: 16px;
             transition: ease-in-out 200ms;
+            z-index: 0;
         }
-        
         
         #pinkBlock > div {
             justify-self: center;
@@ -211,8 +226,6 @@
             margin-left: 1em;
         }
 
-        
-        
         #pinkBlockHex {
            color: white;
            transform: rotate(-90deg);
@@ -246,12 +259,6 @@
             flex-wrap: wrap;
         }
 
-        #intro {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
         #aboutMe article {
             margin-top: 8em;
         }
@@ -267,19 +274,16 @@
             <nav>
                 <ul>
                     <li><a href="/">HOME</a></li>
-                    <li><a href="#work">WORK</a></li>
-                    <li><a href="#aboutMe">ABOUT</a></li>
+                    <li><a href="#art">ART</a></li>
                     <li><a href="#contactForm">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-
-        <section id="intro">
-
-            <!-- TODO - PARALLAX -->
-
+        <section id="parallaxBox">
+            <!-- <div class="rellax" data-rellax-speed="10" id="parallax"><img src="./assets/images/cloud1.png" alt="Another Cloud"></div> -->
+            <div id="parallaxBG"><img src="./assets/images/portfolioCloudsBG_aboutMe_TLDR.png" alt="Clouds"></div>
         </section>
         <section id="aboutMeInfo">
             <div>
@@ -326,11 +330,27 @@
                 <article><span>CAN YOU guess my favorite color?</span></article>
             </div>
         </section>
-        <section id="pinkBlock"><span id="pinkBlockHex"><p>#FE00B8</p></span><div id="aqua"><p>(IT'S AQUA BUT I LOVE HOT PINK TOO)</p></div><span id="aquaBlockHex"><p>#01D8E7</p></span></section>
 
+        <section id="pinkBlock">
+            <span id="pinkBlockHex">
+                <p>#FE00B8</p>
+            </span>
+            <div id="aqua">
+                <p>(IT'S AQUA BUT I LOVE HOT PINK TOO)</p>
+            </div>
+            <span id="aquaBlockHex">
+                <p>#01D8E7</p>
+            </span>
+        </section>
+
+        <section id="art">
+            <h1>SKULLS</h1>
+            <p>Skulls was an "image per day" challenge that I did for 5 days, just for kicks.</p>
+            <p>Each day kept the same skull theme but nothing about the images were pre-conceived. I wanted to draw a series of something as a personal challenge to keep my drawing muscles.</p>
+            <div><img src="./assets/images/PopSkull.jpg" alt="Pop Skull Art Image by Andrew Haight"></div>
+        </section>
         
-
-
+        <div id="parallaxBG"><img src="./assets/images/portfolioCloudsBG_aboutMe_TLDR.png" alt="Clouds"></div>
         <section id="aboutMe">
             <img id="mePhoto" src="./assets/images/meRoundProfessional.png" alt="mePhoto" />
             <div id="contactResumeButtons">
@@ -377,40 +397,38 @@
         // in-page navigation smooth scrolling
         (function () {
             document.querySelectorAll('a[href^="#"]')
-                .forEach(anchor => {
-                    anchor.addEventListener('click', function (e) {
-                        e.preventDefault();
-
-                        document.querySelector(this.getAttribute('href')).scrollIntoView({
-                            behavior: 'smooth'
-                        });
+            .forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
                     });
                 });
+            });
         })();
-
         
-
-    let divColorChange = document.getElementById('pinkBlock');
-
-    // let aquaHex = document.getElementById('aquaBlockHex');
- 
-
-    divColorChange.addEventListener('mouseover', colorChange);
-    
-    function colorChange() {
-    document.getElementById('pinkBlock').style.backgroundColor = "rgb(1, 216, 231)";   
-    }
-
+        
+        
+        let divColorChange = document.getElementById('pinkBlock');
+        
+        // let aquaHex = document.getElementById('aquaBlockHex');
+        
+        
+        divColorChange.addEventListener('mouseover', colorChange);
+        
+        function colorChange() {
+            document.getElementById('pinkBlock').style.backgroundColor = "rgb(1, 216, 231)";   
+        }
+        
     divColorChange.addEventListener('mouseleave', colorChangeBack);
-
+    
     function colorChangeBack() {
-    document.getElementById('pinkBlock').style.backgroundColor = "#fe00b8";
+        document.getElementById('pinkBlock').style.backgroundColor = "#fe00b8";
         
     }
+    var rellax = new Rellax('.rellax');
 
-    // function aquaHexVisibility() {
-    //     document.getElementById('aquaBlockHex').style.display.block;
-    // }
 
 
 
