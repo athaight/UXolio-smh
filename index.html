@@ -2,360 +2,220 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="reset.css" />
-  <title>Andrew Haight</title>
-
-  <!-- TODO Have drew look at z-index of clouds, are negative margins the right way to go? -->
-  <style>
-    section>img {
-      z-index: 99;
-      filter: drop-shadow(0 0.75rem 0.75rem var(--text-link));
-    }
-
-    footer{
-      background-color: var(--bodyBg);
-      margin: 0;
-    }
-
-    #aboutMe {
-      background-color: white;
-      width: 100%;
-      color: var(--bodyBg);
-      z-index: 0;
-    }
-
-    #aboutMe article {
-      margin: 8em 20% 5em 20%;
-    }
-
-    #aboutMeMore {
-      margin: 0 auto 0em auto;
-      display: flex;
-      padding: 1em 0 10em 0;
-      background-color: white;
-      width: 100%;
-    }
-
-    #aboutMeButton {
-      margin: 0em auto 0 auto;
-      text-align: center;
-      
-    }
-
-    #aboutMeButton a {
-      background-color: var(--bodyBg);
-      padding: 15px;
-      border-radius: 25px;
-    }
-
-    #aboutMeClouds {
-      background-image: url('/assets/images/portfolioCloudsBG_HOME_AboutMeSection.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 100%;
-      height: 600px;
-    }
-
-    #cloud1 {
-      z-index: 99;
-      margin-bottom: -30em;
-    }
-
-    #cloud2 {
-      margin-top: -10em;
-      z-index: 98;
-    }
-
-    #contactResumeButtons {
-      margin: 3em 0 0 -3em;
-      text-align: center;
-    }
-
-    #contactResumeButtons a {
-      background-color: var(--bodyBg);
-      padding: 15px 20px;
-      border-radius: 25px;
-      margin-left: 2em;
-    }
-
-    #contactForm {
-      background-color: var(--bodyBg);
-      width: 100%;
-    }
-
-    #contactForm div {
-      padding: .3em;
-    }
-
-    #contactForm {
-      padding: 2em 3em;
-      display: flex;
-      flex-direction: column;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    #contactForm form {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    #contactForm>div button {
-      justify-content: center;
-      align-items: center;
-    }
-
-    #contactForm h2 {
-      max-width: 450px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    #contactForm input,
-    textarea {
-      width: 250px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    #intro {
-      margin: 2em 20% 10em 20%;
-    }
-
-    #intro span {
-      font-weight: 900;
-    }
-
-    #meBug{
-      padding-bottom: 10em;
-    }
-
-    #mePhoto {
-      margin-top: 0em;
-      width: 300px;
-      margin-left: auto;
-      margin-right: auto;
-      z-index: 99;
-      filter: drop-shadow(0px 6px 4px var(--text-link));
-    }
-    
-    #uxWork {
-      margin: 1em 2em;
-      padding: 1em;
-    }
-
-    #uxWork:hover {
-      background-color: aqua;
-      color: var(--bodyBg)
-    }
-
-    #uxBgText {
-      font-size: 72px;
-      font-weight: 900;
-      width: 80px;
-      color: var(--bodyBg);
-      transform: rotate(-90deg);
-      margin-left: -0.22em;
-    }
-
-    #work {
-      background-color: var(--bodyBg);
-      width: 100%;
-    }
-
-    #workBgText {
-      font-size: 72px;
-      font-weight: 900;
-      margin-top: -0.45em;
-      margin-left: -0.2em;
-      color: var(--alt-color);
-    }
-
-    #whiteSpacer {
-      background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 26%, rgba(212, 212, 212, 0.7260479041916168) 64%, rgba(110, 110, 110, 0) 100%);
-      height: 100px;
-      width: 100%;
-      margin-top: -80px;
-      z-index: 0;
-    }
-
-    .greetings {
-      font-size: 20px;
-    }
-
-    @media screen and (max-width: 739px) {
-      #intro {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    #aboutMe article {
-      margin-top: 8em;
-    }
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <title>Andrew Haight</title>
+    <style>
+        
+#chatJoke {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
-  </style>
+
+#chatJoke > h5 {
+   margin-top: -1em;
+   margin-right: 27em;
+}
+
+
+#description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#description p {
+    font-weight: 600;
+}
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-between;
+    margin: -600px 20em 0 20em;
+    
+}
+
+#intro h1 {
+    font-weight: 400;
+}
+
+#intro span {
+    font-weight: 700; 
+}
+
+#mainBG {
+    background-image: url('./assets/images/dottedBg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+
+#postit {
+    margin-top: -600px;
+}
+
+#myArtLogo {
+    margin-bottom: -15px;
+    font-size: 94px;
+}
+
+#sheepLogo {
+    width: 600px;
+}
+
+#workCircle {
+    padding: 5rem;
+}
+
+#workDiv {
+    width: 100%;
+    height: 750px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+}
+
+.harmonium {
+    margin-top: 12em;
+    background-color: #DDE4FF;
+}
+
+.superZoo {
+    margin-top: 6em;
+    background-color: #E2DAD2;
+}
+
+.karateKid {
+    margin-top: 6em;
+    background-color: #C1BFCE;
+}
+
+.sheep {
+    margin-top: 6em;
+    background-color: #202020;
+    color: #f8f7ef;
+}
+
+.myArt {
+    margin-top: 6em;
+    background-color: #9DF0DD;
+}
+
+.myArtCircle {
+    margin-right: -80px;
+}
+
+    </style>
 </head>
 
-<body>
-  <header id="top">
-    <div>
-      <a href="#home"><img src="/assets/images/whiteLogo.png" alt="Andrew Haight logo" /></a>
-      <nav>
-        <ul>
-          <li><a href="#work">WORK</a></li>
-          <li><a href="#aboutMe">ABOUT</a></li>
-          <li><a href="#contactForm">CONTACT</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main>
-    <section id="intro">
-      <p>HI THERE, I'M ANDREW</p>
-      <p class="greetings">
-        I'm a <span>UX Designer</span> and <span>Developer</span>.
-      </p>
-      <p class="blurb">
-        I’m an <span>adapter</span> with an
-        <span>actively inquiring mind</span> and a
-        <span>lively imagination</span>. <br /><br />
-        I have a strong interest in the technical aspects of work that I’m
-        involved with, and a need to know and learn more about the
-        <span>systems, techniques, facts,</span> and
-        <span>concepts</span> involved in it.
-      </p>
-      <!-- TODO - PARALLAX -->
-    </section>
-
-    <!-- <div id="cloud1">
-      <img src="./assets/images/cloud1.png" />
-    </div>
-    <div id="cloud2">
-      <img src="./assets/images/cloud2.png" />
-    </div> -->
-
-    <section class="content" id="aboutMeClouds">
-      <div id="cloud1" class="rellax" data-rellax-speed="10">
-        <img src="./assets/images/cloud1.png"/>
-      </div>
-      <div id="cloud2" class="rellax" data-rellax-speed="5">
-        <img src="./assets/images/cloud2.png"/>
-      </div>
-    </section>
-
-    <section id="aboutMe">
-      <div class="rellax" data-rellax-speed="-2.5" id="meBug">
-      <img id="mePhoto" src="./assets/images/meRoundProfessional.png" alt="mePhoto" />
-      <div id="contactResumeButtons">
-        <a href="#contactForm" id="contactButton">Contact</a>
-        <a href="#" id="resumeButton">Resume</a>
-      </div>
-    </div>
-
-      <article id="meArticle">
-        <p>
-          Recently,<br />
-          I’ve been spending virtually all my time
-          designing and developing.
-        <p>
-          I’m a career switcher who spent a decade in the commercial print industry.
-        </p>
-        <p>
-          In 2020, I made the choice to change paths and began learning Web Development.
-        </p>
-        <p>
-          Web Dev turned me onto UI Development, UX Research, and Information Architecture.
-        </p>
-        <p>
-          This is the perfect field for me because it seems that as far back as I can recall I’ve always loved
-        <ul>
-          <li>Drawing</li>
-          <li>Designing</li>
-          <li>Information</li>
-          <li>Questioning</li>
-        </ul>
-        </p>
-      </article>
-    </section>
-
-    <section id="aboutMeMore">
-      <div class="rellax" data-rellax-speed=".5" id="aboutMeButton"><a href="/aboutMe.html">WANT TO KNOW MORE?</a></div>
-    </section>
-
-    <section id="work">
-      <div id="workBgText">WORK</div>
-      <div id="uxWork">
-        <div id="uxBgText">UX</div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia animi earum, numquam voluptates neque natus
-          temporibus sint culpa velit, iure qui voluptatum repellendus et libero error consequatur recusandae minima
-          suscipit.</p>
-      </div>
-    </section>
-
-    <section id="contactForm">
-      <h2>Let's Work Together <a href="#top" title="back to top"></a></h2>
-      <form>
+<body class="w3-container">
+    <header>
         <div>
-          <label>
-            <input type="text" value="" placeholder="First" />
-          </label>
+            <a href="/"><img src="/assets/images/darkLogo.png" alt="Andrew Haight logo" /></a>
+            <nav>
+                <ul>
+                    <li><a href="/about.html">ABOUT</a></li>
+                    <li><a href="#">RESUME</a></li>
+                </ul>
+            </nav>
         </div>
-        <div>
-          <label>
-            <input type="text" value="" placeholder="Last" />
-          </label>
-        </div>
-        <div>
-          <label>
-            <input type="email" value="" placeholder="Email" />
-          </label>
-        </div>
-        <div>
-          <label>
-            <textarea placeholder="Write me a message..."></textarea>
-          </label>
-        </div>
-        <div>
-          <button type="submit">Send Message</button>
-        </div>
-      </form>
-    </section>
+    </header>
+    <main>
 
+        <div id="mainBG">
+            <div id="postit"><img src="./assets/images/userPostIt.png" alt=""></div>
+        </div>
 
-  </main>
+        <div id="intro">
+            <h1>HI THERE, I'M ANDREW 😎</h1>
+            <p>I'm a <span>UX Designer</span> and <span>Developer</span>.</p>
+            <p>I love advocating for users and building products that feel natural to interact with.</p>
+            <p>I do a little bit of <span>illustration</span> on the side too.</p>
+        </div>
 
-  <footer>
-    <a href="#top" title="logo"><img src="./assets/images/whiteLogo.png"></img></a>
-    <p>&copy; athaight | 2022</p>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
-  <script>
-    var rellax = new Rellax('.rellax');
-    // in-page navigation smooth scrolling
-    (function () {
-      document.querySelectorAll('a[href^="#"]')
-        .forEach(anchor => {
-          anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+        <div id="chatJoke">
+            <h5>Want to chat or know any good jokes?</h5>
+            <h5><a href="#">👉 haight.haight@gmail.com</a></h5>
+        </div>
 
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-              behavior: 'smooth'
-            });
-          });
-        });
-    })();
-  </script>
+        <div id="workDiv" class="harmonium">
+            <img id="workCircle" src="./assets/images/harmoniumCircle.png" alt="">
+            <div id="description">
+                <img id="harmoniumLogo" src="./assets/images/harmoniumLogo.png" alt="">
+                <p>Advocacy group for awareness concerning workplace Mental health</p>
+                <!-- <h6>Research | User Personas | Wireframe | High fidelity Site</h6> -->
+                <button><a href="#">Read the case study</a></button>
+            </div>
+        </div>
+     
+        <div id="workDiv" class="superZoo">
+            <div id="description">
+                <img id="superZooLogo" src="./assets/images/superZooLogo.png" alt="">
+                <p>404 landing page for a fictional zoo</p>
+                <!-- <h6>Research | User Personas | Wireframe | High fidelity Site</h6> -->
+                <button><a href="#">Read the case study</a></button>
+            </div>
+            <img id="workCircle" src="./assets/images/superZooCircle.png" alt="">
+        </div>
+
+        <div id="workDiv" class="karateKid">
+            <div id="description">
+                <img id="karateKidLogo" src="./assets/images/karateKidLogo.png" alt="">
+                <p>User persona and Journey Map for Daniel LaRusso, aka The Karate Kid</p>
+                <!-- <h6>Research | User Personas | Wireframe | High fidelity Site</h6> -->
+                <button><a href="#">Read the case study</a></button>
+            </div>
+            <img id="workCircle" src="./assets/images/karateKidCircle.png" alt="">
+        </div>
+        
+        <div id="workDiv" class="sheep">
+            <div id="description">
+                <img id="sheepLogo" src="./assets/images/sheep_neon.png" alt="">
+                <p>Mock Web Application | NFT generator with countdown to drop date</p>
+                <!-- <h6>Research | User Personas | Wireframe | High fidelity Site</h6> -->
+                <button><a href="#">Read the case study</a></button>
+            </div>
+            <img id="workCircle" src="./assets/images/sheepCircle.png" alt="">
+        </div>
+
+        <div id="workDiv" class="myArt">
+            <div id="description">
+                <h1 id="myArtLogo">MY ART</h1>
+                <p>My artwork using digital and traditional mediums</p>
+                <!-- <h6>Research | User Personas | Wireframe | High fidelity Site</h6> -->
+                <button><a href="#">Read the case study</a></button>
+            </div>
+            <img id="workCircle" class="myArtCircle" src="./assets/images/myArt.png" alt="">
+        </div>
+
+    </main>
+    <footer>
+        <img src="./assets/images/LinkedIn.png" alt="">
+        <img src="./assets/images/Medium.png" alt="">
+        <img src="./assets/images/Twitter.png" alt="">
+        <img src="./assets/images/Instagram.png" alt="">
+    </footer>
 </body>
 
 </html>

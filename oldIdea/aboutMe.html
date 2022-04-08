@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <title>About Me</title>
+
+    <!-- TODO Have drew look at z-index of clouds, are negative margins the right way to go? -->
+    <style>
+        body {
+            background-image: url('./assets/images/portfolioCloudsBG_aboutMEPAGE.png');
+        }
+
+        body>header {
+            margin-left: 2%;
+        }
+
+        header nav li a {
+            font-weight: 700;
+            color: #202020;
+        }
+
+        section>img {
+            z-index: 99;
+            filter: drop-shadow(0 0.75rem 0.75rem var(--text-link));
+        }
+
+        footer {
+            background-color: var(--bodyBg);
+            margin: 5em 0 0 0;
+        }
+
+        #aboutMe {
+            background-color: white;
+            width: 100%;
+            color: var(--bodyBg);
+            z-index: 0;
+            margin-top: 0em;
+        }
+
+        #aboutMe article {
+            margin-top: 0;
+        }
+
+        #aboutMe li {
+            margin-left: 0.4em;
+        }
+
+        #aboutMe p {
+            margin: 0 2em;
+        }
+
+        #aboutMeInfo {
+            background-color: white;
+            margin-top: -10em;
+            width: 100%;
+            padding-left: 20%;
+            padding-right: 20%;
+        }
+
+        #aboutMeInfo>div h2,
+        article {
+            padding-bottom: 2em;
+        }
+
+        #aboutMeInfo>article {
+            padding-top: 2em;
+        }
+
+        #aboutMeInfo div {
+            margin: 0em 2em;
+            background: #202020;
+            background: -webkit-linear-gradient(to bottom, #202020 0%, #FE00B8 100%);
+            background: -moz-linear-gradient(to bottom, #202020 0%, #FE00B8 100%);
+            background: linear-gradient(to bottom, #202020 0%, #FE00B8 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        #aboutMeInfo span {
+            font-weight: 900;
+        }
+
+
+        #aboutMeButton {
+            margin: 5em auto 12em auto;
+            text-align: center;
+        }
+
+        #aboutMeButton a {
+            background-color: var(--bodyBg);
+            padding: 15px;
+            border-radius: 25px;
+        }
+
+        #aqua {
+            width: 100%;
+            text-align: right;
+        }
+
+        #aqua:hover {
+            color: var(--alt-color);
+            transition: ease-in-out 200ms;
+        }
+
+        #aquaBlockHex {
+            color: white;
+            opacity: 0;
+            height: 265px;
+            margin-left: -240px;
+            justify-self: flex-end;
+            align-self: flex-end;
+            font-size: 128px;
+        }
+
+        #art {
+            margin: -20em auto -20em auto;
+            width: 600px;
+            color: white;
+            background-color: #202020;
+            padding: 2em;
+            border-radius: 5px; 
+        }
+
+        #contactForm {
+            padding: 2em 3em;
+            display: flex;
+            flex-direction: column;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 1em;
+        }
+
+        #contactForm div {
+            padding: .3em;
+        }
+
+
+        #contactForm form {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #contactForm>div button {
+            justify-content: center;
+            align-items: center;
+        }
+
+        #contactForm h2 {
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #contactForm input,
+        textarea {
+            width: 250px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #mePhoto {
+            margin-top: 10em;
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            z-index: 99;
+        }
+
+        #contactResumeButtons {
+            margin: 3em 0 0 -3em;
+            text-align: center;
+        }
+
+        #contactResumeButtons a {
+            background-color: var(--bodyBg);
+            padding: 15px 20px;
+            border-radius: 25px;
+            margin-left: 2em;
+        }
+
+        #funFacts {
+            margin-top: 20px;
+        }
+
+        #funFacts>ul {
+            margin: 3em 0;
+        }
+
+        #funFacts>ul li {
+            margin-left: 1em;
+        }
+
+        #intro {
+            background-color: transparent;
+            height: 300px;
+            width: 100%;
+            margin-top: 3em;
+            z-index: 3;
+        }
+
+        /* #parallax {
+    margin-bottom: -900px;
+} */
+
+        #pinkBlock {
+            display: flex;
+            background-color: var(--hotPink);
+            width: 100%;
+            height: 550px;
+            color: #FE00B8;
+            font-weight: 900;
+            font-size: 16px;
+            transition: ease-in-out 200ms;
+            z-index: 0;
+        }
+
+        #pinkBlock>div {
+            justify-self: center;
+            align-self: center;
+            margin-left: 1em;
+        }
+
+        #pinkBlockUnderColor {
+            transform: rotate(180deg);
+        }
+        
+
+        #pinkBlockHex {
+            color: white;
+            transform: rotate(-90deg);
+            display: inline-block;
+            margin-top: .3em;
+            margin-left: -240px;
+            justify-self: flex-start;
+            align-self: flex-start;
+            font-size: 128px;
+            opacity: 1;
+        }
+
+        #pinkBlock:hover>#pinkBlockHex {
+            opacity: 0;
+            transition: ease-in-out 200ms;
+        }
+
+        #pinkBlock:hover>#aquaBlockHex {
+            opacity: 1;
+            transition: ease-in-out 200ms;
+        }
+
+        .carousel-wrapper {
+            overflow: hidden;
+            width: 100%;
+        }
+
+
+        .carousel {
+            transform-style: preserve-3d;
+            background: linear-gradient(27deg, rgba(254,0,184,1) 0%, rgba(1,216,231,1) 100%);
+            border-radius: 5px;
+            
+        }
+
+        .carousel__photo {
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+            margin: auto;
+            padding: 4rem 4rem;
+            z-index: 100;
+            transition: transform .5s, opacity .5s, z-index .5s;
+        }
+
+        .carousel__photo.initial,
+        .carousel__photo.active {
+            opacity: 1;
+            position: relative;
+            z-index: 900;
+        }
+
+        .carousel__photo.prev,
+        .carousel__photo.next {
+            z-index: 800;
+        }
+
+        .carousel__photo.prev {
+            transform: translateX(-100%);
+            /* Move 'prev' item to the left */
+        }
+
+        .carousel__photo.next {
+            transform: translateX(100%);
+            /* Move 'next' item to the right */
+        }
+
+        .carousel__button--prev,
+        .carousel__button--next {
+            position: absolute;
+            top: 50%;
+            width: 3rem;
+            height: 3rem;
+            background-color: var(--bodyBg);
+            transform: translateY(-50%);
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1001;
+            margin: 0.5em;
+            /* Sit on top of everything */
+        }
+
+        .carousel__button--prev {
+            left: 0;
+        }
+
+        .carousel__button--next {
+            right: 0;
+        }
+
+        .carousel__button--prev:hover {
+            border: 3px solid #FE00B8;
+            transition: ease-in-out 200ms;
+        }
+
+        .carousel__button--next:hover {
+            border: 3px solid #FE00B8;
+            transition: ease-in-out 200ms;
+        }
+
+        .carousel__button--prev::after,
+        .carousel__button--next::after {
+            content: " ";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            top: 50%;
+            left: 54%;
+            border-right: 2px solid white;
+            border-bottom: 2px solid gray;
+            transform: translate(-50%, -50%) rotate(135deg);
+        }
+
+        .carousel__button--next::after {
+            left: 47%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+
+        @media screen and (max-width: 739px) {
+
+            body {
+                background-size: contain;
+            }
+
+            main {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            #aboutMe article {
+                margin-top: 8em;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <header id="top">
+        <div>
+            <a href="/"><img src="/assets/images/darkLogo.png" alt="Andrew Haight logo" /></a>
+            <nav>
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="#art">ART</a></li>
+                    <li><a href="#contactForm">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="parallaxBox">
+            <!-- <div class="rellax" data-rellax-speed="10" id="parallax"><img src="./assets/images/cloud1.png" alt="Another Cloud"></div> -->
+            <div id="parallaxBG"><img src="./assets/images/portfolioCloudsBG_aboutMe_TLDR.png" alt="Clouds"></div>
+        </section>
+        <section id="aboutMeInfo">
+            <div>
+                <h2>ABOUT ME | TL;DR</h2>
+                <article>
+                    <h4>MY BACKGROUND</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ullam sit autem porro sed modi
+                        excepturi nisi cupiditate aliquid labore, laborum, odio facilis eius distinctio necessitatibus
+                        praesentium? Optio, explicabo veniam?</p>
+                </article>
+                <article>
+                    <h4>BUT WHY DESIGN?</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ullam sit autem porro sed modi
+                        excepturi
+                        nisi cupiditate aliquid labore, laborum, odio facilis eius distinctio necessitatibus
+                        praesentium?
+                        Optio, explicabo veniam?</p>
+                </article>
+                <article>
+                    <h4>ACHIEVEMENTS TO DATE</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ullam sit autem porro sed modi
+                        excepturi
+                        nisi cupiditate aliquid labore, laborum, odio facilis eius distinctio necessitatibus
+                        praesentium?
+                        Optio, explicabo veniam?</p>
+                </article>
+                <article>
+                    <h4>FUN FACTS</h4>
+                    <article id="funFacts"><span>/HATE/ - This is how to pronounce my last name.</p></span>
+                        <p>Yeah, it sounds pretty sinister unless you see how it is spelled, and hardly anybody goes
+                            with that as their first guess.<br />
+                        <p>No it is not pronounced “height” (an actual rebuttal I once received to <em>my</em> name).
+                        </p>
+                        <p>The “a-i” causes the emphasis to be placed on the “a” sound, as in “straight”... Haight.</p>
+                        </p>
+                        <ul>
+                            <h4>Proud About</h4>
+                            <li>Pug named Kevin <em>- a cool dude</em></li>
+                            <li>Cat named Birdie <em>- also cool, but stinks</em></li>
+                            <li>Married to best friend <em>- 10 years+</em></li>
+                            <li>Former Rock Climbing coach <em>- Life Time Fitness</em></li>
+                        </ul>
+                        Want to chat about what I could do for you or what makes my pug Kevin so cool?</p>
+                        <p>Connect with me on <span><a href="https://www.linkedin.com/in/athaight/">LinkedIn</a></span>
+                        </p>
+
+
+                        <p>
+
+                    </article>
+                    <article><span>CAN YOU guess my favorite color?</span></article>
+            </div>
+        </section>
+
+        <section id="pinkBlock">
+            <span id="pinkBlockHex">
+                <p>#FE00B8</p>
+            </span>
+            <div id="aqua">
+                <p>(IT'S AQUA BUT I LOVE HOT PINK TOO)</p>
+            </div>
+            <span id="aquaBlockHex">
+                <p>#01D8E7</p>
+            </span>
+        </section>
+
+        <div id="pinkBlockUnderColor"><img src="./assets/images/portfolioCloudsBG_aboutMe_TLDR.png" alt="More Clouds"></div>
+
+        <section id="art">
+            <div>
+                <h1>SKULLS</h1>
+                    <p>Skulls was an "image per day" challenge that I did for 5 days, just for kicks.</p>
+                    <p>Each day kept the same skull theme but nothing about the images were pre-conceived.</p> 
+                    <p>I wanted to draw a series of something as a personal challenge to keep my drawing muscles.</p>
+                <div class="carousel-wrapper">
+                    <div class="carousel">
+                        <img class="carousel__photo initial" src="./assets/images/PopSkull.jpg">
+                        <img class="carousel__photo" src="./assets/images/NasaSkull.jpg">
+                        <img class="carousel__photo" src="./assets/images/AlbumSkull.jpg">
+                        <img class="carousel__photo" src="./assets/images/SaintSkull.jpg">
+                        <img class="carousel__photo" src="./assets/images/KissingSkull.jpg">
+
+                        <div class="carousel__button--next"></div>
+                        <div class="carousel__button--prev"></div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <div id="parallaxBG"><img src="./assets/images/portfolioCloudsBG_aboutMe_TLDR.png" alt="Clouds"></div>
+        <section id="aboutMe">
+            <img id="mePhoto" src="./assets/images/meRoundProfessional.png" alt="mePhoto" />
+            <div id="contactResumeButtons">
+                <!-- <a href="#contactForm" id="contactButton">Contact</a> -->
+                <a href="#" id="resumeButton">Resume</a>
+            </div>
+
+            <section id="contactForm">
+                <h2>Let's Work Together <a href="#top" title="back to top"></a></h2>
+                <form>
+                    <div>
+                        <label>
+                            <input type="text" value="" placeholder="First" />
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="text" value="" placeholder="Last" />
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="email" value="" placeholder="Email" />
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <textarea placeholder="Write me a message..."></textarea>
+                        </label>
+                    </div>
+                    <div>
+                        <button type="submit">Send Message</button>
+                    </div>
+                </form>
+            </section>
+    </main>
+
+    <footer>
+        <a href="#top" title="logo"><img src="./assets/images/whiteLogo.png"></img></a>
+        <p>&copy; athaight | 2022</p>
+    </footer>
+
+    <script>
+        // in-page navigation smooth scrolling
+        (function () {
+            document.querySelectorAll('a[href^="#"]')
+                .forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+
+                        document.querySelector(this.getAttribute('href')).scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    });
+                });
+        })();
+
+
+        // Color changing div (pink to aqua)
+        let divColorChange = document.getElementById('pinkBlock');
+
+        // Listen fo mouseover div and change color from pink (resting state) to aqua
+        divColorChange.addEventListener('mouseover', colorChange);
+        function colorChange() {
+            document.getElementById('pinkBlock').style.backgroundColor = "rgb(1, 216, 231)";
+        }
+
+        // Change color back from aqua to pink when mouse leaves div
+        divColorChange.addEventListener('mouseleave', colorChangeBack);
+        function colorChangeBack() {
+            document.getElementById('pinkBlock').style.backgroundColor = "#fe00b8";
+
+        }
+
+        // Rellax is for parallax effect npm package installed however I'm not sure I'll use it. I'd like to try to make it work vanilla
+        // var rellax = new Rellax('.rellax');
+
+        // Skulls image carousel (wrapped in an IIFE to shield code from global scope)
+        !(function (d) {
+            var itemClassName = "carousel__photo";
+            items = d.getElementsByClassName(itemClassName),
+                totalItems = items.length,
+                slide = 0,
+                moving = true;
+
+            // Set classes
+            function setInitialClasses() {
+                // Target the previous, current, and next items
+                // This assumes there are at least three items.  items[totalItems - 1].classList.add("prev");
+                items[0].classList.add("active");
+                items[1].classList.add("next");
+            }// Set event listeners
+            function setEventListeners() {
+                var next = d.getElementsByClassName('carousel__button--next')[0],
+                    prev = d.getElementsByClassName('carousel__button--prev')[0]; next.addEventListener('click', moveNext);
+                prev.addEventListener('click', movePrev);
+            }
+
+            // Next navigation handler
+            function moveNext() {  // Check if moving
+                if (!moving) {    // If it's the last slide, reset to 0, else +1
+                    if (slide === (totalItems - 1)) {
+                        slide = 0;
+                    } else {
+                        slide++;
+                    }    // Move carousel to updated slide
+                    moveCarouselTo(slide);
+                }
+            }// Previous navigation handler
+            function movePrev() {  // Check if moving
+                if (!moving) {    // If it's the first slide, set as the last slide, else -1
+                    if (slide === 0) {
+                        slide = (totalItems - 1);
+                    } else {
+                        slide--;
+                    }
+
+                    // Move carousel to updated slide
+                    moveCarouselTo(slide);
+                }
+            }
+
+            function disableInteraction() {  // Set 'moving' to true for the same duration as our transition.
+                // (0.5s = 500ms)
+
+                moving = true;  // setTimeout runs its function once after the given time
+                setTimeout(function () {
+                    moving = false
+                }, 500);
+            }
+
+            function moveCarouselTo(slide) {  // Check if carousel is moving, if not, allow interaction
+                if (!moving) {    // temporarily disable interactivity
+                    disableInteraction();    // Update the "old" adjacent slides with "new" ones
+                    var newPrevious = slide - 1,
+                        newNext = slide + 1,
+                        oldPrevious = slide - 2,
+                        oldNext = slide + 2;    // Test if carousel has more than three items
+                    if ((totalItems - 1) > 3) {      // Checks and updates if the new slides are out of bounds
+                        if (newPrevious <= 0) {
+                            oldPrevious = (totalItems - 1);
+                        } else if (newNext >= (totalItems - 1)) {
+                            oldNext = 0;
+                        }      // Checks and updates if slide is at the beginning/end
+                        if (slide === 0) {
+                            newPrevious = (totalItems - 1);
+                            oldPrevious = (totalItems - 2);
+                            oldNext = (slide + 1);
+                        } else if (slide === (totalItems - 1)) {
+                            newPrevious = (slide - 1);
+                            newNext = 0;
+                            oldNext = 1;
+                        }      // Now we've worked out where we are and where we're going, 
+                        // by adding/removing classes we'll trigger the transitions.      // Reset old next/prev elements to default classes
+                        items[oldPrevious].className = itemClassName;
+                        items[oldNext].className = itemClassName;      // Add new classes
+                        items[newPrevious].className = itemClassName + " prev";
+                        items[slide].className = itemClassName + " active";
+                        items[newNext].className = itemClassName + " next";
+                    }
+                }
+            }
+
+            function initCarousel() {
+                setInitialClasses();
+                setEventListeners();  // Set moving to false so that the carousel becomes interactive
+                moving = false;
+            }
+
+            // make it rain
+            initCarousel();
+
+        }(document));
+
+    </script>
+</body>
+
+</html>

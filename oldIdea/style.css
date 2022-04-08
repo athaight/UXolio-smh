@@ -1,0 +1,33 @@
+:root {
+    --bodyBG: #202020;
+}
+
+html {
+    font-size: 16px;
+    margin: 0;
+    pading: 0;
+    /* max-width: viewport; */
+  }
+  
+  body {
+    
+    background-color: var(--bodyBG);
+    font-family: "Raleway", sans-serif;
+    min-width: 350px;
+    color: white;
+    padding: 0;
+    margin: 0;
+    /* overflow-x: hidden; */
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--text-link);
+    transition: color 0.4s ease-out;
+  }
+  
+  // TODO -Have Drew look at hover not working
+  a:hover {
+    color: var(--alt-color);
+    font-weight: 900;
+  }
