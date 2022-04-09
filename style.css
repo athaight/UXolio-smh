@@ -4,7 +4,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 20px;
   margin: 0;
   pading: 0;
   /* max-width: viewport; */
@@ -26,11 +26,6 @@ a {
   transition: color 0.4s ease-out;
 }
 
-// TODO -Have Drew look at hover not working
-a:hover {
-  color: var(--alt-color);
-  font-weight: 900;
-}
 
 body > header {
   margin-bottom: 1em;
@@ -75,13 +70,14 @@ footer {
     background-color: #DEDDD3;
     height: 400px;
     margin-top: 10em;
+    
 }
 
 footer img {
     max-width: 34px;
     max-height: 34px;
     align-self: center;
-    
+    margin: 1em;
 }
 
 h1,
@@ -91,6 +87,14 @@ h4,
 h5,
 h6 {
   font-family: "Raleway", sans-serif;
+}
+
+li>a {
+  transition: 0.1s ease-out;
+}
+
+li>a:hover {
+  font-weight: 700;
 }
 
 main {

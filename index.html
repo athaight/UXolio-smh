@@ -14,122 +14,131 @@
         rel="stylesheet" />
     <title>Andrew Haight</title>
     <style>
-        
-#chatJoke {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
+     
 
-#chatJoke > h5 {
-   margin-top: -1em;
-   margin-right: 27em;
-}
+        #chatJoke {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+
+        #chatJoke>h5 {
+            margin-top: -1em;
+            margin-right: 18em;
+        }
 
 
-#description {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
+        #description {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-#description p {
-    font-weight: 600;
-}
+        #description>p {
+            width: 500px;
+            margin-left: 1em;
+            font-weight: 600;
+        }
 
-#intro {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: space-between;
-    margin: -600px 20em 0 20em;
-    
-}
+        #intro {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: space-between;
+            margin: -600px 17em 0 17em;
 
-#intro h1 {
-    font-weight: 400;
-}
+        }
 
-#intro span {
-    font-weight: 700; 
-}
+        #intro h1 {
+            font-weight: 400;
+        }
 
-#mainBG {
-    background-image: url('./assets/images/dottedBg.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 1000px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;  
-}
+        #intro span {
+            font-weight: 700;
+        }
 
-#postit {
-    margin-top: -600px;
-}
+        #mainBG {
+            background-image: url('./assets/images/dottedBg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 1000px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-#myArtLogo {
-    margin-bottom: -15px;
-    font-size: 94px;
-}
+        #postit {
+            margin-top: -600px;
+        }
 
-#sheepLogo {
-    width: 600px;
-}
+        #myArtLogo {
+            margin-bottom: -15px;
+            font-size: 94px;
+        }
 
-#workCircle {
-    padding: 5rem;
-}
+        #sheepLogo {
+            width: 600px;
+        }
 
-#workDiv {
-    width: 100%;
-    height: 750px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: row; 
-    justify-content: center;
-    align-items: center;
-}
+        #workCircle {
+            padding: 5rem;
+            transition: all 0.5s ease-out;
+        }
 
-.harmonium {
-    margin-top: 12em;
-    background-color: #DDE4FF;
-}
+        #workCircle:hover {
+            transform: translateY(-2em);
 
-.superZoo {
-    margin-top: 6em;
-    background-color: #E2DAD2;
-}
+        }
 
-.karateKid {
-    margin-top: 6em;
-    background-color: #C1BFCE;
-}
+        #workDiv {
+            width: 100%;
+            height: 750px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 0 10em 0 10em;
+        }
 
-.sheep {
-    margin-top: 6em;
-    background-color: #202020;
-    color: #f8f7ef;
-}
+        .harmonium {
+            margin-top: 12em;
+            background-color: #DDE4FF;
+        }
 
-.myArt {
-    margin-top: 6em;
-    background-color: #9DF0DD;
-}
+        .superZoo {
+            margin-top: 6em;
+            background-color: #E2DAD2;
+        }
 
-.myArtCircle {
-    margin-right: -80px;
-}
+        .karateKid {
+            margin-top: 6em;
+            background-color: #C1BFCE;
+        }
 
+        .sheep {
+            margin-top: 6em;
+            background-color: #202020;
+            color: #f8f7ef;
+        }
+
+        .myArt {
+            margin-top: 6em;
+            background-color: #9DF0DD;
+        }
+
+        .myArtCircle {
+            margin-right: -80px;
+        }
     </style>
 </head>
 
-<body class="w3-container">
+<body>
     <header>
         <div>
             <a href="/"><img src="/assets/images/darkLogo.png" alt="Andrew Haight logo" /></a>
@@ -160,35 +169,35 @@
         </div>
 
         <div id="workDiv" class="harmonium">
-            <img id="workCircle" src="./assets/images/harmoniumCircle.png" alt="">
+            <img id="workCircle" src="./assets/images/harmonium/harmoniumCircle.png" alt="">
             <div id="description">
-                <img id="harmoniumLogo" src="./assets/images/harmoniumLogo.png" alt="">
+                <img id="harmoniumLogo" src="./assets/images/harmonium/harmoniumLogo.png" alt="">
                 <p>Advocacy group for awareness concerning workplace Mental health</p>
                 <!-- <h6>Research | User Personas | Wireframe | High fidelity Site</h6> -->
-                <button><a href="#">Read the case study</a></button>
+                <button><a href="/harmonium.html">Read the case study</a></button>
             </div>
         </div>
-     
+
         <div id="workDiv" class="superZoo">
             <div id="description">
                 <img id="superZooLogo" src="./assets/images/superZooLogo.png" alt="">
                 <p>404 landing page for a fictional zoo</p>
                 <!-- <h6>Research | User Personas | Wireframe | High fidelity Site</h6> -->
-                <button><a href="#">Read the case study</a></button>
+                <button><a href="/superZoo.html">Read the case study</a></button>
             </div>
             <img id="workCircle" src="./assets/images/superZooCircle.png" alt="">
         </div>
 
         <div id="workDiv" class="karateKid">
+            <img id="workCircle" src="./assets/images/karateKidCircle.png" alt="">
             <div id="description">
                 <img id="karateKidLogo" src="./assets/images/karateKidLogo.png" alt="">
                 <p>User persona and Journey Map for Daniel LaRusso, aka The Karate Kid</p>
                 <!-- <h6>Research | User Personas | Wireframe | High fidelity Site</h6> -->
                 <button><a href="#">Read the case study</a></button>
             </div>
-            <img id="workCircle" src="./assets/images/karateKidCircle.png" alt="">
         </div>
-        
+
         <div id="workDiv" class="sheep">
             <div id="description">
                 <img id="sheepLogo" src="./assets/images/sheep_neon.png" alt="">
@@ -200,21 +209,21 @@
         </div>
 
         <div id="workDiv" class="myArt">
+            <img id="workCircle" class="myArtCircle" src="./assets/images/myArt.png" alt="">
             <div id="description">
                 <h1 id="myArtLogo">MY ART</h1>
                 <p>My artwork using digital and traditional mediums</p>
                 <!-- <h6>Research | User Personas | Wireframe | High fidelity Site</h6> -->
                 <button><a href="#">Read the case study</a></button>
             </div>
-            <img id="workCircle" class="myArtCircle" src="./assets/images/myArt.png" alt="">
         </div>
 
     </main>
     <footer>
-        <img src="./assets/images/LinkedIn.png" alt="">
-        <img src="./assets/images/Medium.png" alt="">
-        <img src="./assets/images/Twitter.png" alt="">
-        <img src="./assets/images/Instagram.png" alt="">
+        <img src="./assets/images/socialLogos/LinkedIn.png" alt="">
+        <img src="./assets/images/socialLogos/Medium.png" alt="">
+        <img src="./assets/images/socialLogos/Twitter.png" alt="">
+        <img src="./assets/images/socialLogos/Instagram.png" alt="">
     </footer>
 </body>
 

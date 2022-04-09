@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,21 +11,80 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet" />
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
     <style>
 
-    #mainBG {
-        background-image: url('./assets/images/dottedBg.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 1000px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;  
-    }
+        hr {
+            display: block;
+            height: 1px;
+            border: 0;
+            border-top: 2px solid #222;
+            margin: -1.5em 0 0 0;
+            padding-bottom: 2em;
+        }
+
+        span {
+            font-weight: 700;
+        }
+
+        #funFacts span {
+            font-weight: 700;
+        }
+
+        #firstSection {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 17em 0 17em;
+            /* gap: 13em; */
+        }
+
+        #secondSection {
+            display: flex;
+            flex-direction: row;
+            margin: 0 17em 0 17em;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 4em;
+            margin-top: 4em;
+        }
+
+        #secondSectionText > h1 {
+           font-weight: 600;
+        }
+
+        #mainBG {
+            background-image: url('./assets/images/dottedBg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #mainBG > h1 {
+            margin: 0 8.5em 0 8.5em;
+        }
+
+        #tldr {
+            display: flex;
+            flex-direction: column;
+            margin: 4em 17em;
+        }
+
+        .largerText {
+            font-size: 26px;
+            font-weight: 400;
+        }
+
+        .mediumText {
+            font-size: 20px;
+        }
 
     </style>
 </head>
@@ -35,6 +95,7 @@
             <a href="/"><img src="/assets/images/darkLogo.png" alt="Andrew Haight logo" /></a>
             <nav>
                 <ul>
+                    <li><a href="/">HOME</a></li>
                     <li><a href="/about.html">ABOUT</a></li>
                     <li><a href="#">RESUME</a></li>
                 </ul>
@@ -43,15 +104,108 @@
     </header>
     <main>
         <div id="mainBG">
-            
+            <h1>As a designer I believe in advocating for users by taking an empathetical approach to design thinking,
+                and listening to feedback with the intention of truly understanding the user’s successes and challenges.
+            </h1>
+        </div>
+        <div id="firstSection">
+            <img src="./assets/images/aboutMePhoto.png" alt="">
+            <div>
+                <h1 class="largerText">You want to know <em>more</em> about <span><em>me?</em></span></h1>
+                <p class="mediumText ">I am flattered and honored!</p>
+            </div>
+        </div>
+        <div>
+            <div id="secondSection">
+                <div id="secondSectionText">
+                    <h1>Here's the main take-aways about me</h1>
+                    <p>I am a curious person and am constantly wondering how and why things are what they are.</p>
+                    <p>My superpower is collaboration and abstract thinking.</p>
+                    <p>I believe that you need to get comfortable being uncomfortable.</p>
+                    <p>I love creativity. Since I was a little kid I’ve loved to draw & paint. I also sculpt art toys, and
+                        make music.</p>
+                    <p>With 10 years of experience in the commercial print industry I can preflight and print projects very
+                            well.</p>
+                    <p>I have completed two different 12 week, full-time boot camps: </p>
+                        <ul>
+                            <li>Full Stack Web Development - Univesity of Arizona</li>
+                            <li>UX/UI Design Immersive - Logical Imagination </li>
+                        </ul>
+                    </div>
+                    <img src="./assets/images/aboutMeKevinPhoto.png" alt="Photo of Kevin the Pug">
+            </div>
+            <div id="tldr">
+                        
+                <h1>TL;DR</h1>
+                <hr/>
+
+                <article>
+                    <h3>MY BACKGROUND</h3>
+                    <p>I spent about a decade doing work in the commercial print industry. I’m fortunate to have spent
+                        time in sales and in production during my time in this arena, and I feel this has helped me to
+                        gain a great understranding of the entire print process, from client needs to product
+                        development and delivery. I began in retail sales and at the time of my departure I was the
+                        department lead for electronic print and certified to operate and perform advanced maintenance
+                        and repair on Xerox iGen and HP Indigo Digital printing presses.</p>
+                    <p>I loved being the department lead and enjoyed collaborating with other department leads on
+                        projects and distributions. Although I enjoyed working with and being a part of a fast
+                        production environment, I wanted to have a more creative role and I made the decision to leave
+                        my career and began persuing a path towards design and development. I discovered UX and became
+                        excited because I knew I was entering into the perfect field for my skills and goals.</p>
+                </article>
+
+                <article>
+                    <h3>BUT WHY DESIGN?</h3>
+                    <p>I’m a creative person and a questioner who has to know the how and why of things. The foundation
+                        of UX is the user. For me, the process of discovering the user’s needs, expectations,
+                        challenges, and thier interactions is thrilling and very important for a good product. I believe
+                        a visually appeling design is only one part, but that a really well developed product comes from
+                        true understanding of the user. Thus, users should be the main focus during design and
+                        development. </p>
+                </article>
+
+                <article>
+                    <h3>ACHIEVEMENTS TO DATE</h3>
+                    <p>Completed a Full Stack Web Development boot camp.</p>
+                    <p>Completed a UX/UI Design Immersive boot camp.</p>
+                    <p>Both were 12 weeks long and full-time. </p>
+                </article>
+
+                <article>
+                    <h3>WHEN I'M NOT INDULGING IN ALL THINGS DESIGN + FUN FACTS</h3>
+                    <article id="funFacts"><span>/HATE/ - This is how to pronounce my last name.</p></span>
+                        <p>Yeah, it sounds pretty sinister unless you see how it is spelled, and hardly anybody goes
+                            with that as their first guess.<br />
+                        <p>No it is not pronounced “height” (an actual rebuttal I once received to <em>my</em> name).
+                        </p>
+                        <p>The “a-i” causes the emphasis to be placed on the “a” sound, as in “straight”... Haight.</p>
+                        </p>
+                        <ul>
+                            <h3>Proud About</h3>
+                            <li>Pug named Kevin <em>- a cool dude</em></li>
+                            <li>Cat named Birdie <em>- also cool, but stinks</em></li>
+                            <li>Married to best friend <em>- 10 years+</em></li>
+                            <li>Former Rock Climbing coach <em>- Life Time Fitness</em></li>
+                        </ul>
+                        Want to chat about what I could do for you or what makes my pug Kevin so cool?</p>
+
+                        <p>Connect with me!</p>
+                        <div><span><a href="https://www.linkedin.com/in/athaight/">LinkedIn</a></span></div>
+                        <div><span><a href="mailto:haight.haight@gmail.com">haight.haight@gmail.com</a></span>
+                        </div>
+                        </p>
+                    </article>
+
+            </div>
         </div>
     </main>
-    
+
     <footer>
-        <img src="./assets/images/LinkedIn.png" alt="">
-        <img src="./assets/images/Medium.png" alt="">
-        <img src="./assets/images/Twitter.png" alt="">
-        <img src="./assets/images/Instagram.png" alt="">
+        <img src="./assets/images/socialLogos/LinkedIn.png" alt="">
+        <img src="./assets/images/socialLogos/Medium.png" alt="">
+        <img src="./assets/images/socialLogos/Twitter.png" alt="">
+        <img src="./assets/images/socialLogos/Instagram.png" alt="">
     </footer>
 </body>
+
 </html>
