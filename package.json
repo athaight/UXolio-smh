@@ -1,10 +1,11 @@
 {
-  "name": "UXolio-smh",
+  "name": "uxolio-smh",
   "version": "1.0.0",
   "description": "Yet another portfoilo build, sheesh.",
   "main": "script.js",
   "dependencies": {
-    
+    "animate.css": "^4.1.1",
+    "vanilla-tilt": "^1.7.2"
   },
   "devDependencies": {},
   "scripts": {
