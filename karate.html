@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <title>Andrew Haight</title>
+    <style>
+   
+        #dlIcon {
+            width: 20px;
+            height: 20px;
+            opacity: .5;
+            margin-left: .5em;
+        }
+
+        #dlIcon:hover {
+            opacity: 1;
+        }
+
+        #journeyHeader {
+            margin-top: 3em;
+        }
+
+        #journey {
+            
+            overflow: scroll;
+           margin-top: 200px;;
+         
+            margin-left: 500px;
+        }
+
+        #journey > img {
+       
+            overflow: hidden;
+            width: 17000px;
+            transform: scale(1);
+        }
+
+
+.sprite-container{
+  width:1000px;
+  height:200px;
+  display: inline-block;
+  background-image: url("./assets/images/karate/userJourney.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: start center;
+  background-attachment:scroll;
+ 
+}
+
+      
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="/"><img src="/assets/images/darkLogo.png" alt="Andrew Haight logo" /></a>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">HOME</a></li>
+                    <li><a href="/about.html">ABOUT</a></li>
+                    <li><a href="/projects.html">PROJECTS</a></li>
+                    <li><a href="./resume.html">RESUME</a>
+                        <a href="./assets/images/AndrewHaightResume.png" download>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="dlIcon">
+                                <path
+                                    d="M480 352h-133.5l-45.25 45.25C289.2 409.3 273.1 416 256 416s-33.16-6.656-45.25-18.75L165.5 352H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96C512 366.3 497.7 352 480 352zM432 456c-13.2 0-24-10.8-24-24c0-13.2 10.8-24 24-24s24 10.8 24 24C456 445.2 445.2 456 432 456zM233.4 374.6C239.6 380.9 247.8 384 256 384s16.38-3.125 22.62-9.375l128-128c12.49-12.5 12.49-32.75 0-45.25c-12.5-12.5-32.76-12.5-45.25 0L288 274.8V32c0-17.67-14.33-32-32-32C238.3 0 224 14.33 224 32v242.8L150.6 201.4c-12.49-12.5-32.75-12.5-45.25 0c-12.49 12.5-12.49 32.75 0 45.25L233.4 374.6z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+      <div id="panspace" class="sprite-container">
+          
+          <img src="./assets/images/karate/User persona and Journey Map.png" alt="">
+      </div>
+
+    
+        
+    </main>
+    <footer>
+        <img src="./assets/images/socialLogos/LinkedIn.png" alt="">
+        <img src="./assets/images/socialLogos/Medium.png" alt="">
+        <img src="./assets/images/socialLogos/Twitter.png" alt="">
+        <img src="./assets/images/socialLogos/Instagram.png" alt="">
+    </footer>
+    
+<script>
+    const vertical_scroll = false;
+const horizontal_scroll = true;
+
+(function(){
+  const scrolls = document.querySelectorAll(".sprite-container");
+  for(let i = 0; i < scrolls.length; i++){
+    initScrollable(scrolls.item(i), vertical_scroll, horizontal_scroll);
+  }
+})();
+
+function initScrollable(t, vertical_scroll, horizontal_scroll){
+  const init_bg_pos = [
+    getComputedStyle(t, null)["background-position-x"],
+    getComputedStyle(t, null)["background-position-y"]
+  ];
+
+  let dragging = false;
+  let coords = [];
+  let offset = [0, 0];
+
+  t.addEventListener("mousedown", function(e){
+    dragging = true;
+    coords = [e.offsetX - offset[0], e.offsetY - offset[1]];
+  });
+
+  t.addEventListener("mouseup", function(){
+    dragging = false;
+  });
+
+  t.addEventListener("mousemove", function(e){
+    if(dragging){
+      offset = [e.offsetX - coords[0], e.offsetY - coords[1]];
+
+      t.style.backgroundPosition = 
+        (horizontal_scroll ? (
+            "calc(" + init_bg_pos[0] + " + " + offset[0] + "px)"
+        ) : (
+            init_bg_pos[0]
+        )) + 
+        " " + 
+        (vertical_scroll ? (
+          "calc(" + init_bg_pos[1] + " + " + offset[1] + "px)"
+        ) : (
+          init_bg_pos[1]
+        ));
+    }
+  });
+}
+</script>
+
+</body>
+
+</html>

@@ -4,7 +4,7 @@
   "description": "Yet another portfoilo build, sheesh.",
   "main": "script.js",
   "dependencies": {
-    "rellax": "^1.12.1"
+    
   },
   "devDependencies": {},
   "scripts": {

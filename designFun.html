@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <title>AH - Design Fun</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        main {
+            margin: 2em 13em;
+        }
+
+        main>a {
+            cursor: pointer;
+        }
+
+       
+
+        #comingSoon > img {
+                padding: 4em 0em;
+                filter: drop-shadow(-24px 24px 14px rgba(34, 34, 34, 0.473));
+            }
+
+
+        #topButton {
+            background-color: #ec5e5e;
+            width: 3%;
+            padding: .5em;
+            margin-top: 5em;
+            color: #deddd3;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 500px) {
+
+            html {
+                font-size: 16px;
+            }
+
+            body>header {
+                margin: 0 2em;
+            }
+
+            body>header div {
+                margin: 1em auto;
+                justify-self: center;
+            }
+
+            body>header img {
+                margin: 0 2em 0 0;
+                width: 33.3%;
+            }
+
+            main {
+                margin: 2em;
+            }
+
+
+            footer {
+                height: 200px;
+            }
+
+            #comingSoon > img {
+                margin-bottom: 2em;
+                filter: drop-shadow(-8px 8px 8px rgba(34, 34, 34, 0.473));
+            }
+
+            #topButton {
+                background-color: #ec5e5e;
+                width: 15%;
+                padding: .5em 1;
+                margin-top: 5em;
+                color: #deddd3;
+                cursor: pointer;
+                text-align: right;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="/"><img src="/assets/images/Logos/darkLogo.png" alt="Andrew Haight logo" /></a>
+            <nav>
+                <ul>
+                    <li><a href="/work.html">WORK</a></li>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/about.html">ABOUT</a></li>
+                    <li><a href="./resume.html">RESUME</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        
+        <div id="comingSoon">
+            <h2>Mock-ups</h2> 
+            <p>Coming Soon Pages | Landing Pages</p>
+
+            <img id="image1" src="./assets/images/comingSoon/ShutterSnap.png" alt="">
+            <img id="image2" src="./assets/images/comingSoon/Slide 16_9 - 1.png" alt="">
+            <img id="image3" src="./assets/images/comingSoon/Henery's.png" alt="">
+            <img id="image4" src="./assets/images/comingSoon/Tables record store.png" alt="">
+        </div>
+
+    </main>
+
+
+    <div id="topButton">top</div>
+
+    <footer>
+        <img src="./assets/images/socialLogos/LinkedIn.png" alt="">
+        <img src="./assets/images/socialLogos/Medium.png" alt="">
+        <img src="./assets/images/socialLogos/Twitter.png" alt="">
+        <img src="./assets/images/socialLogos/Instagram.png" alt="">
+    </footer>
+
+
+    <script>
+        function showButton() {
+
+
+            var button = $('#topButton'), //button that scrolls user to top
+                view = $(window),
+                timeoutKey = -1;
+
+            $(document).on('scroll', function () {
+                if (timeoutKey) {
+                    window.clearTimeout(timeoutKey);
+                }
+                timeoutKey = window.setTimeout(function () {
+
+                    if (view.scrollTop() < 100) {
+                        button.fadeOut();
+                    }
+                    else {
+                        button.fadeIn();
+                    }
+                }, 100);
+            });
+        }
+
+        $('#topButton').on('click', function () {
+            $('html, body').stop().animate({
+                scrollTop: 0
+            }, 500, 'linear');
+            return false;
+        });
+
+        //call function on document ready
+        $(function () {
+            showButton();
+        });
+    </script>
+</body>
+
+</html>

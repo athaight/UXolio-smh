@@ -4,9 +4,9 @@
 }
 
 html {
-  font-size: 20px;
+  font-size: 24px;
   margin: 0;
-  pading: 0;
+  padding: 0em;
   /* max-width: viewport; */
 }
 
@@ -14,7 +14,7 @@ body {
   background-color: var(--bodyBG);
   font-family: "Raleway", sans-serif;
   min-width: 350px;
-  color: #202020;
+  max-width: 100vw;
   padding: 0;
   margin: 0;
   /* overflow-x: hidden; */
@@ -26,9 +26,8 @@ a {
   transition: color 0.4s ease-out;
 }
 
-
 body > header {
-  margin-bottom: 1em;
+  margin: 2em 15em;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -39,20 +38,17 @@ body > header div {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-top: 2rem;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin: 0;
   width: 100%;
 }
 
 body > header img {
   max-height: 100%;
-  margin-right: 5em;
   justify-self: flex-start;
 }
 
 body > header nav li {
-  margin: 1em;
+  margin-left: 1em;
 }
 
 body > header div ul {
@@ -60,24 +56,38 @@ body > header div ul {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+body > header nav li a {
+  transition: 0.1s ease-out;
+}
+
+body > header nav li a:hover {
+  font-weight: 700;
 }
 
 footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    background-color: #DEDDD3;
-    height: 400px;
-    margin-top: 10em;
-    
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  background-color: #deddd3;
+  height: 400px;
+  margin-top: 0;
 }
 
 footer img {
-    max-width: 34px;
-    max-height: 34px;
-    align-self: center;
-    margin: 1em;
+  max-width: 34px;
+  max-height: 34px;
+  align-self: center;
+  margin: 1em;
+}
+
+footer a {
+  align-self: center;
 }
 
 h1,
@@ -89,14 +99,60 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
-li>a {
-  transition: 0.1s ease-out;
-}
-
-li>a:hover {
-  font-weight: 700;
-}
-
 main {
-    margin: 0 2em 0 2em;
+  margin: 0;
+}
+
+#dlIcon {
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+  margin-left: 0.5em;
+}
+
+#dlIcon:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 1200px) {
+  body > header div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  body > header img {
+    max-height: 100%;
+    margin-right: 10em;
+    justify-self: flex-start;
+  }
+}
+
+@media screen and (max-width: 790) {
+  body > header {
+    margin-bottom: 12em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  body > header div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  body > header img {
+    max-height: 100%;
+    margin-right: 10em;
+  }
 }

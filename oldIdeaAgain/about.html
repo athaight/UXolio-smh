@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Andrew Haight</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <style>
+
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 2px solid #222;
+        margin: -1.5em 0 0 0;
+        padding-bottom: 2em;
+    }
+
+    span {
+        font-weight: 700;
+    }
+
+    #dlIcon {
+        width: 20px;
+        height: 20px;
+        opacity: .5;
+        margin-left: .5em;
+    }
+
+    #dlIcon:hover {
+        opacity: 1;
+    }
+
+    #email span a {
+        color: #b48400;
+    }
+
+    #funFacts span {
+        font-weight: 700;
+    }
+
+    #firstSection {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 17em 0 17em;
+        /* gap: 13em; */
+    }
+
+    #linkedin span a{
+        color: #b48400;
+    }
+
+    #mainBG {
+        background-image: url('./assets/images/dottedBg.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #mainBG>h1 {
+        margin: 0 8.5em 0 8.5em;
+    }
+
+    #secondSection {
+        display: flex;
+        flex-direction: row;
+        margin: 0 17em 0 17em;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 4em;
+        margin-top: 4em;
+    }
+
+    #topButton {
+            background-color: #ec5e5e;
+            width: 3%;
+            padding: .5em;
+            margin-top: 5em;
+            color: #deddd3;
+            cursor: pointer;
+        }
+
+    #secondSectionText>h1 {
+        font-weight: 600;
+    }
+
+    #tldr {
+        display: flex;
+        flex-direction: column;
+        margin: 4em 17em;
+    }
+
+    .largerText {
+        font-size: 26px;
+        font-weight: 400;
+    }
+
+    .mediumText {
+        font-size: 20px;
+    }
+
+  
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="top">
+            <a href="/"><img src="/assets/images/Logos/darkLogo.png" alt="Andrew Haight logo" /></a>
+            <nav>
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="./resume.html">RESUME</a>
+                        <a href="./assets/images/AndrewHaightResume.png" download>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="dlIcon">
+                                <path
+                                    d="M480 352h-133.5l-45.25 45.25C289.2 409.3 273.1 416 256 416s-33.16-6.656-45.25-18.75L165.5 352H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96C512 366.3 497.7 352 480 352zM432 456c-13.2 0-24-10.8-24-24c0-13.2 10.8-24 24-24s24 10.8 24 24C456 445.2 445.2 456 432 456zM233.4 374.6C239.6 380.9 247.8 384 256 384s16.38-3.125 22.62-9.375l128-128c12.49-12.5 12.49-32.75 0-45.25c-12.5-12.5-32.76-12.5-45.25 0L288 274.8V32c0-17.67-14.33-32-32-32C238.3 0 224 14.33 224 32v242.8L150.6 201.4c-12.49-12.5-32.75-12.5-45.25 0c-12.49 12.5-12.49 32.75 0 45.25L233.4 374.6z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div id="mainBG">
+           
+        </div>
+        <div id="firstSection">
+            <img src="./assets/images/aboutMePhoto.png" alt="">
+            <div>
+                <h1 class="largerText">You want to know <em>more</em> about <span><em>me?</em></span></h1>
+                <p class="mediumText ">I am flattered and honored!</p>
+            </div>
+        </div>
+        <div>
+            <div id="secondSection">
+                <div id="secondSectionText">
+                    <h1>Here's the main take-aways about me</h1>
+                    <p>I am a <span>curious</span> person and I constantly wonder <span>how</span> and<span> why</span>
+                        things are what they are.</p>
+                    <p>My <span>superpowers</span> are <span>collaboration</span> and <span>abstract thinking</span>.
+                    </p>
+                    <p>I believe that <span>you need to get comfortable being uncomfortable</span>.</p>
+                    <p><span>I love creativity</span>. As a kid loved to draw & paint<br/> (that never stopped). <br />
+                        I also sculpt art toys, and
+                        make music.</p>
+                    <p>With <span>10 years of experience in the commercial print industry</span> I can preflight and
+                        print projects very
+                        well.</p>
+                    <p>I have <span>completed two</span> different 12 week, full-time <span>boot camps</span>: </p>
+                    <ul>
+                        <li><span>Full Stack Web Development</span> - Univesity of Arizona</li>
+                        <li><span>UX/UI Design Immersive</span> - Logical Imagination </li>
+                    </ul>
+                </div>
+                <img src="./assets/images/aboutMeKevinPhoto.png" alt="Photo of Kevin the Pug">
+            </div>
+            <div id="tldr">
+
+                <h1>TL;DR</h1>
+                <hr />
+
+                <article>
+                    <h3>MY BACKGROUND</h3>
+                    <p>I spent a decade doing work in the commercial print industry. I worked in sales at first but was
+                        more drawn to production and was able to change roles. I feel having exposure to both
+                        departments helped me to
+                        gain a great understanding of the entire print process, from client needs to product
+                        development and delivery (I was naturally UX focused without knowing it). At the time of my
+                        departure I was the
+                        Lead for Electronic Print Department and had obtained certifications to operate and perform
+                        advanced maintenance
+                        and repair on Xerox iGen and HP Indigo Digital printing presses. It was a pretty big deal.</p>
+                    <p>I loved being the Department Lead and enjoyed collaborating with other Department Leads on
+                        projects and distributions. Although I enjoyed working with and being a part of a fast
+                        production environment I always wanted to have a more creative role and I eventually made the decision to leave
+                        my career so I could begin pursuing a path towards design and development. When I discovered UX I was so
+                        excited because I knew I'd be entering into the perfect field for my skills and goals.</p>
+                </article>
+
+                <article>
+                    <h3>BUT WHY DESIGN?</h3>
+                    <p>I’m a creative person and someone who questions a lot, having to know the how and why of things. The foundation
+                        of UX is the user and the entire process the user experiences. For me, the process of discovering the user’s needs, expectations,
+                        challenges, and their interactions are the most thrilling parts, and that is very important for a good product. I believe
+                        a visually appealing design is only one part, but that a really well developed product comes from
+                        true understanding of the user. Thus, users should be the main focus during design and
+                        development.</p>
+                </article>
+
+                <article>
+                    <h3>ACHIEVEMENTS TO DATE</h3>
+                    <p>Completed the Full Stack Web Development boot camp through University of Arizona.</p>
+                    <p>Completed the UX/UI Design Immersive boot camp through Interapt and Logical Imagination.</p>
+                    <p>Both were 12 weeks long, full-time, and remote based.</p>
+                </article>
+
+                <article>
+                    <h3>WHEN I'M NOT INDULGING IN ALL THINGS DESIGN + FUN FACTS</h3>
+                    <article id="funFacts"><span>/HATE/ - This is how to pronounce my last name.</p></span>
+
+                        <p>Yeah, it sounds pretty sinister unless you see how it is spelled, and hardly anybody goes
+                            with that as their first guess.<br />
+                        <p>No, it is not pronounced “height”. Yes, I'm sure. (This was an actual rebuttal I once received as to how to pronounce <em>my</em> name).</p>
+
+                        <p>The “a-i” causes the emphasis to be placed on the “a” sound, as in “straight”...<br/> 
+                            Haight.</p>
+                        </p>
+
+                        <h3>THINGS I LOVE AND THAT I'M PROUD ABOUT</h3>
+                        <ul>
+                            <li>Pug named Kevin <em>- a cool dude</em></li>
+                            <li>Cat named Birdie <em>- also cool, but stinks</em></li>
+                            <li>Married to best friend <em>- 10 years+</em></li>
+                            <li>Former Rock Climbing coach <em>- Life Time Fitness</em></li>
+                        </ul>
+
+                        <p>Want to chat about what I could do for you or what makes my pug Kevin so cool?</p>
+
+                        <p>Connect with me!</p>
+                        <div id="linkedin"><span><a href="https://www.linkedin.com/in/athaight/">LinkedIn</a></span></div>
+                        <div id="email"><span><a href="mailto:haight.haight@gmail.com">haight.haight@gmail.com</a></span>
+                        </div>
+                        </p>
+                    </article>
+
+            </div>
+        </div>
+    </main>
+
+    <div id="topButton">top</div>
+
+    <footer>
+        <img src="./assets/images/socialLogos/LinkedIn.png" alt="">
+        <img src="./assets/images/socialLogos/Medium.png" alt="">
+        <img src="./assets/images/socialLogos/Twitter.png" alt="">
+        <img src="./assets/images/socialLogos/Instagram.png" alt="">
+    </footer>
+
+    <script>
+        function showButton() {
+      
+      
+      var button  = $('#topButton'), //button that scrolls user to top
+          view = $(window),
+          timeoutKey = -1;
+      
+      $(document).on('scroll', function() {
+          if(timeoutKey) {
+              window.clearTimeout(timeoutKey);
+          }
+          timeoutKey = window.setTimeout(function(){
+      
+              if (view.scrollTop() < 100) {
+                  button.fadeOut();
+              }
+              else {
+                  button.fadeIn();
+              }
+          }, 100);
+      });
+      }
+      
+      $('#topButton').on('click', function(){
+      $('html, body').stop().animate({
+          scrollTop: 0
+      }, 500, 'linear');
+      return false;
+      });
+      
+      //call function on document ready
+      $(function(){
+      showButton();
+      });
+      </script>
+</body>
+
+</html>

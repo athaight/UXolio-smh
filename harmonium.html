@@ -8,14 +8,135 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet" />
     <title>AH - Harmonium</title>
     <style>
+        article>h3 {
+            font-weight: 500;
+        }
+
         body {
             margin: 0;
+        }
+
+        body>header {
+            margin: 2em 15em;
+        }
+
+        body>header div {
+            justify-content: space-between;
+        }
+
+        body>footer {
+            margin: 0;
+            width: 100;
+        }
+
+        main {
+            margin: 2em 15em;
+        }
+
+        #harmoniumBody > img {
+            filter: drop-shadow(-24px 24px 14px rgba(34, 34, 34, 0.473));
+            padding: 2em;
+        }
+
+        #article-1-affinity>p {
+            width: 800px;
+            margin-bottom: 4em;
+        }
+
+        #article-2-research {
+            width: 800px;
+            align-self: flex-start;
+            margin-bottom: 2em;
+        }
+
+        #article-3-qualitative {
+            width: 800px;
+            align-self: flex-start;
+            margin-bottom: 2em;
+        }
+
+        #article-4-style {
+            width: 800px;
+            align-self: flex-start;
+            margin-bottom: 2em;
+        }
+
+        #article-5-assets {
+            width: 800px;
+            align-self: flex-start;
+            margin-bottom: 2em;
+        }
+
+        #article-6-wireframes {
+            width: 800px;
+            align-self: flex-start;
+            margin-bottom: 2em;
+        }
+
+        #article-8-hiFi {
+            width: 800px;
+            align-self: flex-start;
+            margin-bottom: 2em;
+        }
+
+        #desktop {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            display: block;
+        }
+
+        #mobile {
+            display: none;
+        }
+
+
+        #design-thinking-horizontal {
+            display: block;
+            margin-top: 2em;
+        }
+
+        #design-thinking-vertical {
+            display: none;
+        }
+
+        #first-section {
+            align-self: flex-start;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: .8fr 1fr;
+            gap: 2em;
+            margin-top: 4em;
+            margin-bottom: 8em;
+        }
+
+        #first-section>h2 {
+            max-width: 800px;
+            align-self: flex-start;
+            margin-left: 6em;
+            grid-column: span 2;
+        }
+
+        #first-section-p {
+            display: flex;
+            grid-column: span 3;
+            gap: 1em;
+            margin-top: 2em;
+        }
+
+        #first-section-image {
+            justify-self: center;
+
         }
 
         #harmoniumBody {
@@ -23,28 +144,35 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin: 5em 17em;
+            margin: 0em;
         }
 
         #harmoniumBody>img {
             margin: 5em;
+            padding: 1em;
         }
 
         #harmoniumHeader {
             display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            margin-top: 10em;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin: 5em 0 1em 0;
+        }
+
+        #harmoniumHeader h4 {
+            margin-left: 9em;
         }
 
         #harmoniumHeader>img {
-            width: 1120px;
+            max-width: 250%;
+            justify-self: center;
         }
 
         #harmoniumFooterImage {
             margin-top: 10em;
             width: 400px;
+            filter: drop-shadow(-24px 24px 14px rgba(34, 34, 34, 0.473))
         }
 
         #harmoniumFooterLogo {
@@ -53,112 +181,381 @@
 
         #sectionHeader {
             font-weight: 500;
-            justify-self: flex-start;
-            align-self: flex-start;
-            margin: 7em 0 -.2em 0;
+
+            margin: 8em 0 -.2em 0;
+        }
+
+        #topButton {
+            background-color: #ec5e5e;
+            width: 3%;
+            padding: .5em;
+            margin-top: 5em;
+            color: #deddd3;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 500px) {
+
+            html {
+                font-size: 16px;
+            }
+
+            body>header {
+                margin: 0;
+            }
+
+            body>header div {
+                margin: 2em auto;
+                justify-content: center;
+            }
+
+            body>header img {
+                margin: 0 2em 0 0;
+                width: 33.3%;
+            }
+
+            embed {
+                display: none;
+            }
+
+            main {
+                margin: 2em;
+            }
+
+            footer {
+                height: 200px;
+            }
+
+            button {
+                background-color: #291A71;
+                padding: .5em 1em;
+                border-radius: .8em;
+                color: white;
+                border: none;
+                transition: .5s;
+                margin-bottom: -8em;
+            }
+
+            button:hover {
+                background-color: #b8509e;
+                color: white;
+                filter: drop-shadow(-8px 8px 8px rgba(34, 34, 34, 0.473)); 
+            }
+
+            #desktop {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                display: none;
+            }
+
+            #mobile {
+                display: block;
+            }
+
+            #harmoniumBody > img {
+            filter: drop-shadow(-8px 8px 8px rgba(34, 34, 34, 0.473));
+            padding: 1em;
+        }
+
+
+            #harmoniumHeader {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 4em 0 0 0;
+
+            }
+
+            #harmoniumHeader>img {
+                width: 350px;
+            }
+
+            #harmoniumHeader>h4 {
+                margin: 2em 0 0 0;
+            }
+
+
+            #harmoniumBody {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                margin: 2em 2em;
+            }
+
+            #harmoniumFooterImage {
+                margin-top: 10em;
+                width: 230px;
+                filter: drop-shadow(-8px 8px 8px rgba(34, 34, 34, 0.473))
+            }
+
+            #harmoniumFooterLogo {
+                width: 200px;
+                margin-top: 2em;
+            }
+
+            #topButton {
+                background-color: #ec5e5e;
+                width: 15%;
+                padding: .5em 1;
+                margin-top: 5em;
+                color: #deddd3;
+                cursor: pointer;
+                text-align: right;
+            }
+
+            #first-section {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #first-section>h2 {
+                margin-left: 0em;
+                margin-top: 0;
+                align-self: center;
+                justify-self: center;
+            }
+
+            #first-section-image {
+                width: 100%;
+                justify-self: center;
+
+            }
+
+            #first-section-p {
+                display: flex;
+                flex-direction: column;
+            }
+
+
+            #design-thinking-horizontal {
+                display: none;
+                margin-top: 2em;
+            }
+
+            #design-thinking-vertical {
+                display: block;
+                height: 100%;
+                width: 40%;
+                align-self: center;
+                justify-self: center;
+            }
+
+            #article-1-affinity>p {
+                width: fit-content;
+                margin-bottom: 4em;
+            }
+
+            #article-2-research {
+                width: fit-content;
+                align-self: flex-start;
+                margin-bottom: 2em;
+            }
+
+            #article-3-qualitative {
+                width: fit-content;
+                align-self: flex-start;
+                margin-bottom: 2em;
+            }
+
+            #article-4-style {
+                width: fit-content;
+                align-self: flex-start;
+                margin-bottom: 2em;
+            }
+
+            #article-5-assets {
+                width: fit-content;
+                align-self: flex-start;
+                margin-bottom: 2em;
+            }
+
+            #article-6-wireframes {
+                width: fit-content;
+                align-self: flex-start;
+                margin-bottom: 2em;
+            }
+
+            #article-8-hiFi {
+                width: fit-content;
+                align-self: flex-start;
+                margin-bottom: 2em;
+            }
+
+            #harmoniumBody>img {
+                margin: 0em;
+            }
+
+            #harmoniumFooterImage {
+                margin-top: 10em;
+                width: 400px;
+                align-self: center;
+            }
+
+            #harmoniumFooterLogo {
+                width: 300px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <header>
+    <header id="desktop">
         <div>
-            <a href="/"><img src="/assets/images/darkLogo.png" alt="Andrew Haight logo" /></a>
+            <a href="/"><img src="/assets/images/Logos/darkLogo.png" alt="Andrew Haight logo" /></a>
             <nav>
                 <ul>
+                    <li><a href="/work.html">WORK</a></li>
                     <li><a href="/">HOME</a></li>
                     <li><a href="/about.html">ABOUT</a></li>
-                    <li><a href="#">RESUME</a></li>
+                    <li><a href="./resume.html">RESUME</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <header id="mobile">
+        <div>
+            <nav>
+                <ul>
+                    <a href="/"><img src="/assets/images/Logos/darkLogo.png" alt="Andrew Haight logo" /></a>
+                    <li><a href="/work.html">WORK</a></li>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/about.html">ABOUT</a></li>
+                    <li><a href="./resume.html">RESUME</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
         <div id="harmoniumHeader">
-            <img src="./assets/images/harmonium/harmoniumLogoBIG.png" alt="">
+            <img class="animate__animated animate__fadeIn" src="./assets/images/harmonium/harmoniumLogoBIG.png" alt="">
+            <h4 class="animate__animated animate__slideInLeft">Mental Health Advocacy in the Workplace</h4>
         </div>
 
         <div id="harmoniumBody">
-            <p>Busey ipsum dolor sit amet. The magic Indian is a mysterious spiritual force, and we're going to
-                Cathedral Rock, and that's the vortex of the heart.It's OK to get Rib-grease on your face, because
-                you're allowing people to see that you're proud of these ribs.When you get lost in your imaginatory
-                vagueness, your foresight will become a nimble vagrant.
-
-                It's good to yell at people and tell people that you're from Tennesee, so that way you'll be safe.It's
-                OK to get Rib-grease on your face, because you're allowing people to see that you're proud of these
-                ribs.Listen to the silence. And when the silence is deafening, you're in the center of your own
-                universe.
-            </p>
-            <img src="./assets/images/harmonium/Girl Smiling Circle.png" alt="">
-            <p>Busey ipsum dolor sit amet. The magic Indian is a mysterious spiritual force, and we're going to
-                Cathedral Rock, and that's the vortex of the heart.It's OK to get Rib-grease on your face, because
-                you're allowing people to see that you're proud of these ribs.When you get lost in your imaginatory
-                vagueness, your foresight will become a nimble vagrant.
-            </p>
-
-            <h1 id="sectionHeader">AFFINITY DIAGRAMS</h1>
-            <p>Busey ipsum dolor sit amet. The magic Indian is a mysterious spiritual force, and we're going to
-                Cathedral Rock, and that's the vortex of the heart.It's OK to get Rib-grease on your face, because
-                you're allowing people to see that you're proud of these ribs.When you get lost in your imaginatory
-                vagueness, your foresight will become a nimble vagrant.
-            </p>
-            <img src="./assets/images/harmonium/afinityDiagrams.png" alt="">
-
-            <h1 id="sectionHeader">RESEARCH PLAN</h1>
-            <p>Busey ipsum dolor sit amet. The magic Indian is a mysterious spiritual force, and we're going to
-                Cathedral Rock, and that's the vortex of the heart.It's OK to get Rib-grease on your face, because
-                you're allowing people to see that you're proud of these ribs.When you get lost in your imaginatory
-                vagueness, your foresight will become a nimble vagrant.
-            </p>
+            <div id="first-section">
+                <h2>We created Harmonium because we each shared stories about struggling with mental health in the
+                    workplace.
+                </h2>
+                <img id="first-section-image" class="animate__animated animate__fadeIn"
+                    src="./assets/images/harmonium/Girl Smiling Circle.png" alt="">
+                <div id="first-section-p">
+                    <p>In our conversations we discovered that we all had a lot of common interests but one thing came
+                        up
+                        that
+                        resonated with each of us pretty deeply: we've all had past jobs that were incredibly taxing on
+                        our
+                        mental health and in which we felt a huge lack of concern or care from our employers regarding
+                        our
+                        mental health or well being.
+                    </p>
+                    <p>Our approach utilized the design thinking methodology and began with a brainstorming session
+                        where we
+                        presented an important question which we could keep present throughout the process: "Why do we
+                        care
+                        about mental health?"
+                    </p>
+                    <p>This is a passionate subject for each of us and one that we felt would
+                        be
+                        very impactful to address, thus the foundation of Harmonium was set and we had our direction.
+                    </p>
+                </div>
+            </div>
+            <div id="design-thinking-horizontal">
+                <img src="./assets/images/harmonium/design-thinking-horizontal.png" alt="">
+            </div>
+            <div id="design-thinking-vertical">
+                <img src="./assets/images/harmonium/design-thinking-vertical.png" alt="">
+            </div>
+            <article id="article-1-affinity">
+                <h1 id="sectionHeader">AFFINITY DIAGRAMS</h1>
+                <h3>What were we thinking?</h3>
+                <p>A great tool we used during this early stage was an Affinity Diagram. This helped us to generate
+                    ideas
+                    and organize them into common categories so we could analyze and choose between them. Another
+                    benefit reaped by this tool was seeing that we really .
+                </p>
+                <img id="affinityDiagrams" src="./assets/images/harmonium/afinityDiagrams.png" alt="">
+            </article>
+            <article id="article-2-research">
+                <h1 id="sectionHeader">RESEARCH PLAN</h1>
+                <h3>5 Qualitative Interviews </h3>
+                <p>After deciding that our product would take us in the direction of a company that is focused on mental
+                    health of individuals in the workplace, we started our research plan. This would allow us explore
+                    how
+                    employees' mental wellbeing is affected by the workplace and would clarify what services and
+                    programs we could provide.
+                </p>
+                <p>We conducted 5 qualitative interviews and coded the results to search for patterns and themes. We
+                    found several common patterns that included themes of tangible and intangible obstacles, lack of
+                    managerial support, personal deterrents, and a desire for workplace improvements.
+                </p>
+            </article>
             <embed src="./assets/Research.pdf#toolbar=0" type="application/pdf" width="100%" height="600px" />
-
-            <h1 id="sectionHeader">QUALITATIVE ANALYSIS</h1>
-            <p>Busey ipsum dolor sit amet. The magic Indian is a mysterious spiritual force, and we're going to
-                Cathedral Rock, and that's the vortex of the heart.It's OK to get Rib-grease on your face, because
-                you're allowing people to see that you're proud of these ribs.When you get lost in your imaginatory
-                vagueness, your foresight will become a nimble vagrant.
-            </p>
+            <a href="./assets/Research.pdf" target="__blank"><button>See the Plan Summary</button></a>
+            <article id="article-3-qualitative">
+                <h1 id="sectionHeader">QUALITATIVE ANALYSIS</h1>
+                <h3>Quantitative Survey | 11 Questions | 86 responses </h3>
+                <p>Following our qualitative interviews we created a quantitative survey that remained open for four
+                    days and was promoted through social media. We also reached out to everyone we personally knew
+                    asking them to take it. In the end we received 86 responses.
+                </p>
+                <p>The data showed that 98.8% of respondents agreed that there was an obvious stigma around mental
+                    health being openly discussed or addressed in the workplace, but believed that mental health is an
+                    important issue and would like to see resources and support.
+                </p>
+                <p>The data showed that the true issue is the stigma surrounding mental health in the workplace, and
+                    without addressing that directly any application or training program we could develop would become
+                    just another drop in a large bucket. Our product is one of advocacy for the destigmatization and
+                    encouragement of mental wellbeing in the workplace. We can achieve this by providing a site that
+                    organizes and provides resources that help our advocacy and that make it easy for people to learn
+                    and seek help.</p>
+            </article>
             <embed src="./assets/Quantitative.pdf" type="application/pdf" width="100%" height="600px" />
-
-            <h1 id="sectionHeader">STYLE GUIDE</h1>
-            <p>Busey ipsum dolor sit amet. The magic Indian is a mysterious spiritual force, and we're going to
-                Cathedral Rock, and that's the vortex of the heart.It's OK to get Rib-grease on your face, because
-                you're allowing people to see that you're proud of these ribs.When you get lost in your imaginatory
-                vagueness, your foresight will become a nimble vagrant.
-            </p>
+            <a href="./assets/Quantitative.pdf" target="__blank"><button>See the Analysis Summary</button></a>
+            <article id="article-4-style">
+                <h1 id="sectionHeader">STYLE GUIDE</h1>
+                <h3>Building a brand</h3>
+                <p>With our users in mind we began collecting images, fonts, and colors that each of us felt represented the way we felt Harmonium should feel. To our surprise, we all contributed images that consisted of round objects and archways, soft colors and rounded fonts.
+                </p>
+            </article>
             <embed src="./assets/StyleGuide.pdf" type="application/pdf" width="100%" height="600px" />
-
-            <h1 id="sectionHeader">SITE ASSETS - FIGMA</h1>
-            <p>Busey ipsum dolor sit amet. The magic Indian is a mysterious spiritual force, and we're going to
-                Cathedral Rock, and that's the vortex of the heart.It's OK to get Rib-grease on your face, because
-                you're allowing people to see that you're proud of these ribs.When you get lost in your imaginatory
-                vagueness, your foresight will become a nimble vagrant.
-            </p>
+            <a href="./assets/StyleGuide.pdf" target="__blank"><button>See the Style Guide</button></a>
+            <article id="article-5-assets">
+                <h1 id="sectionHeader">SITE ASSETS - FIGMA</h1>
+                <p>Helping with consistency through our site are digital the assets I created in Figma. We wanted a character that could represent Harmonium as well as objects like plants, clouds, and pill shapes.
+                </p>
+            </article>
             <img src="./assets/images/harmonium/Assets.png" alt="">
-
-            <h1 id="sectionHeader">WIREFRAMES - FIGMA</h1>
-            <p>Busey ipsum dolor sit amet. The magic Indian is a mysterious spiritual force, and we're going to
-                Cathedral Rock, and that's the vortex of the heart.It's OK to get Rib-grease on your face, because
-                you're allowing people to see that you're proud of these ribs.When you get lost in your imaginatory
-                vagueness, your foresight will become a nimble vagrant.
-            </p>
+            <article id="article-6-wireframes">
+                <h1 id="sectionHeader">WIREFRAMES - FIGMA</h1>
+                <h3>Laying it out</h3>
+                <p>Using the golden ratio and the rule of thirds to create our wireframes, we layed out where our images, Call To Actions, and text would go.
+                </p>
+            </article>
             <img src="./assets/images/harmonium/Harmonium wireframes.png" alt="">
+            <article id="article-6-wireframes">
 
-            <p>Busey ipsum dolor sit amet. The magic Indian is a mysterious spiritual force, and we're going to
-                Cathedral Rock, and that's the vortex of the heart.It's OK to get Rib-grease on your face, because
-                you're allowing people to see that you're proud of these ribs.When you get lost in your imaginatory
-                vagueness, your foresight will become a nimble vagrant.
-            </p>
+                <p>Wireframes became our first high fidelity site mock-ups.
+                </p>
+            </article>
             <img src="./assets/images/harmonium/Harmonium wire to hifi.png" alt="">
-
-            <h1 id="sectionHeader">HIGH RESOLUTION SITE MOCKUP - FIGMA</h1>
-            <p>Busey ipsum dolor sit amet. The magic Indian is a mysterious spiritual force, and we're going to
-                Cathedral Rock, and that's the vortex of the heart.It's OK to get Rib-grease on your face, because
-                you're allowing people to see that you're proud of these ribs.When you get lost in your imaginatory
-                vagueness, your foresight will become a nimble vagrant.
-            </p>
+            <article id="article-8-hiFi">
+                <h1 id="sectionHeader">HIGH FIDELITY SITE MOCKUP - FIGMA</h1>
+                <p>With our first round mock-ups built we felt confident that we had a good basis to start usability testing.
+                </p>
+            </article>
             <img src="./assets/images/harmonium/Harmonium hifi pages.png" alt="">
-
+            <article id="article-9-usability">
+                <h1 id="sectionHeader">USABILITY TESTING</h1>
+                <h3>How well can users interact with our product</h3>
+                We used A/B testing to highlight issues with the site that included article placement and navigability issues.</p>
+            </article>
+            <img src="./assets/images/harmonium/Group 88.png" alt="">
             <div id="harmoniumFooterImage">
                 <img src="./assets/images/harmonium/GirlPlants.png" alt="">
             </div>
@@ -167,13 +564,54 @@
             </div>
         </div>
     </main>
-
+    <div id="topButton">top</div>
     <footer>
-        <img src="./assets/images/socialLogos/LinkedIn.png" alt="">
-        <img src="./assets/images/socialLogos/Medium.png" alt="">
-        <img src="./assets/images/socialLogos/Twitter.png" alt="">
-        <img src="./assets/images/socialLogos/Instagram.png" alt="">
+        <a href="https://www.linkedin.com/in/athaight/" target="__blank"><img
+                src="./assets/images/socialLogos/LinkedIn.png" alt=""></a>
+        <a href="https://medium.com/@athaight" target="__blank"><img src="./assets/images/socialLogos/Medium.png"
+                alt=""></a>
+        <a href="https://twitter.com/athaight" target="__blank"><img src="./assets/images/socialLogos/Twitter.png"
+                alt=""></a>
+        <a href="https://www.instagram.com/skripptor/?hl=en" target="__blank"><img
+                src="./assets/images/socialLogos/Instagram.png" alt=""></a>
     </footer>
+
+    <script>
+        function showButton() {
+
+
+            var button = $('#topButton'), //button that scrolls user to top
+                view = $(window),
+                timeoutKey = -1;
+
+            $(document).on('scroll', function () {
+                if (timeoutKey) {
+                    window.clearTimeout(timeoutKey);
+                }
+                timeoutKey = window.setTimeout(function () {
+
+                    if (view.scrollTop() < 100) {
+                        button.fadeOut();
+                    }
+                    else {
+                        button.fadeIn();
+                    }
+                }, 100);
+            });
+        }
+
+        $('#topButton').on('click', function () {
+            $('html, body').stop().animate({
+                scrollTop: 0
+            }, 500, 'linear');
+            return false;
+        });
+
+        //call function on document ready
+        $(function () {
+            showButton();
+        });
+    </script>
 </body>
 
 </html>

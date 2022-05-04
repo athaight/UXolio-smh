@@ -9,60 +9,240 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet" />
-    <title>AH - Harmonium</title>
+    <title>AH - SuperZoo</title>
     <style>
         body {
             margin: 0;
         }
 
-        #superZooComponents {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            margin: 5em 17em;
+        main {
+            margin: 2em 13em;
+        }
+
+        main>a {
+            cursor: pointer;
+        }
+
+        main > img {
+            filter: drop-shadow(-24px 24px 14px rgba(34, 34, 34, 0.473));
+            padding: 2em;
         }
 
         #superZooBody {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 2em;
+            margin-top: 4em;
             align-items: center;
-            margin: 5em 17em;
+            justify-content: center;
         }
 
-        #superZooBody>img {
-            margin: 5em;
+        #superZooBody > img {
+            filter: drop-shadow(-24px 24px 14px rgba(34, 34, 34, 0.473));
         }
+
+        #image1 {
+            grid-area: 1 / 1;
+        }
+
+        #image2 {
+            grid-area: 1 / 2;
+        }
+
+        #image3 {
+            grid-area: 2 / 1;
+            justify-self: end;
+        }
+
+        #image4 {
+            grid-area: 2 / 2;
+            justify-self: start;
+        }
+
 
         #superZooHeader {
             display: flex;
             flex-direction: row;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             margin-top: 10em;
+            margin-left: 2em;
         }
 
-        #superZooHeader > img {
+        #superZooHeader>img {
             width: 600px;
         }
 
+        #superZoo404 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: .3fr 1fr 1fr;
+            gap: 2em;
+            margin-left: 2em;
+            margin-right: 2em;
+        }
 
+        #superZoo404>h3 {
+            grid-area: 1 / 1;
+        }
+
+        #paragraph1 {
+            grid-area: 2 / 1;
+        }
+
+        #paragraph2 {
+            grid-area: 2 / 2;
+        }
+
+        #paragraph3 {
+            grid-area: 3 / span 3;
+        }
+
+        #topButton {
+            background-color: #ec5e5e;
+            width: 3%;
+            padding: .5em;
+            margin-top: 5em;
+            color: #deddd3;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 500px) {
+
+            html {
+                font-size: 16px;
+            }
+
+            body>header {
+                margin: 0;
+            }
+
+            body>header div {
+                margin: 2em auto;
+                justify-self: center;
+            }
+
+            body>header img {
+                margin: 0 2em 0 0;
+                width: 33.3%;
+            }
+
+            main {
+                margin: 2em;
+            }
+
+            main > img {
+                filter: drop-shadow(-8px 8px 8px rgba(34, 34, 34, 0.473));
+            }
+
+            footer {
+                height: 200px;
+            }
+
+
+
+            #superZooHeader {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 4em 0em;
+            }
+
+            #superZooHeader>img {
+            width: 360px;
+            
+        }
+            
+            #superZooBody {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+               
+            }
+
+            #superZooBody > img {
+            filter: drop-shadow(-8px 8px 8px rgba(34, 34, 34, 0.473));
+        }
+
+
+            #image1 {
+                width: 70%;
+            }
+
+            #image2 {
+                width: 70%;
+            }
+
+            #image3 {
+                width: 70%;
+            }
+
+            #image4 {
+                width: 70%;
+            }
+
+            #superZoo404 {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: .1fr .5fr .5fr .5fr;
+                gap: 1em;
+                align-items: center;
+                margin-left: 3em;
+            }
+
+            #superZoo404>h3 {
+                grid-area: 1 / 1;
+                grid-column: span 3;
+                margin: 0 0 0 -2em;
+                justify-self: center;
+            }
+
+            #paragraph1 {
+                grid-area: 2 / 1;
+                width: 100%;
+            }
+
+            #paragraph2 {
+                grid-area: 3 / 1;
+            }
+
+            #paragraph3 {
+                grid-area: 4 / 1;
+            }
+
+            #topButton {
+                background-color: #ec5e5e;
+                width: 15%;
+                padding: .5em 1;
+                margin-top: 5em;
+                color: #deddd3;
+                cursor: pointer;
+                text-align: right;
+            }
+
+
+        }
     </style>
 </head>
 
 <body>
     <header>
         <div>
-            <a href="/"><img src="/assets/images/darkLogo.png" alt="Andrew Haight logo" /></a>
+            <a href="/"><img src="/assets/images/Logos/darkLogo.png" alt="Andrew Haight logo" /></a>
             <nav>
                 <ul>
+                    <li><a href="/work.html">WORK</a></li>
                     <li><a href="/">HOME</a></li>
                     <li><a href="/about.html">ABOUT</a></li>
-                    <li><a href="#">RESUME</a></li>
+                    <li><a href="./resume.html">RESUME</a></li>
                 </ul>
             </nav>
         </div>
@@ -71,21 +251,37 @@
         <div id="superZooHeader">
             <img src="./assets/images/superZoo/superZoologo.png" alt="">
         </div>
+        <div id="superZoo404">
+            <h3>What is a 404 page exactly?</h3>
+            <p id="paragraph1">A 404 page is a page most websites have, or should have, that indicates to the user that
+                the domain they
+                requested, the URL path, is null or provides no information.
+            </p>
+            <p id="paragraph2">A URL stands for Uniform Resource Locator, which is just tech-speak for a web address.
+                <br>Sometimes, web sites have pages that are broken, or had information at one time but perhaps it has been
+                moved and is no longer available.<br> A 404 page let's the user know they are at the right site but that the
+                page on the site isn't working.</p>
+            <p id="paragraph3">Created in Figma.<br> To see a working prototype all you need to do is give me a high
+                five... here<a
+                    href="https://www.figma.com/proto/xQXraBLspK2FoX1ztCzmih/Zoo-404?page-id=0%3A1&node-id=2%3A2&viewport=241%2C48%2C0.16&scaling=min-zoom&starting-point-node-id=2%3A2"
+                    target="__blank">✋</a></p>
+        </div>
+
+
+        <img src="./assets/images/superZoo/Zoo 404.png" alt="">
+
 
         <div id="superZooBody">
-            <p>Busey ipsum dolor sit amet. The magic Indian is a mysterious spiritual force, and we're going to Cathedral Rock, and that's the vortex of the heart.It's OK to get Rib-grease on your face, because you're allowing people to see that you're proud of these ribs.When you get lost in your imaginatory vagueness, your foresight will become a nimble vagrant.
-            </p>
-            <img src="./assets/images/superZoo/Zoo 404.png" alt="">
-            <div id="superZooComponents">
-                <img src="./assets/images/superZoo/Get ticket form.png" alt="">
-                <img src="./assets/images/superZoo/Get ticket form selected.png" alt="">
-            </div>
-            <div id="superZooComponents">
-            <img src="./assets/images/superZoo/Location Dropdown.png" alt="">
-            <img src="./assets/images/superZoo/Navigation Dropdown.png" alt="">
+            <img id="image1" src="./assets/images/superZoo/Get ticket form.png" alt="">
+            <img id="image2" src="./assets/images/superZoo/Get ticket form selected.png" alt="">
+            <img id="image3" src="./assets/images/superZoo/Location Dropdown.png" alt="">
+            <img id="image4" src="./assets/images/superZoo/Navigation Dropdown.png" alt="">
         </div>
-        </div>
+
     </main>
+
+
+    <div id="topButton">top</div>
 
     <footer>
         <img src="./assets/images/socialLogos/LinkedIn.png" alt="">
@@ -93,6 +289,44 @@
         <img src="./assets/images/socialLogos/Twitter.png" alt="">
         <img src="./assets/images/socialLogos/Instagram.png" alt="">
     </footer>
+
+
+    <script>
+        function showButton() {
+
+
+            var button = $('#topButton'), //button that scrolls user to top
+                view = $(window),
+                timeoutKey = -1;
+
+            $(document).on('scroll', function () {
+                if (timeoutKey) {
+                    window.clearTimeout(timeoutKey);
+                }
+                timeoutKey = window.setTimeout(function () {
+
+                    if (view.scrollTop() < 100) {
+                        button.fadeOut();
+                    }
+                    else {
+                        button.fadeIn();
+                    }
+                }, 100);
+            });
+        }
+
+        $('#topButton').on('click', function () {
+            $('html, body').stop().animate({
+                scrollTop: 0
+            }, 500, 'linear');
+            return false;
+        });
+
+        //call function on document ready
+        $(function () {
+            showButton();
+        });
+    </script>
 </body>
 
 </html>

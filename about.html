@@ -5,21 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Andrew Haight</title>
+    <title>AH - About</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link
-    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet" />
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
     <style>
+        body {
+            background-color: white;
+        }
+
+        body>header {
+            margin-left: 15em;
+            margin-right: 15em;
+            align-items: flex-end;
+        }
+
+        footer {
+            margin-top: 0;
+            height: 200px;
+        }
 
         hr {
             display: block;
             height: 1px;
             border: 0;
-            border-top: 2px solid #222;
+            border-top: 2px solid white;
             margin: -1.5em 0 0 0;
             padding-bottom: 2em;
         }
@@ -28,17 +45,129 @@
             font-weight: 700;
         }
 
+        #interaptLink {
+            color: white;
+        }
+
+        #interaptLink:hover {
+            color: #ec5e5e;
+        }
+
+        #uofalink {
+            color: white;
+        }
+
+        #uofalink:hover {
+            color: #ec5e5e;
+        }
+
+        #dlIcon {
+            width: 20px;
+            height: 20px;
+            opacity: .5;
+            margin-left: .5em;
+        }
+
+        #dlIcon:hover {
+            opacity: 1;
+        }
+
+        #email span a {
+            color: #b48400;
+        }
+
+        #email span a:hover {
+            color: #ec5e5e;
+        }
+
         #funFacts span {
             font-weight: 700;
         }
 
         #firstSection {
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            margin: 0 17em 0 17em;
+            background-color: #222;
+            color: white;
+            width: 100%;
+            z-index: 99;
             /* gap: 13em; */
+        }
+
+        #hpIndigoBlock {
+                display: flex;
+                flex-direction: row;
+            }
+
+        #hpIndigo {
+            min-width: 550px;
+            width: 600px;
+            margin: 2em 0 0 0em;
+            padding-left: 4em;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        #illustrationButton {
+            grid-area: 3 / 2;
+            justify-self: center;
+        }
+
+        #illustrationButton>a button {
+            border: solid white 2px;
+            padding: 2em;
+            cursor: pointer;
+            
+        }
+
+        #illustrationButton>a button {
+            background-color: transparent;
+            color: white;
+
+        }
+
+        #illustrationButton>p {
+            display: none;
+            margin-top: 8em;
+            width: 200px;
+            text-align: right;
+        }
+
+        #iMacPug {
+            filter: drop-shadow(-10px 0px 5px rgb(22, 22, 22));
+        }
+
+        #iMacwireframe {
+            filter: drop-shadow(-10px 0px 5px rgb(22, 22, 22));
+        }
+
+        #linkedin span a {
+            color: #b48400;
+        }
+
+        #linkedin span a:hover {
+            color: #ec5e5e;
+        }
+
+        #mainBG {
+            width: 100%;
+            height: 500px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: flex-end;
+        }
+
+        #mainBG>img {
+            width: 400px;
+            z-index: 0;
+        }
+
+        #mainBG>h1 {
+            align-self: center;
+            justify-self: start;
         }
 
         #secondSection {
@@ -51,30 +180,57 @@
             margin-top: 4em;
         }
 
-        #secondSectionText > h1 {
-           font-weight: 600;
-        }
-
-        #mainBG {
-            background-image: url('./assets/images/dottedBg.png');
-            background-size: cover;
-            background-repeat: no-repeat;
+        #topButton {
+            background-color: #222;
             width: 100%;
-            height: 500px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            padding: .5em;
+            color: #deddd3;
+            cursor: pointer;
+            transition: 3s ease-out;
+            text-align: center;
         }
 
-        #mainBG > h1 {
-            margin: 0 8.5em 0 8.5em;
+        #topButton:hover {
+            color: rgba(255, 0, 0, .8);
+            background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%),
+                linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(0, 255, 0, 0) 70.71%),
+                linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
+        }
+
+        #secondSectionText>h1 {
+            font-weight: 600;
         }
 
         #tldr {
             display: flex;
             flex-direction: column;
-            margin: 4em 17em;
+            margin: 4em 15em;
+        }
+
+        #kevinImage {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+
+        }
+
+        #kevinImage>img {
+            grid-area: 1 / 2;
+            justify-self: end;
+            align-self: end;
+            padding-top: 1.5em;
+        }
+
+        #kevinImage>#kevinImageText {
+            grid-area: 1 / 1;
+        }
+
+        #meCutOut1 {
+            display: block;
+        }
+
+        #meCutOut2 {
+            display: none;
         }
 
         .largerText {
@@ -86,126 +242,1049 @@
             font-size: 20px;
         }
 
+        /* SECTION 4 - QUOTE */
+
+        #section4Quote {
+            display: grid;
+            grid-template-columns: .5fr 1fr .5fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            background-color: #222;
+            color: white;
+            padding: 0em 0;
+        }
+
+        #section4QuoteMark1 {
+            grid-area: 2 / 2;
+            text-align: center;
+            align-self: center;
+        }
+
+        #section4Quote>p {
+            grid-area: 3 / 2;
+        }
+
+        #section4QuoteMark2 {
+            grid-area: 4 / 2;
+            text-align: center;
+            align-self: center;
+        }
+
+        #section4QuoteAuthor {
+            grid-area: 5 / 3;
+        }
+
+
+        /* SECTION 5 - SKILLS */
+
+        #section5Skills {
+            background-image: url("assets/images/dottedBg.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: grid;
+            background-color: white;
+            background-position: center;
+            color: #222;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            margin: 0em;
+            padding: 4em 15em;
+        }
+
+        #section5SkillsImage {
+            grid-area: 1 / 1;
+            align-self: center;
+            justify-self: center;
+            padding: 2em 6em;
+        }
+
+        #section5SkillsText {
+            grid-area: 1 / 2;
+            padding: 0 4em;
+            align-self: center;
+            justify-self: center;
+        }
+
+        #section5SkillsText>hr {
+            width: 800px;
+        }
+
+
+        /* SECTION 6 - section6EXPERTISE */
+
+        #section6Expertise {
+            background-color: white;
+            color: #222;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: .1fr 1fr 1fr;
+            padding: 10em 15em;
+            transition: .3s ease-out;
+        }
+
+
+        #section6ExpertiseText {
+            grid-row: 2;
+            grid-column: 1 / span 3;
+            display: block;
+            transition: .3s ease-out;
+        }
+
+        #section6Buttons {
+            grid-area: 1 / 1;
+            display: flex;
+            flex-direction: column;
+            align-self: start;
+            width: 400px;
+            gap: 1em;
+
+        }
+
+        #section6Buttons>h1 {
+            margin: .3em 0 0 0;
+            padding: 0;
+            grid-area: 1/1;
+        }
+
+        #section6Button {
+            background-color: white;
+            border: 1px solid red;
+            color: red;
+            transition: .3s ease-out;
+            padding: .5em 1em;
+            display: none;
+        }
+
+        #section6Button:hover {
+            background-color: red;
+            color: white;
+            box-shadow: -5px 5px 5px rgba(255, 0, 0, 0.418);
+        }
+
+        #section6List1 {
+            padding-left: 0;
+            min-width: 160px;
+            z-index: 1;
+            grid-area: 3 / 1;
+            display: block;
+            transition: .3s ease-out;
+        }
+
+        #section6List2 {
+            padding-left: 0;
+            min-width: 160px;
+            z-index: 2;
+            grid-area: 3 / 2;
+            display: block;
+            transition: .3s ease-out;
+        }
+
+        #section6List3 {
+            padding-left: 0em;
+            min-width: 160px;
+            z-index: 1;
+            grid-area: 3 / 3;
+            display: block;
+        }
+
+        #section7Process {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            grid-template-rows: 1fr;
+            padding: 4em 15em;
+            background-color: white;
+            color: #222;
+        }
+
+        #section7Process>h1 {
+            grid-area: 1 / 1;
+        }
+
+        #section7ProcessText {
+            grid-area: 2 / 1;
+
+        }
+
+        #section7ProcessText>p {
+            padding: 0em;
+            margin: 0 0 0 0;
+        }
+
+        #section7Image {
+            grid-area: 2 / 2;
+            align-self: start;
+            justify-self: center;
+
+        }
+
+        #section7Image img {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #section8UX {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: .3fr 1fr;
+            justify-content: center;
+            align-items: start;
+            gap: 4em;
+            padding: 4em 15em;
+        }
+
+        #section8hr {
+            grid-area: 1 / 1;
+            width: 400px;
+
+        }
+
+        #section8Image {
+            grid-area: 1 / 2;
+            margin-top: 8em;
+        }
+
+        #section8Text {
+            grid-area: 2 / 1;
+            width: 500px;
+
+        }
+
+        #section9UI {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            margin: -25em 15em 4em 15em;
+            gap: 4em;
+        }
+
+        #section9hr {
+            grid-area: 1 / 1;
+            width: 500px;
+        }
+
+        #section9Image {
+            grid-area: 2 / 2;
+        }
+
+        #section9Text {
+            grid-area: 2 / 1;
+            width: 500px;
+
+        }
+
+        #section10DigitalAsset {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            margin: 4em 15em;
+            gap: 4em;
+        }
+
+        #section10hr {
+            grid-area: 1 / 1;
+            width: 500px;
+
+        }
+
+        #section10Image {
+            grid-area: 2 / 2;
+        }
+
+        #section10Text {
+            grid-area: 2 / 1;
+            width: 500px;
+
+        }
+
+        #section11PersonalArt {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: .3fr 1fr 1fr;
+            margin: 4em 15em 8em 15em;
+            gap: 4em;
+        }
+
+        #section11hr {
+            grid-area: 1 / 1;
+            width: 500px;
+
+        }
+
+        #section11Image {
+            grid-area: 2 / 2;
+            filter: drop-shadow(-10px 0px 5px rgb(22, 22, 22));
+        }
+
+        #section11Text {
+            grid-area: 2 / 1;
+            width: 500px;
+
+        }
+
+        @media screen and (max-width: 500px) {
+            html {
+                font-size: 16px;
+            }
+
+
+            body>header {
+                margin: 0;
+            }
+
+            body>header img {
+               
+                width: 58%;
+            }
+
+
+            body>header div {
+                margin: 1em auto;
+            }
+
+            #hpIndigoBlock {
+                display: flex;
+                flex-direction: column;
+            }
+
+        #hpIndigo {
+            min-width: 50px;
+            width: fit-content;
+            margin: 2em 0 0 0em;
+            padding-left: 0em;
+            font-size: 16px;
+            text-align: center;
+        }
+
+            #top img {
+                margin: 0;
+            }
+
+            #mainBG {
+                flex-direction: column;
+                height: auto;
+                margin-top: 3em;
+            }
+
+            #mainBG>h1 {
+                justify-self: center;
+                align-self: center;
+                margin: 0 2em;
+            }
+
+            #meCutOut1 {
+                display: none;
+                width: 225px;
+            }
+
+            #meCutOut2 {
+                display: block;
+                width: 225px;
+            }
+
+            #firstSection {
+                margin-top: auto;
+            }
+
+            #tldr {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                margin: 0;
+                width: 80%;
+            }
+
+            #tldr>h1 {
+                text-align: center;
+                justify-self: center;
+            }
+
+          
+
+            #hpIndigo {
+                width: 225px;
+                margin: 4em auto 0 auto;
+                font-size: 16px;
+                text-align: center;
+                justify-self: center;
+            }
+
+
+            #kevinImage>#kevinImageText {
+                grid-area: 2 / 1;
+            }
+
+            #kevinImage {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                margin-top: 4em;
+                
+            }
+
+            #kevinImage>img {
+                grid-area: 1 / 1;
+                grid-column: span 3;
+                margin: 4em 0 0em 0;
+                padding: 0;
+                line-height: 0;
+                justify-self: center;
+                align-self: center;
+            }
+
+            #section6Expertise {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #section6ExpertiseText {
+                margin: 0 2em;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            #section6ExpertiseText>h3 {
+                margin: 2em 2em 1em -1em;
+
+            }
+
+            #section6Buttons>h1 {
+                margin: 0 1em;
+            }
+
+            #section6List1 {
+                justify-self: flex-start;
+                align-self: flex-start;
+                margin-left: 1em;
+            }
+
+            #section6List2 {
+                justify-self: flex-start;
+                align-self: flex-start;
+                margin-left: 1em;
+            }
+
+            #section6List3 {
+                justify-self: flex-start;
+                align-self: flex-start;
+                margin-left: 1em;
+            }
+
+            #section4Quote {
+                display: flex;
+                flex-direction: column;
+                background-color: #222;
+                color: white;
+                padding: 2em 2em;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #section7Process {
+                display: flex;
+                flex-direction: column;
+                padding: 2em;
+                background-color: white;
+                color: #222;
+            }
+
+            #section7Image {
+                margin: 2em 0;
+                align-self: center;
+                justify-self: center;
+
+            }
+
+            #section7Image>h2 {
+                margin: 0;
+                align-self: flex-start;
+                justify-self: flex-start;
+
+            }
+
+            #section8UX {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 4em;
+                margin-left: 2em;
+                margin-right: 2em;
+                margin-bottom: 2em;
+                overflow-x: hidden;
+            }
+
+            #section8hr {
+                margin: 0em 2em;
+            }
+
+            #section8hr>h1 {
+                margin: 0em 1em;
+            }
+
+            #section8Text {
+                justify-self: center;
+                align-self: center;
+                margin: 0em 2em;
+                width: 350px;
+            }
+
+            #section8Image {
+            grid-area: 1 / 2;
+            margin-top: 0em;
+            width: fit-content;
+        }
+
+            #section9UI {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-left: 2em;
+                margin-right: 2em;
+                margin-top: 2em;
+                width: 350px;
+            }
+
+            #section9Image {
+                width: 350px;
+            }
+
+            #section9Text {
+                grid-area: 2 / 1;
+                width: 350px;
+            }
+
+            #section9hr {
+            grid-area: 1 / 1;
+            width: fit-content;
+        }
+
+            #section10DigitalAsset {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-left: 2em;
+                margin-right: 2em;
+                width: 350px;
+            }
+
+            #section10hr {
+                width: 350px;
+            }
+
+            #section10Text {
+                grid-area: 2 / 1;
+                width: 350px;
+            }
+
+            #section11PersonalArt {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-left: 2em;
+                margin-right: 2em;
+                width: 350px;
+            }
+
+            #section11hr {
+                width: 350px;
+            }
+
+            #section11Text {
+                width: 350px;
+            }
+
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <div>
-            <a href="/"><img src="/assets/images/darkLogo.png" alt="Andrew Haight logo" /></a>
+        <div id="top">
+            <a href="/"><img src="/assets/images/Logos/darkLogo.png" alt="Andrew Haight logo" /></a>
             <nav>
                 <ul>
                     <li><a href="/">HOME</a></li>
-                    <li><a href="/about.html">ABOUT</a></li>
-                    <li><a href="#">RESUME</a></li>
+                    <li><a href="./work.html">WORK</a>
+                    <li><a href="./resume.html">RESUME</a>
+                        <a href="./assets/images/AndrewHaightResume.png" download>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="dlIcon">
+                                <path
+                                    d="M480 352h-133.5l-45.25 45.25C289.2 409.3 273.1 416 256 416s-33.16-6.656-45.25-18.75L165.5 352H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96C512 366.3 497.7 352 480 352zM432 456c-13.2 0-24-10.8-24-24c0-13.2 10.8-24 24-24s24 10.8 24 24C456 445.2 445.2 456 432 456zM233.4 374.6C239.6 380.9 247.8 384 256 384s16.38-3.125 22.62-9.375l128-128c12.49-12.5 12.49-32.75 0-45.25c-12.5-12.5-32.76-12.5-45.25 0L288 274.8V32c0-17.67-14.33-32-32-32C238.3 0 224 14.33 224 32v242.8L150.6 201.4c-12.49-12.5-32.75-12.5-45.25 0c-12.49 12.5-12.49 32.75 0 45.25L233.4 374.6z" />
+                            </svg>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
         <div id="mainBG">
-            <h1>As a designer I believe in advocating for users by taking an empathetical approach to design thinking,
-                and listening to feedback with the intention of truly understanding the user’s successes and challenges.
+            <h1 class="largerText animate__animated animate__slideInLeft">You want to know <em>more</em> about
+                <span><em>me?</em></span>
             </h1>
+            <img id="meCutOut1" class="" src="./assets/images/MePicCutout.png"
+                alt="">
+            <img id="meCutOut2" class="" src="./assets/images/MeProfessional.png"
+                alt="">
         </div>
         <div id="firstSection">
-            <img src="./assets/images/aboutMePhoto.png" alt="">
-            <div>
-                <h1 class="largerText">You want to know <em>more</em> about <span><em>me?</em></span></h1>
-                <p class="mediumText ">I am flattered and honored!</p>
-            </div>
-        </div>
-        <div>
-            <div id="secondSection">
-                <div id="secondSectionText">
-                    <h1>Here's the main take-aways about me</h1>
-                    <p>I am a curious person and am constantly wondering how and why things are what they are.</p>
-                    <p>My superpower is collaboration and abstract thinking.</p>
-                    <p>I believe that you need to get comfortable being uncomfortable.</p>
-                    <p>I love creativity. Since I was a little kid I’ve loved to draw & paint. I also sculpt art toys, and
-                        make music.</p>
-                    <p>With 10 years of experience in the commercial print industry I can preflight and print projects very
-                            well.</p>
-                    <p>I have completed two different 12 week, full-time boot camps: </p>
-                        <ul>
-                            <li>Full Stack Web Development - Univesity of Arizona</li>
-                            <li>UX/UI Design Immersive - Logical Imagination </li>
-                        </ul>
-                    </div>
-                    <img src="./assets/images/aboutMeKevinPhoto.png" alt="Photo of Kevin the Pug">
-            </div>
             <div id="tldr">
-                        
+
                 <h1>TL;DR</h1>
-                <hr/>
+                <hr />
 
                 <article>
                     <h3>MY BACKGROUND</h3>
-                    <p>I spent about a decade doing work in the commercial print industry. I’m fortunate to have spent
-                        time in sales and in production during my time in this arena, and I feel this has helped me to
-                        gain a great understranding of the entire print process, from client needs to product
-                        development and delivery. I began in retail sales and at the time of my departure I was the
-                        department lead for electronic print and certified to operate and perform advanced maintenance
-                        and repair on Xerox iGen and HP Indigo Digital printing presses.</p>
-                    <p>I loved being the department lead and enjoyed collaborating with other department leads on
+                    <p>I spent a decade doing work in the commercial print industry. I worked in sales at first but was
+                        more drawn to production and was able to change roles. I feel having exposure to both
+                        departments helped me to
+                        gain a great understanding of the entire print process, from client needs to product
+                        development and delivery (I was naturally UX focused without knowing it). At the time of my
+                        departure I was the
+                        Lead for Electronic Print Department and had obtained certifications to operate and perform
+                        advanced maintenance
+                        and repair on Xerox iGen and HP Indigo Digital printing presses. It was a pretty big deal.</p>
+                    <div id="hpIndigoBlock">
+                    <p>I loved being the Department Lead and enjoyed collaborating with other Department Leads on
                         projects and distributions. Although I enjoyed working with and being a part of a fast
-                        production environment, I wanted to have a more creative role and I made the decision to leave
-                        my career and began persuing a path towards design and development. I discovered UX and became
-                        excited because I knew I was entering into the perfect field for my skills and goals.</p>
+                        production environment I always wanted to have a more creative role and I eventually made the
+                        decision to leave
+                        my career so I could begin pursuing a path towards design and development. When I discovered UX
+                        I was so
+                        excited because I knew I'd be entering into the perfect field for my skills and goals.</p>
+                    <div id="hpIndigo">
+                        <img src="./assets/images/HP-indigo-7800.jpg" caption="Relocating an Hp Indigo 7800 Press"
+                            alt="">
+                        <p>Heavy maintenance on an HP Indigo 7800 Digital Printing Press</p>
+                    </div>
+                </div>
                 </article>
 
                 <article>
                     <h3>BUT WHY DESIGN?</h3>
-                    <p>I’m a creative person and a questioner who has to know the how and why of things. The foundation
-                        of UX is the user. For me, the process of discovering the user’s needs, expectations,
-                        challenges, and thier interactions is thrilling and very important for a good product. I believe
-                        a visually appeling design is only one part, but that a really well developed product comes from
+                    <p>I’m a creative person and someone who questions a lot, having to know the how and why of things.
+                        The foundation
+                        of UX is the user and the entire process the user experiences. For me, the process of
+                        discovering the user’s needs, expectations,
+                        challenges, and their interactions are the most thrilling parts, and that is very important for
+                        a good product. I believe
+                        a visually appealing design is only one part, but that a really well developed product comes
+                        from
                         true understanding of the user. Thus, users should be the main focus during design and
-                        development. </p>
+                        development.</p>
                 </article>
 
                 <article>
                     <h3>ACHIEVEMENTS TO DATE</h3>
-                    <p>Completed a Full Stack Web Development boot camp.</p>
-                    <p>Completed a UX/UI Design Immersive boot camp.</p>
-                    <p>Both were 12 weeks long and full-time. </p>
+                    <p>Completed - Full Stack Web Development boot camp through <a id="interaptLink"
+                            href="https://interapt.com/">University of Arizona.</a></p>
+                    <p>Completed - UX/UI Design Immersive boot camp through <a id="uofalink"
+                            href="https://interapt.com/">Interapt</a> and Logical Imagination.</p>
+                    <p>Both were 12 weeks long, full-time, and remote based.</p>
                 </article>
 
                 <article>
                     <h3>WHEN I'M NOT INDULGING IN ALL THINGS DESIGN + FUN FACTS</h3>
                     <article id="funFacts"><span>/HATE/ - This is how to pronounce my last name.</p></span>
+
                         <p>Yeah, it sounds pretty sinister unless you see how it is spelled, and hardly anybody goes
                             with that as their first guess.<br />
-                        <p>No it is not pronounced “height” (an actual rebuttal I once received to <em>my</em> name).
+                        <p>No, it is not pronounced “height”. Yes, I'm sure. (This was an actual rebuttal I once
+                            received as to how to pronounce <em>my</em> name).</p>
+
+                        <p>The “a-i” causes the emphasis to be placed on the “a” sound, as in “straight”...<br />
+                            Haight.</p>
                         </p>
-                        <p>The “a-i” causes the emphasis to be placed on the “a” sound, as in “straight”... Haight.</p>
-                        </p>
+
+                        <h3>THINGS I LOVE AND THAT I'M PROUD ABOUT</h3>
                         <ul>
-                            <h3>Proud About</h3>
                             <li>Pug named Kevin <em>- a cool dude</em></li>
                             <li>Cat named Birdie <em>- also cool, but stinks</em></li>
                             <li>Married to best friend <em>- 10 years+</em></li>
                             <li>Former Rock Climbing coach <em>- Life Time Fitness</em></li>
                         </ul>
-                        Want to chat about what I could do for you or what makes my pug Kevin so cool?</p>
 
-                        <p>Connect with me!</p>
-                        <div><span><a href="https://www.linkedin.com/in/athaight/">LinkedIn</a></span></div>
-                        <div><span><a href="mailto:haight.haight@gmail.com">haight.haight@gmail.com</a></span>
+                        <p>Want to chat about what I could do for you or what makes my pug Kevin so cool?</p>
+                        <div id="kevinImage">
+                            <img src="./assets/images/kevinTherapy.png" alt="Photo of Kevin the Pug">
+                            <div id="kevinImageText">
+                                <p>Connect with me!</p>
+                                <div id="linkedin"><span><a
+                                            href="https://www.linkedin.com/in/athaight/">LinkedIn</a></span></div>
+                                <div id="email"><span><a
+                                            href="mailto:andrew@athaight.com">andrew@athaight.com</a></span>
+                                </div>
+                            </div>
                         </div>
-                        </p>
                     </article>
+            </div>
 
+
+            <!-- SECTION 5 - SKILLS -->
+
+            <!-- <div id="section5Skills">
+
+            <div id="section5SkillsImage"> -->
+            <!-- <img src="./assets/images/amelie-mourichon-sv8oOQaUb-o-unsplash.jpg" alt=""> -->
+            <!-- <img src="./assets/images/Skill bars.png" alt="">
+            </div>
+
+            <div id="section5SkillsText">
+                <p>I’ve been sketching and creating with a Wacom tablet and using Abode products for over 15 years now.
+                    I love learning new programs too, like Figma for designing, and Blender3D for 3d modeling. I’ve
+                    always been good at figuring things out.
+                </p>
+            </div>
+        </div> -->
+
+
+
+            <!-- SECTION 6 - section6EXPERTISE -->
+
+            <div id="section6Expertise">
+
+
+                <div id="section6Buttons">
+                    <h1>Expertise</h1>
+                    <button onclick="softwareTechnology()" class="sectionButton1" id="section6Button">Software and
+                        Technologies</button>
+                    <button onclick="professionalUnderstanding()" class="sectionButton2"
+                        id="section6Button">Professional Understanding</button>
+                    <button class="sectionButton3" id="section6Button">Areas of Growth</button>
+                </div>
+
+                <div id="section6ExpertiseText">
+                    <h3><em>I’m going to be a bit jovial here...<br> I freaking love UX.</em></h3>
+
+                    <p>Interviews during the research process, the conversations and questioning, empathizing with
+                        someone.
+                        Those data and what they tell. Theses are things that ground me and give me all the feels.
+                    </p>
+                    <p>
+                        I love learning new skills and techniques, adding tools to the toolbox.
+                    </p>
+                    <p>
+                        For design technologies Adobe has been my go to for so long that I almost feel bad for loving
+                        FIgma
+                        so much; but, then there’s Premire Pro, Animate, Photoshop, good ol’ Illustrator... Adobe slaps
+                        the
+                        market.
+                    </p>
+                    <p>
+                        Development is so rewarding too.
+                        To see your code come to life on screen makes the heart race as if some form of magic was just
+                        cast... logical magic.
+                    </p>
+                    <p>
+                        Adaptaion is easy for me. I just like a lot of things and enjoy being helpful.
+                    </p>
+                </div>
+
+                <div class="section6List1" id="section6List1">
+                    <ul>
+                        <li>Adobe Animate</li>
+                        <li>Adobe Audition</li>
+                        <li>Adobe InDesign</li>
+                        <li>Adobe Illustrator</li>
+                        <li>Adobe Photoshop</li>
+                        <li>Adobe Premier Pro</li>
+                        <li>Blender</li>
+                        <li>CSS</li>
+                        <li>GitHub</li>
+                        <li>Figma</li>
+                        <li>Google</li>
+                        <li>Heroku</li>
+                    </ul>
+                </div>
+                <div class="section6List2" id="section6List2">
+                    <ul>
+                        <li>HTML</li>
+                        <li>JavaScript</li>
+                        <li>Microsoft Office</li>
+                        <li>Miro</li>
+                        <li>Netlify</li>
+                        <li>NodeJS</li>
+                        <li>npm</li>
+                        <li>Procreate</li>
+                        <li>ReactJS</li>
+                        <li>TailwindCSS</li>
+                        <li>VS Code</li>
+                        <li>XML</li>
+                    </ul>
+                </div>
+                <div class="section6List3" id="section6List3">
+                    <ul>
+                        <li>Agile / Scrum</li>
+                        <li>Code Refactoring</li>
+                        <li>Design Thinking</li>
+                        <li>Digital Illustration</li>
+                        <li>Information Architecture</li>
+                        <li>Interaction Design</li>
+                        <li>Responsive Design</li>
+                        <li>Traditional Illustration</li>
+                        <li>UX Research</li>
+                        <li>UX Design</li>
+                        <li>UI Development</li>
+                        <li>UX Writing</li>
+                        <li>Video editing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SECTION 4 - QUOTE -->
+
+            <div id="section4Quote">
+                <h1 id="section4QuoteMark1">"</h1>
+                <p>Andrew has an actively inquiring mind, a lively interest in the technical aspects of his work, and a
+                    need
+                    to know and learn more about the systems, techniques, facts, and concepts involved in it.
+                    <br>
+                    <br>
+                    With a strong competitive drive and an overall sense of urgency, Andrew will drive himself hard to
+                    achieve his goals.
+                </p>
+                <h1 id="section4QuoteMark2">"</h1>
+                <h5 id="section4QuoteAuthor">~Me, in third person</h5>
+            </div>
+
+            <!-- SECTION 7 - PROCESS -->
+
+            <div id="section7Process">
+                <h1>Process</h1>
+                <div id="section7Image">
+                    <h2>USERS are the focus.</h2>
+                    <img id="" src="./assets/images/userPostIt.png" alt="">
+                </div>
+                <div id="section7ProcessText">
+                    <p>
+                    <h2>
+                        Research Process - Design Thinking
+                    </h2>
+                    </p>
+
+                    <p>
+                    <h3>
+                        Emphathize
+                    </h3>
+                    Busey ipsum dolor sit amet. It's good to yell at people and tell people that you're from Tennesee,
+                    so that way you'll be safe.
+                    </p>
+                    <p>
+                    <h3>
+                        Define
+                    </h3>
+                    You ever roasted doughnuts? Have you urinated? Have you drained your bladder? Are you free? Because
+                    if you haven't it will only come out later.
+                    </p>
+                    <p>
+                    <h3>
+                        Ideate
+                    </h3>
+                    I'm giving you some information that your bodily fluids may penetrate your clothing fibre's without
+                    warning.
+                    </p>
+                    <p>
+                    <h3>
+                        Prototype
+                    </h3>
+                    The ma gic Indian is a mysterious spiritual force, and we're going to Cathedral Rock, and that's the
+                    vortex of the heart.
+                    </p>
+                    <p>
+                    <h3>
+                        Test
+                    </h3>
+                    The best way to communicate is compatible. Compatible communication is listening with open ears and
+                    an open mind, and not being fearful or judgemental about what you're hearing.
+                    </p>
+                </div>
+            </div>
+
+            <div id="section8UX">
+                <div id="section8hr">
+                    <h1>UX Research & Data Analysis</h1>
+                    <div id="section8Text">
+                        <p>
+                            The best way to communicate is compatible. Compatible communication is listening with open
+                            ears and an open mind, and not being fearful or judgemental about what you're hearing.
+                        </p>
+                    </div>
+                </div>
+                <div id="section8Image">
+                    <img id="" src="./assets/images/Group 30.png" alt="">
+                </div>
+            </div>
+
+            <div id="section9UI">
+                <div id="section9hr">
+                    <h1>UI Design & Development</h1>
+
+                </div>
+                <div id="section9Text">
+                    <p>
+                        The best way to communicate is compatible. Compatible communication is listening with open ears
+                        and an open mind, and not being fearful or judgemental about what you're hearing.
+                    </p>
+                </div>
+                <div id="section9Image">
+                    <img id="iMacwireframe" src="./assets/images/iMacwireframe.png" alt="">
+                </div>
+            </div>
+
+            <div id="section10DigitalAsset">
+                <div id="section10hr">
+                    <h1>Digital Asset Creation</h1>
+
+                </div>
+                <div id="section10Text">
+                    <p>
+                        What the heck is that?
+                    </p>
+                    <p>
+                        Digital assets are images that are drawn, mostly using digital technologies, and are used on
+                        websites and applications.
+                    </p>
+                    <p>
+                        The team needs an original image of a dog driving a car you say? I’m on it.
+                    </p>
+                </div>
+                <div id="section10Image">
+                    <img id="iMacPug" src="./assets/images/Group 37.png" alt="">
+                </div>
+            </div>
+
+
+            <div id="section11PersonalArt">
+                <div id="section11hr">
+                    <h1>Personal Illustrations</h1>
+
+                </div>
+                <div id="section11Image">
+                    <img id="" src="./assets/images/myArt/myArt.png" alt="">
+                </div>
+
+                <div id="section11Text">
+                    <p>
+                        I love aesthetics and have an affinity for surrealistic and psychadelic art that is weird and
+                        sometimes full of hyper-detail.
+                    </p>
+                    <p>
+                        Some of my favorite artists are featured in pierodicals like Juxtapoze and High-Fructose
+                        magazines. I’d love to have my art featured in a publication like those one day. Bucketlist.
+
+                    </p>
+                    <p>
+                        Most of the work I’ve produced is really weird and falls into the same category as what I’m
+                        drawn to.
+                    </p>
+                    <p>
+                        If you like this sort of art and want to see my work, don’t say I didn’t warn you.
+                    </p>
+                </div>
+                <div id="illustrationButton">
+                    <a href="./illustration.html"><button>ENTER THE MAGIC THEATER</button></a>
+                    <p>For Madmen Only</p>
+                    <p>Cost of Admission:<br>Your Mind.</p>
+                </div>
             </div>
         </div>
+
     </main>
 
+
+    <div id="topButton">top</div>
     <footer>
-        <img src="./assets/images/socialLogos/LinkedIn.png" alt="">
-        <img src="./assets/images/socialLogos/Medium.png" alt="">
-        <img src="./assets/images/socialLogos/Twitter.png" alt="">
-        <img src="./assets/images/socialLogos/Instagram.png" alt="">
+
+        <a href="https://www.linkedin.com/in/athaight/" target="__blank"><img
+                src="./assets/images/socialLogos/LinkedIn.png" alt=""></a>
+        <a href="https://medium.com/@athaight" target="__blank"><img src="./assets/images/socialLogos/Medium.png"
+                alt=""></a>
+        <a href="https://twitter.com/athaight" target="__blank"><img src="./assets/images/socialLogos/Twitter.png"
+                alt=""></a>
+        <a href="https://www.instagram.com/skripptor/?hl=en" target="__blank"><img
+                src="./assets/images/socialLogos/Instagram.png" alt=""></a>
     </footer>
+
+    <script>
+        function softwareTechnology() {
+            let blurb = document.getElementById('section6ExpertiseText');
+            let listOne = document.getElementById('section6List1');
+            let listTwo = document.getElementById('section6List2');
+
+            if (blurb.style.display === 'block') {
+                blurb.style.display = 'none';
+                listOne.style.display = 'block';
+                listTwo.style.display = 'block';
+
+            } else {
+                blurb.style.display = 'block';
+                listOne.style.display = 'none';
+                listTwo.style.display = 'none';
+            }
+
+        }
+
+        function professionalUnderstanding() {
+            let blurb = document.getElementById('section6ExpertiseText');
+            let listThree = document.getElementById('section6List3');
+
+
+            if (blurb.style.display === 'block') {
+                blurb.style.display = 'none';
+                listThree.style.display = 'block';
+
+
+            } else {
+                blurb.style.display = 'block';
+                listThree.style.display = 'none';
+
+            }
+
+        }
+
+
+
+        function showButton() {
+            var button = $('#topButton'), //button that scrolls user to top
+                view = $(window),
+                timeoutKey = -1;
+
+            $(document).on('scroll', function () {
+                if (timeoutKey) {
+                    window.clearTimeout(timeoutKey);
+                }
+                timeoutKey = window.setTimeout(function () {
+
+                    if (view.scrollTop() < 100) {
+                        button.fadeOut();
+                    }
+                    else {
+                        button.fadeIn();
+                    }
+                }, 100);
+            });
+        }
+
+        $('#topButton').on('click', function () {
+            $('html, body').stop().animate({
+                scrollTop: 0
+            }, 500, 'linear');
+            return false;
+        });
+
+        //call function on document ready
+        $(function () {
+            showButton();
+        });
+    </script>
 </body>
 
 </html>

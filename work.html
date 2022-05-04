@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <title>AH - Work</title>
+    <style>
+        #section2Work {
+            background-image: url("assets/images/dottedBg.png");
+            background-size: cover;
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            align-items: start;
+            justify-content: start;
+            margin: 2em 0em 4em 0em;
+            padding-left: 15em;
+        }
+
+        #section2Work>img {
+            justify-self: end;
+        }
+
+        #section2Text {
+            margin: 0;
+        }
+
+        #section2Text>ul {
+            list-style: none;
+            font-size: 40px;
+            margin-left: -1em;
+            transition: .5s ease-out;
+            padding-bottom: .5em;
+        }
+
+        #section2Text>ul li {
+            margin-bottom: 1em;
+            transition: .3s ease-out;
+            font-weight: 600;
+        }
+
+        #section2Text>ul li a:hover {
+            color: red;
+            cursor: pointer;
+        }
+
+        #section2Text>ul li:hover {
+            color: red;
+            cursor: pointer;
+            animation: animate__pulse;
+        }
+
+        #workBlurb {
+            padding: 6.3em 15em 0em 0;
+        }
+
+        @media screen and (max-width: 500px) {
+
+            html {
+                font-size: 16px;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body>header {
+                margin: 0;
+            }
+
+            body>header div {
+                margin: 1em auto;
+                justify-content: center;
+            }
+
+            body>header img {
+                margin: 0 2em 0 0;
+                width: 33.3%;
+            }
+
+            main { 
+                margin: 5em 0;
+            }
+            footer {
+                height: 200px;
+                margin-top: 0;
+            }
+
+            #section2Work {
+                background-image: url("assets/images/dottedBg.png");
+                background-size: cover;
+                display: flex;
+                margin: 0;
+                padding: 0 4em;
+                gap: 2em;
+            }
+
+            #section2Text>ul {
+                list-style: none;
+                font-size: 20px;
+                margin-left: -2em;
+                transition: .5s ease-out;
+                padding-bottom: .5em;
+            }
+
+            #section2Text {
+                grid-area: 1 /1;
+            }
+
+            #workBlurb {
+                padding: 6.3em 0;
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="/"><img src="/assets/images/Logos/darkLogo.png" alt="Andrew Haight logo" /></a>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">HOME</a></li>
+                    <li><a href="/about.html">ABOUT</a></li>
+                    <li><a href="./resume.html">RESUME</a>
+                        <a href="./assets/images/AndrewHaightResume.png" download>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="dlIcon">
+                                <path
+                                    d="M480 352h-133.5l-45.25 45.25C289.2 409.3 273.1 416 256 416s-33.16-6.656-45.25-18.75L165.5 352H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96C512 366.3 497.7 352 480 352zM432 456c-13.2 0-24-10.8-24-24c0-13.2 10.8-24 24-24s24 10.8 24 24C456 445.2 445.2 456 432 456zM233.4 374.6C239.6 380.9 247.8 384 256 384s16.38-3.125 22.62-9.375l128-128c12.49-12.5 12.49-32.75 0-45.25c-12.5-12.5-32.76-12.5-45.25 0L288 274.8V32c0-17.67-14.33-32-32-32C238.3 0 224 14.33 224 32v242.8L150.6 201.4c-12.49-12.5-32.75-12.5-45.25 0c-12.49 12.5-12.49 32.75 0 45.25L233.4 374.6z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+
+        <div class="square" id="section2Work">
+            <div class="square-wrapper" id="section2Text">
+                <div id="section2TextHR">
+                    <h1>Work</h1>
+                </div>
+                <ul>
+                    <li class="workLi1"><a href="./carLoan.html">
+                        Car Loan App</a></li>
+                    <li class="workLi2"><a href="./designFun.html">
+                        Design Fun</a></li>
+                    <li class="workLi3"><a href="./harmonium.html">Harmonium Case
+                            Study</a></li>
+                    <li class="workLi4"><a href="./redfin.html">
+                        Redfin Application Page</a></li>
+                    <li class="workLi5"><a href="./speedgear.html">
+                        Speedgear.com Heuristic</a></li>
+                    <li class="workLi6"><a href="./superZoo.html">Super Zoo 404
+                            Page</a></li>
+                </ul>
+            </div>
+            <div id="workBlurb">
+                <p>I like to keep a few of my most recent projects listed here and I'll cycle through them, adding and
+                    subtracting projects.</p>
+                <p></p>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <img src="./assets/images/socialLogos/LinkedIn.png" alt="">
+        <img src="./assets/images/socialLogos/Medium.png" alt="">
+        <img src="./assets/images/socialLogos/Twitter.png" alt="">
+        <img src="./assets/images/socialLogos/Instagram.png" alt="">
+    </footer>
+</body>
+
+</html>

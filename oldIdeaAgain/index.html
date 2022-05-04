@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <title>Andrew Haight</title>
+    <style>
+        #chatJoke {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            margin-top: 5em;
+        }
+
+        #chatJoke>h5 {
+            margin-top: -1em;
+            margin-right: 18em;
+        }
+
+
+        #description {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #description>p {
+            width: 500px;
+            margin-left: 1em;
+            font-weight: 600;
+        }
+
+        #dlIcon {
+            width: 20px;
+            height: 20px;
+            opacity: .5;
+            margin-left: .5em;
+        }
+
+        #dlIcon:hover {
+            opacity: 1;
+        }
+
+        #intro {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: space-between;
+            margin: -620px 17em 0 17em;
+        }
+
+        #intro h1 {
+            font-weight: 400;
+        }
+
+        #intro span {
+            font-weight: 700;
+        }
+
+        #mainBG {
+            background-image: url('./assets/images/dottedBg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 1000px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #postit {
+            margin-top: -600px;
+        }
+
+        #myArtLogo {
+            margin-bottom: -15px;
+            font-size: 94px;
+        }
+
+        #projects {
+            align-self: flex-start;
+            font-size: 10px;
+            position: absolute;
+            color: #4e777a;
+        }
+
+        #sheepLogo {
+            width: 600px;
+        }
+
+        #workBlock {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #86CBD1;
+            width: 100%;
+            height: 600px;
+            margin-top: 10em;
+            position: relative;
+            gap: 1.5em;
+        }
+
+
+        #workBlock img {
+            padding: 1em;
+            width: 400px;
+            height: 350px;
+            transition: .5s;
+        }
+
+        #workBlock img:hover {
+            transform: translateY(-8px) scale(1.08);
+            filter: drop-shadow(4px 4px 4px #4e777a);
+            
+        }
+
+        div.image p.caption {
+            position: absolute;
+            bottom: 0;
+            margin-left: 2em;
+            display: none;
+            color: #4e777a;
+        }
+
+        /* div.image:hover p.caption {
+            display: block;
+        } */
+
+        #workCircle {
+            padding: 5rem;
+            transition: all 0.5s ease-out;
+        }
+
+        #workCircle:hover {
+            transform: translateY(-2em);
+
+        }
+
+        #workDiv {
+            width: 100%;
+            height: 750px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 0 10em 0 10em;
+        }
+
+        .caption {
+            display: none;
+        }
+
+        .harmonium {
+            margin-top: 12em;
+            background-color: #DDE4FF;
+        }
+
+        .superZoo {
+            margin-top: 6em;
+            background-color: #E2DAD2;
+        }
+
+        .karateKid {
+            margin-top: 6em;
+            background-color: #C1BFCE;
+        }
+
+        .sheep {
+            margin-top: 6em;
+            background-color: #202020;
+            color: #f8f7ef;
+        }
+
+        .myArt {
+            margin-top: 6em;
+            background-color: #9DF0DD;
+        }
+
+        .myArtCircle {
+            margin-right: -80px;
+        }
+
+        @media screen and (max-width: 1380px) {
+           #chatJoke {
+               margin-left: 6em;
+           }
+            #intro {
+            margin: -620px 10em 0 11em;
+        }
+}
+
+
+@media screen and (max-width: 1200px) {
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }   
+        #chatJoke {
+           margin-left: 28rem;
+           }
+            #intro {
+            margin: -620px auto 0 auto;
+        }
+
+        #chatJoke>h5 {
+            margin-top: -1em;
+          
+        }
+
+        
+        #workBlock {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #86CBD1;
+            width: 100%;
+            height: auto;
+            margin-top: 10em;
+            position: relative;
+            gap: 1.5em;
+        }
+
+
+        #workBlock img {
+            padding: 1em;
+            width: 400px;
+            height: 350px;
+            transition: .5s;
+        }
+}
+   
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="/"><img src="/assets/images/darkLogo.png" alt="Andrew Haight logo" /></a>
+            <nav>
+                <ul>
+                    <li><a href="/about.html">ABOUT</a></li>
+                    <li><a href="/projects.html">PROJECTS</a></li>
+                    <li><a href="./resume.html">RESUME</a>
+                        <a href="./assets/images/AndrewHaightResume.png" download>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="dlIcon">
+                                <path
+                                    d="M480 352h-133.5l-45.25 45.25C289.2 409.3 273.1 416 256 416s-33.16-6.656-45.25-18.75L165.5 352H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96C512 366.3 497.7 352 480 352zM432 456c-13.2 0-24-10.8-24-24c0-13.2 10.8-24 24-24s24 10.8 24 24C456 445.2 445.2 456 432 456zM233.4 374.6C239.6 380.9 247.8 384 256 384s16.38-3.125 22.62-9.375l128-128c12.49-12.5 12.49-32.75 0-45.25c-12.5-12.5-32.76-12.5-45.25 0L288 274.8V32c0-17.67-14.33-32-32-32C238.3 0 224 14.33 224 32v242.8L150.6 201.4c-12.49-12.5-32.75-12.5-45.25 0c-12.49 12.5-12.49 32.75 0 45.25L233.4 374.6z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+
+        <div id="mainBG">
+            <div id="postit"><img src="./assets/images/userPostIt.png" alt=""></div>
+        </div>
+
+        <div id="intro">
+            <h1>HI THERE, I'M ANDREW 😎</h1>
+            <p>I'm a <span>UX Designer</span> and <span>Developer</span>.</p>
+            <p>I love advocating for users and building products that feel natural to interact with.</p>
+            <p>I believe that if you <strong>understand the user</strong>, you <strong>understand the goal.</strong></p>
+            <p>Who is the <strong>USER</strong> here?<br/>
+            That is <strong>YOU</strong>. <br/>
+            I'm glad you're here.</p>
+        </div>
+
+      
+        
+        <div id="workBlock">
+            
+            <div class="image">
+                <a href="./ui.html"><p class="caption">caption</p><img src="./assets/images/UiBox.png" alt=""></a>
+            </div>
+            <div class="image">
+                <a href="./ux.html"><p class="caption">caption</p><img src="./assets/images/UxBox.png" alt=""></a>
+            </div>
+            <div class="image">
+                <a href="./illustration.html"><p class="caption">caption</p><img src="./assets/images/illustrationBox.png" alt=""></a>
+            </div>
+        </div>
+
+        
+        <div id="chatJoke">
+            <h5>Let's get acquainted!</h5>
+            <h5><a href="#">👉 haight.haight@gmail.com</a></h5>
+        </div>
+
+        
+
+    </main>
+    <footer>
+        <img src="./assets/images/socialLogos/LinkedIn.png" alt="">
+        <img src="./assets/images/socialLogos/Medium.png" alt="">
+        <img src="./assets/images/socialLogos/Twitter.png" alt="">
+        <img src="./assets/images/socialLogos/Instagram.png" alt="">
+    </footer>
+</body>
+
+
+
+</html>
