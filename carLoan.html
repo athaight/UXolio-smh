@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link
@@ -18,32 +19,185 @@
     <style>
         body {
             margin: 0;
+
         }
 
         main {
-            margin: 2em 13em;
+            margin: 2em 15em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         main>a {
             cursor: pointer;
         }
 
-       
+        h1,
+        h3 {
+            align-self: flex-start;
+        }
 
-        #comingSoon > img {
-                padding: 4em 0em;
-                filter: drop-shadow(-24px 24px 14px rgba(34, 34, 34, 0.473));
-            }
+        h1 {
+            margin: 0;
+        }
+
+        h3 {
+            font-weight: 500;
+            margin: 0;
+        }
+
+        img {
+            transform-style: preserve-3d;
+            transition: 0.5s ease-out;
+            margin: 2em;
+        }
 
 
-        /* #topButton {
+
+        .containerMobile {
+            display: none;
+        }
+
+        .container {
+            /* position: relative; */
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+            justify-content: center;
+            align-items: start;
+            padding: 50px 0;
+            transform-style: preserve-3d;
+            gap: 2em;
+        }
+
+        .box {
+            filter: drop-shadow(-8px 8px 8px rgba(34, 34, 34, 0.473));
+        }
+
+        .box1 {
+            grid-area: 1 / 1;
+            grid-row: span 3;
+        }
+
+        .box2 {
+            grid-area: 1 / 2;
+        }
+
+        .box3 {
+            grid-area: 1 / 3;
+        }
+
+        /* .box4 {
+            grid-area: 4 / 2;
+        } */
+
+        .box5 {
+            grid-area: 3 / 2;
+        }
+
+        .box6 {
+            grid-area: 3 / 3;
+        }
+
+        .box7 {
+            grid-area: 3 / 4;
+        }
+
+        .box8 {
+            grid-area: 2 / 4;
+        }
+
+        .box9 {
+            grid-area: 4 / 2;
+        }
+
+        .box10 {
+            grid-area: 4 / 3;
+        }
+        .box11 {
+            grid-area: 4 / 4;
+        }
+        .box12 {
+            grid-area: 5 / 2;
+        }
+        .box13 {
+            grid-area: 5 / 3;
+        }
+        .box14 {
+            grid-area: 5 / 4;
+        }
+        .box15 {
+            grid-area: 6 / 2;
+        }
+        .box16 {
+            grid-area: 1 / 4;
+        }
+        .box17 {
+            grid-area: 2 / 2;
+        }
+        .box18 {
+            grid-area: 2 / 3;
+        }
+        .box19 {
+            grid-area: 6 / 3;
+        }
+        .box20 {
+            grid-area: 6 / 4;
+        }
+
+
+        /* .container .box {
+            position: relative;
+            width: 250px;
+            height: 800px;
+            margin: 100px 0;
+            transform-style: preserve-3d;
+            transition: 0.5s ease-out;
+            filter: drop-shadow(-8px 8px 8px rgba(34, 34, 34, 0.473));
+        }
+
+        .container .box:hover img {
+            filter: drop-shadow(-32px 32px 24px rgba(34, 34, 34, 0.473));
+            transform: scale(1.03);
+        }
+
+        .container .box .imgBx {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+        }
+        .imgBx {
+            margin-top: 2em;
+        } */
+
+        #titleMobile {
+            display: none;
+        }
+
+        #titleDesktop {
+            align-self: flex-start;
+            justify-self: center;
+            margin-left: 2em;
+        }
+
+        #titleDesktopImage {
+            width: 60%;
+            margin-top: 2em;
+        }
+
+        #topButton {
             background-color: #ec5e5e;
             width: 3%;
             padding: .5em;
             margin-top: 5em;
             color: #deddd3;
             cursor: pointer;
-        } */
+        }
 
         @media screen and (max-width: 500px) {
 
@@ -67,18 +221,51 @@
 
             main {
                 display: flex;
-                margin: 2em;
-                height: 70vh;
-                justify-content: center;
+                margin: 0 2em;
+                justify-items: center;
                 align-items: flex-start;
             }
-
 
             footer {
                 height: 200px;
             }
 
-/* 
+            .container {
+                display: none;
+            }
+
+            .containerMobile {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 2em 0 0 0;
+                padding: 0;
+            }
+
+            .containerMobile img {
+                margin: 0;
+                padding: 0;
+            }
+
+            .box {
+                margin-bottom: 2em;
+                align-self: center;
+                filter: drop-shadow(-8px 8px 8px rgba(34, 34, 34, 0.473));
+            }
+
+
+
+            #titleDesktop {
+                display: none;
+            }
+
+            #titleMobile {
+                display: block;
+                margin: 0;
+                padding: 0;
+            }
+
             #topButton {
                 background-color: #ec5e5e;
                 width: 15%;
@@ -87,7 +274,7 @@
                 color: #deddd3;
                 cursor: pointer;
                 text-align: right;
-            } */
+            }
 
 
         }
@@ -109,13 +296,161 @@
         </div>
     </header>
     <main>
-        
-     <h1>COMING SOON</h1>
+        <div id="titleDesktop">
+            <h1 class="animate__animated animate__slideInLeft">Mock-ups</h1>
+            <h3 class="animate__animated animate__slideInLeft">Landing Pages | Coming Soon Pages</h3>
+        </div>
+        <!-- <div id="titleDesktopImage"><img src="./assets/images/carLoan/Group 1.png" alt=""></div> -->
+        <div class="container">
+            <div class="box box1">
+                <div class="imgBx">
+                    <img src="./assets/images/carLoan/Home page.png" alt="">
+                </div>
+            </div>
+            <div class="box box2">
+                <div class="imgBx">
+                    <img src="./assets/images/carLoan/Start.png" alt="">
+                </div>
+            </div>
+            <div class="box box3">
+                <div class="imgBx">
+                    <img src="./assets/images/carLoan/Start-1.png" alt="">
+                </div>
+            </div>
+            <div class="box box8">
+                <div class="imgBx">
+                    <img src="./assets/images/carLoan/personal info-1.png" alt="">
+                </div>
+            </div>
+            <div class="box box5">
+                <div class="imgBx">
+                    <img src="./assets/images/carLoan/personal info-2.png" alt="">
+                </div>
+            </div>
+            <div class="box box6">
+                <div class="imgBx">
+                    <img src="./assets/images/carLoan/personal info-4.png" alt="">
+                </div>
+            </div>
+            <div class="box box7">
+                <div class="imgBx">
+                    <img src="./assets/images/carLoan/personal info-3.png" alt="">
+                </div>
+            </div>
+            <!-- <div class="box box4">
+                <div class="imgBx">
+                    <img src="./assets/images/carLoan/Navigation drop.png" alt="">
+                </div>
+            </div> -->
+            <div class="box box9">
+                <div class="imgBx">
+                    <img src="./assets/images/carLoan/personal info-5.png" alt="">
+                </div>
+            </div>
+            <div class="box box10">
+                <div class="imgBx">
+                    <img src="./assets/images/carLoan/personal info-6.png" alt="">
+                </div>
+            </div>
+            <div class="box box11">
+                <div class="imgBx">
+                    <img src="./assets/images/carLoan/personal info-7.png" alt="">
+                </div>
+            </div>  
+            <div class="box box12">
+                <div class="imgBx">
+                    <img src="./assets/images/carLoan/Spouce info.png" alt="">
+                </div>
+            </div>
+            <div class="box box13">
+                <div class="imgBx">
+                    <img src="./assets/images/carLoan/personal info-10.png" alt="">
+                </div>
+            </div>
+            <div class="box box14">
+                <div class="imgBx">
+                    <img src="./assets/images/carLoan/personal info-9.png" alt=""> 
+                </div>
+            </div>
+            <div class="box box15">
+                <div class="imgBx">
+                    <img src="./assets/images/carLoan/vehicle info.png" alt="">
+                </div>
+            </div>
+            <div class="box box16">
+                <div class="imgBx">
+                    <img src="./assets/images/carLoan/Disclosure.png" alt="">
+                </div>
+            </div>
+            <div class="box box17">
+                <div class="imgBx">
+                    <img src="./assets/images/carLoan/Disclosure-1.png" alt="">
+                </div>
+            </div>
+            <div class="box box18">
+                <div class="imgBx">
+                    <img src="./assets/images/carLoan/Disclosure-2.png" alt="">
+                </div>
+            </div>
+            <div class="box box19">
+                <div class="imgBx">
+                    <img src="./assets/images/carLoan/vehicle info-1.png" alt="">
+                </div>
+            </div>
+            <!-- <div class="box box20">
+                <div class="imgBx">
+                    <img src="./assets/images/carLoan/vehicle info-2.png" alt="">
+                </div>
+            </div> -->
 
+
+        </div>
+        <div id="titleMobile">
+            <h1 class="animate__animated animate__slideInLeft">Mock-ups</h1>
+            <h3 class="animate__animated animate__slideInLeft">Auto Loan Moblie</h3>
+        </div>
+       
+        <div class="containerMobile">
+            <div class="box box1">
+                <div class="imgBx">
+                    <img src="./assets/images/carLoan/Home page.png" alt="">
+                </div>
+            </div>
+            <div class="box box2">
+                <div class="imgBx">
+                    <img src="./assets/images/carLoan/Start-1.png" alt="">
+                </div>
+            </div>
+            <div class="box box3">
+                <div class="imgBx">
+                    <img src="./assets/images/carLoan/Start.png" alt="">
+                </div>
+            </div>
+            <div class="box box8">
+                <div class="imgBx">
+                    <img src="./assets/images/carLoan/personal info-4.png" alt="">
+                </div>
+            </div>
+            <div class="box box5">
+                <div class="imgBx">
+                    <img src="./assets/images/carLoan/personal info-1.png" alt="">
+                </div>
+            </div>
+            <div class="box box6">
+                <div class="imgBx">
+                    <img src="./assets/images/carLoan/personal info-2.png" alt="">
+                </div>
+            </div>
+            <div class="box box7">
+                <div class="imgBx">
+                    <img src="./assets/images/carLoan/personal info-3.png" alt="">
+                </div>
+            </div>
+        </div>
     </main>
 
 
-    <!-- <div id="topButton">top</div> -->
+    <div id="topButton">top</div>
 
     <footer>
         <img src="./assets/images/socialLogos/LinkedIn.png" alt="">
@@ -124,7 +459,25 @@
         <img src="./assets/images/socialLogos/Instagram.png" alt="">
     </footer>
 
-
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        // VanillaTilt.init(document.querySelector(".box"), {
+        //     max: 5,
+        //     speed: 400
+        // });
+        // VanillaTilt.init(document.querySelector(".box2"), {
+        //     max: 5,
+        //     speed: 400
+        // });
+        // VanillaTilt.init(document.querySelector(".box3"), {
+        //     max: 5,
+        //     speed: 400
+        // });
+        // VanillaTilt.init(document.querySelector(".box4"), {
+        //     max: 5,
+        //     speed: 400
+        // });
+    </script>
     <script>
         function showButton() {
 
@@ -161,6 +514,7 @@
             showButton();
         });
     </script>
+
 </body>
 
 </html>

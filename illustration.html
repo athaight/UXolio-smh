@@ -14,16 +14,82 @@
         rel="stylesheet" />
     <title>AH - Illustration</title>
     <style>
+        body {
+            margin: 0;
+
+        }
+
+        main {
+            margin: 2em 15em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        main>p,
+        h3 {
+            max-width: 800px;
+        }
+
+        main>a {
+            cursor: pointer;
+        }
+
+        h1,
+        h3 {
+            align-self: flex-start;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        h3 {
+            font-weight: 500;
+            margin: 0;
+        }
+
+        img {
+            transform-style: preserve-3d;
+            transition: 0.5s ease-out;
+        }
+
         #mobile {
             display: none;
         }
+
+        #skulls {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2em;
+            margin: 2em 0 4em 0;
+        }
+
+        #skulls>img {
+            max-height: 500px;
+        }
+
+        body>header img {
+            margin-right: auto;
+
+        }
+
+        body>header div nav {
+               margin-left: -1em;
+            }
+
+
 
         @media screen and (max-width: 500px) {
 
             html {
                 font-size: 16px;
             }
-            
+
             body>header {
                 margin: 2em;
                 display: flex;
@@ -35,12 +101,12 @@
                 flex-direction: row;
                 justify-content: space-between;
             }
-            
+
             body>header img {
                 margin-right: 7em;
-               
+
             }
-            
+
             main {
                 display: flex;
                 flex-direction: column;
@@ -49,7 +115,7 @@
                 text-align: center;
                 margin: 4em;
             }
-            
+
             footer {
                 height: 200px;
             }
@@ -57,19 +123,21 @@
             #desktop {
                 display: none;
             }
+
             #mobile {
                 display: block;
             }
+
             #skulls {
                 margin: 0em;
                 text-align: left;
             }
 
-            #skulls > img {
+            #skulls>img {
                 margin-top: 2em;
             }
-            
-            
+
+
         }
     </style>
 </head>
@@ -77,21 +145,13 @@
 <body>
     <header id="desktop">
         <div>
+            <a href="/"><img src="/assets/images/Logos/darkLogo.png" alt="Andrew Haight logo" /></a>
             <nav>
                 <ul>
-                    <a href="/"><img src="/assets/images/Logos/darkLogo.png" alt="Andrew Haight logo" /></a>
-                    <li><a href="/index.html">HOME</a></li>
-                    <li><a href="/about.html">ABOUT</a></li>
                     <li><a href="/work.html">WORK</a></li>
-                    <!-- <li><a href="/projects.html">PROJECTS</a></li> -->
-                    <!-- <li><a href="./resume.html">RESUME</a>
-                        <a href="./assets/images/AndrewHaightResume.png" download>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="dlIcon">
-                                <path
-                                    d="M480 352h-133.5l-45.25 45.25C289.2 409.3 273.1 416 256 416s-33.16-6.656-45.25-18.75L165.5 352H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96C512 366.3 497.7 352 480 352zM432 456c-13.2 0-24-10.8-24-24c0-13.2 10.8-24 24-24s24 10.8 24 24C456 445.2 445.2 456 432 456zM233.4 374.6C239.6 380.9 247.8 384 256 384s16.38-3.125 22.62-9.375l128-128c12.49-12.5 12.49-32.75 0-45.25c-12.5-12.5-32.76-12.5-45.25 0L288 274.8V32c0-17.67-14.33-32-32-32C238.3 0 224 14.33 224 32v242.8L150.6 201.4c-12.49-12.5-32.75-12.5-45.25 0c-12.49 12.5-12.49 32.75 0 45.25L233.4 374.6z" />
-                            </svg> -->
-                    </a>
-                    </li>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/about.html">ABOUT</a></li>
+                    <li><a href="./resume.html">RESUME</a></li>
                 </ul>
             </nav>
         </div>
@@ -119,13 +179,23 @@
     </header>
     <main>
         <h3>I like to draw for fun and I'm really influenced by weird and surreal art.</h3>
+        <p>This is a set of five images that I did for a self-challenge. I wanted to draw a new image for five days in a
+            row and use the same character, but have no preconceived image in mind. <br>Just wake up and draw!</p>
         <div id="skulls">
-            <p>This is a set of five images that I did for a self-challenge. I wanted to draw a new image for five days in a row and use the same character, but have no preconceived image in mind. Just wake up and draw!</p>
             <img src="./assets/images/myArt/AlbumSkull.jpg" alt="">
             <img src="./assets/images/myArt/PopSkull.jpg" alt="">
             <img src="./assets/images/myArt/SaintSkull.jpg" alt="">
             <img src="./assets/images/myArt/NasaSkull.jpg" alt="">
             <img src="./assets/images/myArt/KissingSkull.jpg" alt="">
+        </div>
+           <h3>These are a few examples of an NFT project I'm developing</h3>
+        <p>Creepy Sheep Collective</p>
+        <div id="skulls">
+            <img src="./assets/images/sheep/image1.png" alt="">
+            <img src="./assets/images/sheep/image2.PNG" alt="">
+            <img src="./assets/images/sheep/image3.png" alt="">
+            <img src="./assets/images/sheep/image4.png" alt="">
+            <img src="./assets/images/sheep/image5.png" alt="">
         </div>
     </main>
 
