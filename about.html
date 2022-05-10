@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Andrew Haight About Me">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AH - About</title>
     <link rel="stylesheet" href="reset.css">
@@ -22,10 +23,21 @@
         }
 
         body>header {
-            margin-left: 15em;
-            margin-right: 15em;
-            align-items: flex-end;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            position: fixed;
+            top: 0;
+            z-index: 0;
+            width: 1170px;
         }
+
+        body>header img {
+            margin: 0;
+        }
+
+
 
         footer {
             margin-top: 0;
@@ -74,6 +86,9 @@
 
         #email span a {
             color: #b48400;
+            padding: 1em;
+            margin-left: -1em;
+
         }
 
         #email span a:hover {
@@ -93,12 +108,15 @@
             color: white;
             width: 100%;
             z-index: 99;
+            position: relative;
+            margin-top: 4em;
             /* gap: 13em; */
         }
 
         #hpIndigoBlock {
             display: flex;
             flex-direction: row;
+            gap: 2em;
         }
 
         #hpIndigo {
@@ -111,21 +129,28 @@
         }
 
         #illustrationButton {
-            grid-area: 3 / 2;
-            justify-self: center;
+            grid-area: 3 / 1;
+            justify-self: start;
         }
 
         #illustrationButton>a button {
             border: solid white 2px;
             padding: 2em;
             cursor: pointer;
-
+            transition: .3s;
+            border-radius: 8px;
         }
 
         #illustrationButton>a button {
             background-color: transparent;
             color: white;
+        }
 
+
+        #illustrationButton>a button:hover {
+            background-color: white;
+            color: #222;
+            filter: drop-shadow(-10px 10px 5px rgb(3, 3, 3));
         }
 
         #illustrationButton>p {
@@ -143,8 +168,14 @@
             filter: drop-shadow(-10px 0px 5px rgb(22, 22, 22));
         }
 
+        #linkedin {
+            margin-bottom: 1em;
+        }
+
         #linkedin span a {
             color: #b48400;
+            padding: 1em;
+            margin-left: -1em;
         }
 
         #linkedin span a:hover {
@@ -158,16 +189,25 @@
             flex-direction: row;
             justify-content: space-evenly;
             align-items: flex-end;
+            position: relative;
+            top: 150px;
+            z-index: 0;
         }
 
         #mainBG>img {
             width: 400px;
             z-index: 0;
+            position: fixed;
+            justify-self: flex-end;
+            align-self: flex-end;
+            right: 0;
+            margin-right: 10em;
         }
 
         #mainBG>h1 {
             align-self: center;
             justify-self: start;
+            position: fixed;
         }
 
         #secondSection {
@@ -180,21 +220,25 @@
             margin-top: 4em;
         }
 
+
         #topButton {
-            background-color: #222;
-            width: 100%;
-            padding: .5em;
-            color: #deddd3;
+            background-color: #deddd3;
+            width: 5%;
+            padding: .5rem;
+            padding-right: 1rem;
+            color: #222;
             cursor: pointer;
-            transition: 3s ease-out;
-            text-align: center;
+            transition: .3s;
+            margin-top: -2.5em;
+            position: relative;
+            z-index: 99;
+            text-align: right;
+            border-radius: 0em 2em 2em 0em;
         }
 
         #topButton:hover {
-            color: rgba(255, 0, 0, .8);
-            background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%),
-                linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(0, 255, 0, 0) 70.71%),
-                linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
+            color: #deddd3;
+            background-color: #e34545;
         }
 
         #secondSectionText>h1 {
@@ -210,7 +254,7 @@
         #kevinImage {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: 1fr;
 
         }
 
@@ -277,7 +321,7 @@
         /* SECTION 5 - SKILLS */
 
         #section5Skills {
-            background-image: url("assets/images/dottedBg.png");
+            background-image: url("assets/images/dottedBG.webp");
             background-size: contain;
             background-repeat: no-repeat;
             display: grid;
@@ -369,6 +413,10 @@
             transition: .3s ease-out;
         }
 
+        #section6List1>h3 {
+            padding-left: .5em;
+        }
+
         #section6List2 {
             padding-left: 0;
             min-width: 160px;
@@ -376,6 +424,11 @@
             grid-area: 3 / 2;
             display: block;
             transition: .3s ease-out;
+            justify-self: center;
+        }
+
+        #section6List2>h3 {
+            padding-left: .5em;
         }
 
         #section6List3 {
@@ -384,6 +437,11 @@
             z-index: 1;
             grid-area: 3 / 3;
             display: block;
+            justify-self: end;
+        }
+
+        #section6List3>h3 {
+            padding-left: .5em;
         }
 
         #section7Process {
@@ -528,6 +586,8 @@
 
             body>header {
                 margin: 0;
+                position: relative;
+                width: auto;
             }
 
             body>header img {
@@ -562,6 +622,8 @@
                 flex-direction: column;
                 height: auto;
                 margin-top: 3em;
+                position: relative;
+                top: 0;
             }
 
             #mainBG>h1 {
@@ -808,7 +870,7 @@
 <body>
     <header>
         <div id="top">
-            <a href="/"><img src="/assets/images/Logos/darkLogo.png" alt="Andrew Haight logo" /></a>
+            <a href="/"><img src="/assets/images/Logos/darkLogo.webp" alt="Andrew Haight logo" /></a>
             <nav>
                 <ul>
                     <li><a href="/">HOME</a></li>
@@ -827,11 +889,11 @@
     </header>
     <main>
         <div id="mainBG">
-            <h1 class="largerText animate__animated animate__slideInLeft">You want to know <em>more</em> about
+            <h1 id="mainBgTx" class="largerText animate__animated animate__slideInLeft">You want to know <em>more</em> about
                 <span><em>me?</em></span>
             </h1>
-            <img id="meCutOut1" class="" src="./assets/images/MePicCutout.png" alt="">
-            <img id="meCutOut2" class="" src="./assets/images/MeProfessional.png" alt="">
+            <img id="meCutOut1" class="" src="./assets/images/mePicCutOut.webp" alt="">
+            <img id="meCutOut2" class="" src="./assets/images/meProfessional.webp" alt="">
         </div>
         <div id="firstSection">
             <div id="tldr">
@@ -840,46 +902,73 @@
                 <hr />
 
                 <article>
-                    <h3>MY BACKGROUND</h3>
-                    <p>I spent a decade doing work in the commercial print industry. I worked in sales at first but was
-                        more drawn to production and was able to change roles. I feel having exposure to both
-                        departments helped me to
-                        gain a great understanding of the entire print process, from client needs to product
-                        development and delivery (I was naturally UX focused without knowing it). At the time of my
-                        departure, I was the
-                        Lead for the Electronic Print Department and had obtained certifications to operate and perform
-                        advanced maintenance
-                        and repair on Xerox iGen and HP Indigo Digital printing presses. It was a pretty big deal.</p>
+                    <h2>MY BACKGROUND</h2>
+                    <h3>I spent a decade doing work in the commercial print industry.</h3>
+                    <p> I began in a sales support role, but I was
+                        always so excited when I got a chance to go into the production department because it's so cool
+                        seeing all the equipment in full operation; Bindry with the booklet maker running, the
+                        guillotine cutter constantly cutting down paper, presses at full speed... it was like an episode
+                        of How It's Made in real life. I just had to wait for an opening and I knew I could get into
+                        that department.</h3>
+                    <p>Patience paid off and I jumped at the opportunity to transition as a general production hand,
+                        which meant I had the chance to learn all the machines and how they worked. It might sound
+                        boring to some, but I like seeing how things work and I loved it.</p>
+                    <p>Shortly after that an opening as a press operator became available and, again, I was able to move
+                        into a new role.</p>
+                    <p>The crazy thing was, I didn't know a thing about a digital printing press, and they're pretty
+                        complex. I just knew they were facinating, and that I could learn.</p>
+                    <p>This time patience <em>and</em> persistence were key attributes needed to get me over that steep
+                        learning hump not only become a press operator, but because I watched the field technicians when
+                        they were dispatched to our site for repairs I became proficient enough to perform these duties,
+                        increasing my produiction time drastically and reducing maintanence calls. I would go on to
+                        achieve two certifications in press maintenance and repair during my time as and operator.</p>
+                    <p> The feeling I have is that exposure to both
+                        departments, sales and production, helped me to
+                        gain a larger scope and understanding of the print process, from client needs to product
+                        development and delivery. I was naturally trying to be UX focused without knowing it, and that
+                        was super helpful when I became the Lead of the Electronic Print Department and was tossed in
+                        amongst the other Leads and Production Manager.</p>
                     <div id="hpIndigoBlock">
                         <p>I loved being the Department Lead and enjoyed collaborating with other Department Leads on
-                            projects and distributions. Although I enjoyed working with and being a part of a fast
-                            production environment, I always wanted to have a more creative role and I eventually made
+                            projects and distributions. This sort of team work and collaboration, being part of a fast
+                            production environment, was very rewarding and it felt good to complete these massive
+                            distributions and be amazed that so many moving parts could come together and get
+                            accomplished.</p>
+                        <p> Still, I always wanted to have a more creative role and I eventually made
                             the
                             decision to leave
-                            my career so I could begin pursuing a path towards design and development. When I discovered
-                            UX
-                            I was so
-                            excited because I knew I'd be entering into the perfect field for my skills and goals.</p>
+                            my career so I could begin pursuing a path towards design and development.
+                            UX is exciting and I find things like interaction design, intuitive UI, and responsive
+                            design fun to learn and think about when designing.</p>
                         <div id="hpIndigo">
-                            <img src="./assets/images/HP-indigo-7800.jpg" caption="Relocating an Hp Indigo 7800 Press"
-                                alt="">
+                            <img src="./assets/images/hpIndigo.webp" caption="Relocating an Hp Indigo 7800 Press"
+                                alt="Image of an HP Indigo Digital Printing Press">
                             <p>Heavy maintenance on an HP Indigo 7800 Digital Printing Press</p>
                         </div>
                     </div>
                 </article>
 
                 <article>
-                    <h3>BUT WHY DESIGN?</h3>
-                    <p>I’m a creative person and someone who questions a lot, having to know the how and why of things.
-                        The foundation of UX is the user and the entire process the user experiences. For me, the
+                    <h2>BUT WHY DESIGN?</h2>
+                    <p>I question <strong>a lot</strong>. </p>
+                    <p>It probably drives my wife a little crazy.</p>
+                    <p>Wanting to know the how and why of things and getting a wee bit obsessed with figuring something
+                        out is a good thing, within certain constraints... right?</p>
+                    <p>The foundation of UX is the user and the entire process the user experiences.</p>
+                    <p>For me, the
                         process of discovering the user’s needs, expectations, challenges, and their interactions are
                         the most thrilling parts, and that is especially important for an excellent product. A visually
                         appealing design is only one part, but a well-developed product comes from true understanding of
-                        the user. Thus, users should be the focus during design and development. </p>
+                        the user. Thus, users should be the focus during design and development.</p>
                 </article>
 
                 <article>
-                    <h3>ACHIEVEMENTS TO DATE</h3>
+                    <h2>ACHIEVEMENTS TO DATE</h2>
+                    <h3>UX Design and Development is a pretty big world, but I love exploring.</h3>
+                    <p>So far on this journey I've completed two boot camps which have given given me an understanding
+                        of the UX research process and methodologies like Design Thinking and User Centered Design, and
+                        also Web Development exposure in both front and back-end.</p>
+                    <p>UX Design and front-end development are wildy fun and I can't get enough.</p>
                     <p>Completed - Full Stack Web Development boot camp through <a id="interaptLink"
                             href="https://interapt.com/">University of Arizona.</a></p>
                     <p>Completed - UX/UI Design Immersive boot camp through <a id="uofalink"
@@ -888,29 +977,34 @@
                 </article>
 
                 <article>
-                    <h3>WHEN I'M NOT INDULGING IN ALL THINGS DESIGN + FUN FACTS</h3>
+                    <h2>FUN FACTS</h2>
                     <article id="funFacts"><span>/HATE/ - This is how to pronounce my last name.</p></span>
 
                         <p>Yeah, it sounds pretty sinister unless you see how it is spelled, and hardly anybody goes
-                            with that as their first guess.<br />
-                        <p>No, it is not pronounced “height”. Yes, I'm sure. (This was an actual rebuttal I once
-                            received as to how to pronounce <em>my</em> name).</p>
+                            with that as their first guess.<br /></p>
+
 
                         <p>The “a-i” causes the emphasis to be placed on the “a” sound, as in “straight”...<br />
                             Haight.</p>
-                        </p>
-
-                        <h3>THINGS I LOVE AND THAT I'M PROUD ABOUT</h3>
+                        <p>If you've ever explored 60's counter culture then you might be familiar to the intersection
+                            Haight/Ashbury in San Francisco. No relation, but cool enough still.</p>
+                        <br>
+                        <h2>THINGS I LOVE AND THAT I'M PROUD ABOUT</h2>
+                        <h3>And that make me, me.</h3>
                         <ul>
-                            <li>Pug named Kevin <em>- a cool dude</em></li>
-                            <li>Cat named Birdie <em>- also cool, but stinks</em></li>
-                            <li>Married to best friend <em>- 10 years+</em></li>
-                            <li>Former Rock Climbing coach <em>- Life Time Fitness</em></li>
+                            <li>Raised a pug named Kevin. We hang out every day. <em>-He's a pretty cool dude</em></li>
+                            <li>Adopted a cat named Birdie who follows us on walks. <em>-Also cool, but stinks</em></li>
+                            <li>Lucky to be married over a decade to the girl I was crushing on <strong>hard</strong>
+                                for years.<em> -Way cooler than me</em></li>
+                            <li>Former Rock Climbing coach and Route Setter. <strong>Still sending.</strong> <em> -Life
+                                    Time Fitness</em></li>
+                            <li>Renovating an 86' Toyota Mini-Cruiser Class-C RV in our spare time. <em> -Look out
+                                    National Parks!</em></li>
                         </ul>
 
                         <p>Want to chat about what I could do for you or what makes my pug Kevin so cool?</p>
                         <div id="kevinImage">
-                            <img src="./assets/images/kevinTherapy.png" alt="Photo of Kevin the Pug">
+                            <img src="./assets/images/kevinTherapy.webp" alt="Photo of Kevin the Pug">
                             <div id="kevinImageText">
                                 <p>Connect with me!</p>
                                 <div id="linkedin"><span><a
@@ -922,28 +1016,6 @@
                         </div>
                     </article>
             </div>
-
-
-            <!-- SECTION 5 - SKILLS -->
-
-            <!-- <div id="section5Skills">
-
-            <div id="section5SkillsImage"> -->
-            <!-- <img src="./assets/images/amelie-mourichon-sv8oOQaUb-o-unsplash.jpg" alt=""> -->
-            <!-- <img src="./assets/images/Skill bars.png" alt="">
-            </div>
-
-            <div id="section5SkillsText">
-                <p>I’ve been sketching and creating with a Wacom tablet and using Abode products for over 15 years now.
-                    I love learning new programs too, like Figma for designing, and Blender3D for 3d modeling. I’ve
-                    always been good at figuring things out.
-                </p>
-            </div>
-        </div> -->
-
-
-
-            <!-- SECTION 6 - section6EXPERTISE -->
 
             <div id="section6Expertise">
 
@@ -958,26 +1030,30 @@
                 </div>
 
                 <div id="section6ExpertiseText">
-                    <h3><em>I’m going to be a bit jovial here...<br> I freaking love UX.</em></h3>
+                    <h2><em>I’m going to be a bit jovial here...<br> I freaking love UX.</em></h2>
 
                     <p>Interviews during the research process, conversations, questioning, empathizing with someone,
                         those data and what they tell: These are things that ground me and give me all the feels.
                     </p>
                     <p>
-                        I love learning new skills and techniques, adding tools to the toolbox.  
+                        I love learning new skills and techniques, adding tools to the toolbox.
                     </p>
                     <p>
-                        For design technologies Adobe has been my go-to for so long that I almost feel bad for loving Figma so much; but, then there’s Premiere Pro, Animate, Photoshop, good ol’ Illustrator... Adobe slaps the market.
+                        For design technologies Adobe has been my go-to for so long that I almost feel bad for loving
+                        Figma so much; but, then there’s Premiere Pro, Animate, Photoshop, good ol’ Illustrator... Adobe
+                        slaps the market.
                     </p>
                     <p>
-                        Development is so rewarding too. To see your code come to life on screen makes the heart race as if some form of magic were just cast... logical magic.  
+                        Development is so rewarding too. To see your code come to life on screen makes the heart race as
+                        if some form of magic were just cast... logical magic.
                     </p>
                     <p>
-                        Adaptation is easy for me. I just like a lot of things and enjoy being helpful. 
+                        Adaptation is easy for me. I just like a lot of things and enjoy being helpful.
                     </p>
                 </div>
 
                 <div class="section6List1" id="section6List1">
+                    <h3>Tech</h3>
                     <ul>
                         <li>Adobe Animate</li>
                         <li>Adobe Audition</li>
@@ -994,6 +1070,7 @@
                     </ul>
                 </div>
                 <div class="section6List2" id="section6List2">
+                    <h3>Tech</h3>
                     <ul>
                         <li>HTML</li>
                         <li>JavaScript</li>
@@ -1010,6 +1087,7 @@
                     </ul>
                 </div>
                 <div class="section6List3" id="section6List3">
+                    <h3>Skills</h3>
                     <ul>
                         <li>Agile / Scrum</li>
                         <li>Code Refactoring</li>
@@ -1050,7 +1128,7 @@
                 <h1>Process</h1>
                 <div id="section7Image">
                     <h2>USERS are the focus.</h2>
-                    <img id="" src="./assets/images/userPostIt.png" alt="">
+                    <img id="" src="./assets/images/userPostIt.webp" alt="">
                 </div>
                 <div id="section7ProcessText">
                     <p>
@@ -1063,31 +1141,37 @@
                     <h3>
                         Emphathize
                     </h3>
-                    Empathy is the first step in design thinking because it is a skill that allows us to understand and share the same feelings that others feel.
+                    Empathy is the first step in design thinking because it is a skill that allows us to understand and
+                    share the same feelings that others feel.
                     </p>
                     <p>
                     <h3>
                         Define
                     </h3>
-                    This is where analization of observations and synthesise of them allows for a definition of the core problems.
+                    This is where analization of observations and synthesise of them allows for a definition of the core
+                    problems.
                     </p>
                     <p>
                     <h3>
                         Ideate
                     </h3>
-                    Ideation is generating a broad set of ideas on a given topic, with no attempt to judge or evaluate them, and with the goal addressing and solving a specified problem with design.
+                    Ideation is generating a broad set of ideas on a given topic, with no attempt to judge or evaluate
+                    them, and with the goal addressing and solving a specified problem with design.
                     </p>
                     <p>
                     <h3>
                         Prototype
                     </h3>
-                    A prototype is a simple experimental model of a proposed solution used to test or validate ideas, design assumptions, and other aspects of its conceptualisation quickly and cheaply, so that the designer/s involved can make appropriate refinements or possible changes in direction.
+                    A prototype is a simple experimental model of a proposed solution used to test or validate ideas,
+                    design assumptions, and other aspects of its conceptualisation quickly and cheaply, so that the
+                    designer/s involved can make appropriate refinements or possible changes in direction.
                     </p>
                     <p>
                     <h3>
                         Test
                     </h3>
-                    Testing, in Design Thinking, involves generating user feedback as related to the prototypes you have developed, as well as gaining a deeper understanding of your users.
+                    Testing, in Design Thinking, involves generating user feedback as related to the prototypes you have
+                    developed, as well as gaining a deeper understanding of your users.
                     </p>
                 </div>
             </div>
@@ -1097,12 +1181,13 @@
                     <h1>UX Research & Data Analysis</h1>
                     <div id="section8Text">
                         <p>
-                         With UX (user experience) research I can get a systematic study of users and their requirements so I can add realistic contexts and insights to design processes.
+                            With UX (user experience) research I can get a systematic study of users and their
+                            requirements so I can add realistic contexts and insights to design processes.
                         </p>
                     </div>
                 </div>
                 <div id="section8Image">
-                    <img id="" src="./assets/images/Group 30.png" alt="">
+                    <img id="" src="./assets/images/uxResearchCollage.webp" alt="">
                 </div>
             </div>
 
@@ -1113,12 +1198,14 @@
                 </div>
                 <div id="section9Text">
                     <p>
-                        
-                    My marketable programming skills include HTML, CSS, JavaScript, JSON, jQuery, SQL database development, Photoshop, Illustrator, Animate, Premiere Pro, Figma, and many more. Programs are easy to pick up quickly. 
+
+                        My marketable programming skills include HTML, CSS, JavaScript, JSON, jQuery, SQL database
+                        development, Photoshop, Illustrator, Animate, Premiere Pro, Figma, and many more. Programs are
+                        easy to pick up quickly.
                     </p>
                 </div>
                 <div id="section9Image">
-                    <img id="iMacwireframe" src="./assets/images/iMacwireframe.png" alt="">
+                    <img id="iMacwireframe" src="./assets/images/iMacWireframe.webp" alt="">
                 </div>
             </div>
 
@@ -1136,11 +1223,11 @@
                         websites and applications.
                     </p>
                     <p>
-                        The team needs an original image of a dog driving a car you say? I’m on it.
+                        The team needs an original image of a dog driving a car you say? <strong>I’m on it.</strong>
                     </p>
                 </div>
                 <div id="section10Image">
-                    <img id="iMacPug" src="./assets/images/Group 37.png" alt="">
+                    <img id="iMacPug" src="./assets/images/carPug.webp" alt="">
                 </div>
             </div>
 
@@ -1151,7 +1238,7 @@
 
                 </div>
                 <div id="section11Image">
-                    <img id="" src="./assets/images/myArt/myArt.png" alt="">
+                    <img id="" src="./assets/images/myArt/myArt.webp" alt="">
                 </div>
 
                 <div id="section11Text">
@@ -1160,8 +1247,8 @@
                         sometimes full of hyper-detail.
                     </p>
                     <p>
-                        Some of my favorite artists are featured in pierodicals like Juxtapoze and High-Fructose
-                        magazines. I’d love to have my art featured in a publication like those one day. Bucketlist.
+                        Some of my favorite artists are featured in pierodicals like Juxtapoze and High-Fructose. I’d
+                        love to have my art featured in a publication like those one day. Bucketlist.
 
                     </p>
                     <p>
@@ -1185,56 +1272,17 @@
 
     <div id="topButton">top</div>
     <footer>
-
         <a href="https://www.linkedin.com/in/athaight/" target="__blank"><img
-                src="./assets/images/socialLogos/LinkedIn.png" alt=""></a>
-        <a href="https://medium.com/@athaight" target="__blank"><img src="./assets/images/socialLogos/Medium.png"
-                alt=""></a>
-        <a href="https://twitter.com/athaight" target="__blank"><img src="./assets/images/socialLogos/Twitter.png"
-                alt=""></a>
+                src="./assets/images/socialLogos/linkedIn.webp" alt="LinkedIn.com"></a>
+        <a href="https://medium.com/@athaight" target="__blank"><img src="./assets/images/socialLogos/medium.webp"
+                alt="Medium.com"></a>
+        <a href="https://twitter.com/athaight" target="__blank"><img src="./assets/images/socialLogos/twitter.webp"
+                alt="Twitter.com"></a>
         <a href="https://www.instagram.com/skripptor/?hl=en" target="__blank"><img
-                src="./assets/images/socialLogos/Instagram.png" alt=""></a>
+                src="./assets/images/socialLogos/instagram.webp" alt="Instagram.com"></a>
     </footer>
 
     <script>
-        function softwareTechnology() {
-            let blurb = document.getElementById('section6ExpertiseText');
-            let listOne = document.getElementById('section6List1');
-            let listTwo = document.getElementById('section6List2');
-
-            if (blurb.style.display === 'block') {
-                blurb.style.display = 'none';
-                listOne.style.display = 'block';
-                listTwo.style.display = 'block';
-
-            } else {
-                blurb.style.display = 'block';
-                listOne.style.display = 'none';
-                listTwo.style.display = 'none';
-            }
-
-        }
-
-        function professionalUnderstanding() {
-            let blurb = document.getElementById('section6ExpertiseText');
-            let listThree = document.getElementById('section6List3');
-
-
-            if (blurb.style.display === 'block') {
-                blurb.style.display = 'none';
-                listThree.style.display = 'block';
-
-
-            } else {
-                blurb.style.display = 'block';
-                listThree.style.display = 'none';
-
-            }
-
-        }
-
-
-
         function showButton() {
             var button = $('#topButton'), //button that scrolls user to top
                 view = $(window),
@@ -1259,7 +1307,7 @@
         $('#topButton').on('click', function () {
             $('html, body').stop().animate({
                 scrollTop: 0
-            }, 500, 'linear');
+            }, 2000, 'linear');
             return false;
         });
 
@@ -1267,7 +1315,25 @@
         $(function () {
             showButton();
         });
+
+        // Header photo Parallax effect
+        // function parallax() {
+        //     var h = document.getElementById("meCutOut1");
+        //     var s = document.getElementById("mainBgTx")
+        //     var yPos = -10 - window.pageYOffset / -4;
+        //     var yPos2 = -30 - window.pageYOffset / -9;
+        //     s.style.top = 50 + yPos + "%";
+        //     h.style.top = 50 + yPos2 + "%";
+           
+
+        //     //alert(yPos);
+        // }
+
+        // window.addEventListener("scroll", function () {
+        //     parallax();
+        // });
     </script>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
 </body>
 
 </html>

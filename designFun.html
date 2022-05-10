@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Andrew Haight Design Fun">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
@@ -91,13 +92,25 @@
 
         }
 
+    
         #topButton {
-            background-color: #ec5e5e;
-            width: 3%;
-            padding: .5em;
-            margin-top: 5em;
-            color: #deddd3;
+            background-color: #deddd3;
+            width: 5%;
+            padding: .5rem;
+            padding-right: 1rem;
+            color: #222;
             cursor: pointer;
+            transition: .3s;
+            margin-top: -2.5em;
+            position: relative;
+            z-index: 99;
+            text-align: right;
+            border-radius: 0em 2em 2em 0em;
+        }
+
+        #topButton:hover {
+            color: #deddd3;
+            background-color: #e34545;
         }
 
         @media screen and (max-width: 500px) {
@@ -146,7 +159,7 @@
             }
 
             #topButton {
-                background-color: #ec5e5e;
+                background-color: #e34545;
                 width: 15%;
                 padding: .5em 1;
                 margin-top: 5em;
@@ -163,7 +176,7 @@
 <body>
     <header>
         <div>
-            <a href="/"><img src="/assets/images/Logos/darkLogo.png" alt="Andrew Haight logo" /></a>
+            <a href="/"><img src="/assets/images/Logos/darkLogo.webp" alt="Andrew Haight logo" /></a>
             <nav>
                 <ul>
                     <li><a href="/work.html">WORK</a></li>
@@ -181,22 +194,22 @@
         <div class="container">
             <div class="box">
                 <div class="imgBx">
-                    <img src="./assets/images/comingSoon/ShutterSnap.png" alt="">
+                    <img src="./assets/images/ui/shutter.webp" alt="">
                 </div>
             </div>
             <div class="box box2">
                 <div class="imgBx">
-                    <img src="./assets/images/comingSoon/mountain.png" alt="">
+                    <img src="./assets/images/ui/mountain.webp" alt="">
                 </div> 
             </div>
             <div class="box box3">
                 <div class="imgBx">
-                    <img src="./assets/images/comingSoon/Henerys.png" alt="">
+                    <img src="./assets/images/ui/henry.webp" alt="">
                 </div> 
             </div>
             <div class="box box4">
                 <div class="imgBx">
-                    <img src="./assets/images/comingSoon/Tables record store.png" alt="">
+                    <img src="./assets/images/ui/tables.webp" alt="">
                 </div>
                 
             </div>
@@ -205,22 +218,22 @@
         <div class="containerMobile">
             <div class="">
                 <div class="imgBx">
-                    <img src="./assets/images/comingSoon/ShutterSnap.png" alt="">
+                    <img src="./assets/images/ui/shutter.webp" alt="">
                 </div>
             </div>
             <div class="">
                 <div class="imgBx">
-                    <img src="./assets/images/comingSoon/mountain.png" alt="">
+                    <img src="./assets/images/ui/mountain.webp" alt="">
                 </div> 
             </div>
             <div class="">
                 <div class="imgBx">
-                    <img src="./assets/images/comingSoon/Henerys.png" alt="">
+                    <img src="./assets/images/ui/henry.webp" alt="">
                 </div> 
             </div>
             <div class="">
                 <div class="imgBx">
-                    <img src="./assets/images/comingSoon/Tables record store.png" alt="">
+                    <img src="./assets/images/ui/tables.webp" alt="">
                 </div>
                 
             </div>
@@ -231,10 +244,14 @@
     <div id="topButton">top</div>
 
     <footer>
-        <img src="./assets/images/socialLogos/LinkedIn.png" alt="">
-        <img src="./assets/images/socialLogos/Medium.png" alt="">
-        <img src="./assets/images/socialLogos/Twitter.png" alt="">
-        <img src="./assets/images/socialLogos/Instagram.png" alt="">
+        <a href="https://www.linkedin.com/in/athaight/" target="__blank"><img
+                src="./assets/images/socialLogos/linkedIn.webp" alt="LinkedIn.com"></a>
+        <a href="https://medium.com/@athaight" target="__blank"><img src="./assets/images/socialLogos/medium.webp"
+                alt="Medium.com"></a>
+        <a href="https://twitter.com/athaight" target="__blank"><img src="./assets/images/socialLogos/twitter.webp"
+                alt="Twitter.com"></a>
+        <a href="https://www.instagram.com/skripptor/?hl=en" target="__blank"><img
+                src="./assets/images/socialLogos/instagram.webp" alt="Instagram.com"></a>
     </footer>
 
     <script type="text/javascript" src="vanilla-tilt.js"></script>

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Andrew Haight Illustration">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
@@ -12,6 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>AH - Illustration</title>
     <style>
         body {
@@ -71,6 +73,27 @@
 
         #skulls>img {
             max-height: 500px;
+            filter: drop-shadow(-8px 8px 8px rgba(34, 34, 34, 0.473));
+        }
+
+        #topButton {
+            background-color: #222;
+            width: 5%;
+            padding: .5rem;
+            padding-right: 1rem;
+            color: #deddd3;
+            cursor: pointer;
+            transition: .3s;
+            margin-top: -2.5em;
+            position: relative;
+            z-index: 99;
+            text-align: right;
+            border-radius: 0em 2em 2em 0em;
+        }
+
+        #topButton:hover {
+            color: #deddd3;
+            background-color: #e34545;
         }
 
         body>header img {
@@ -135,6 +158,7 @@
 
             #skulls>img {
                 margin-top: 2em;
+                filter: drop-shadow(-8px 8px 8px rgba(34, 34, 34, 0.473));
             }
 
 
@@ -145,7 +169,7 @@
 <body>
     <header id="desktop">
         <div>
-            <a href="/"><img src="/assets/images/Logos/darkLogo.png" alt="Andrew Haight logo" /></a>
+            <a href="/"><img src="/assets/images/Logos/darkLogo.webp" alt="Andrew Haight logo" /></a>
             <nav>
                 <ul>
                     <li><a href="/work.html">WORK</a></li>
@@ -159,7 +183,7 @@
     <header id="mobile">
         <div>
             <nav>
-                <a href="/"><img src="/assets/images/Logos/darkLogo.png" alt="Andrew Haight logo" /></a>
+                <a href="/"><img src="/assets/images/Logos/darkLogo.webp" alt="Andrew Haight logo" /></a>
                 <ul>
                     <li><a href="/index.html">HOME</a></li>
                     <li><a href="/about.html">ABOUT</a></li>
@@ -182,30 +206,72 @@
         <p>This is a set of five images that I did for a self-challenge. I wanted to draw a new image for five days in a
             row and use the same character, but have no preconceived image in mind. <br>Just wake up and draw!</p>
         <div id="skulls">
-            <img src="./assets/images/myArt/AlbumSkull.jpg" alt="">
-            <img src="./assets/images/myArt/PopSkull.jpg" alt="">
-            <img src="./assets/images/myArt/SaintSkull.jpg" alt="">
-            <img src="./assets/images/myArt/NasaSkull.jpg" alt="">
-            <img src="./assets/images/myArt/KissingSkull.jpg" alt="">
+            <img src="./assets/images/myArt/album.webp" alt="Digital Illustration By Andrew Haight" data-tilt>
+            <img src="./assets/images/myArt/pop.webp" alt="Digital Illustration By Andrew Haight" data-tilt>
+            <img src="./assets/images/myArt/saint.webp" alt="Digital Illustration By Andrew Haight" data-tilt>
+            <img src="./assets/images/myArt/nasa.webp" alt="Digital Illustration By Andrew Haight" data-tilt>
+            <img src="./assets/images/myArt/kissing.webp" alt="Digital Illustration By Andrew Haight" data-tilt>
         </div>
            <h3>These are a few examples of an NFT project I'm developing</h3>
         <p>Creepy Sheep Collective</p>
         <div id="skulls">
-            <img src="./assets/images/sheep/image1.png" alt="">
-            <img src="./assets/images/sheep/image2.PNG" alt="">
-            <img src="./assets/images/sheep/image3.png" alt="">
-            <img src="./assets/images/sheep/image4.png" alt="">
-            <img src="./assets/images/sheep/image5.png" alt="">
+            <img src="./assets/images/sheep/sheep1.webp" alt="Digital Illustration By Andrew Haight" data-tilt>
+            <img src="./assets/images/sheep/sheep2.webp" alt="Digital Illustration By Andrew Haight" data-tilt>
+            <img src="./assets/images/sheep/sheep3.webp" alt="Digital Illustration By Andrew Haight" data-tilt>
+            <img src="./assets/images/sheep/sheep4.webp" alt="Digital Illustration By Andrew Haight" data-tilt>
+            <img src="./assets/images/sheep/sheep5.webp" alt="Digital Illustration By Andrew Haight" data-tilt>
         </div>
     </main>
 
-
+    <div id="topButton">top</div>
     <footer>
-        <img src="./assets/images/socialLogos/LinkedIn.png" alt="">
-        <img src="./assets/images/socialLogos/Medium.png" alt="">
-        <img src="./assets/images/socialLogos/Twitter.png" alt="">
-        <img src="./assets/images/socialLogos/Instagram.png" alt="">
+        <a href="https://www.linkedin.com/in/athaight/" target="__blank"><img
+                src="./assets/images/socialLogos/linkedIn.webp" alt="LinkedIn.com"></a>
+        <a href="https://medium.com/@athaight" target="__blank"><img src="./assets/images/socialLogos/medium.webp"
+                alt="Medium.com"></a>
+        <a href="https://twitter.com/athaight" target="__blank"><img src="./assets/images/socialLogos/twitter.webp"
+                alt="Twitter.com"></a>
+        <a href="https://www.instagram.com/skripptor/?hl=en" target="__blank"><img
+                src="./assets/images/socialLogos/instagram.webp" alt="Instagram.com"></a>
     </footer>
+
+    <script>
+        function showButton() {
+
+
+            var button = $('#topButton'), //button that scrolls user to top
+                view = $(window),
+                timeoutKey = -1;
+
+            $(document).on('scroll', function () {
+                if (timeoutKey) {
+                    window.clearTimeout(timeoutKey);
+                }
+                timeoutKey = window.setTimeout(function () {
+
+                    if (view.scrollTop() < 100) {
+                        button.fadeOut();
+                    }
+                    else {
+                        button.fadeIn();
+                    }
+                }, 100);
+            });
+        }
+
+        $('#topButton').on('click', function () {
+            $('html, body').stop().animate({
+                scrollTop: 0
+            }, 500, 'linear');
+            return false;
+        });
+
+        //call function on document ready
+        $(function () {
+            showButton();
+        });
+    </script>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
 </body>
 
 </html>

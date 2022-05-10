@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Andrew Haight Portfolio">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
@@ -13,7 +14,8 @@
         href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" ></script>
     <title>Andrew Haight</title>
 
     <style>
@@ -28,6 +30,7 @@
 
         #headerDestop {
             display: block;
+
         }
 
         #headerTabletPhone {
@@ -58,7 +61,7 @@
         }
 
         #section1Hero {
-            background-image: url("assets/images/dottedBg.png");
+            background-image: url("assets/images/dottedBG.webp");
             background-size: cover;
             background-repeat: no-repeat;
             width: 100%;
@@ -74,7 +77,7 @@
 
         #section1Hero>h4 {
             width: 600px;
-            margin: 3em 15em;
+            margin: 4.3em 15em;
         }
 
 
@@ -128,7 +131,7 @@
         /* SECTION 2 - WORK */
 
         #section2Work {
-            background-image: url("assets/images/dottedBg.png");
+            background-image: url("assets/images/dottedBG.webp");
             background-size: cover;
             display: grid;
             grid-template-columns: 2fr 2fr;
@@ -136,7 +139,6 @@
             justify-content: start;
             margin: 15em 0em 0 0em;
             padding-left: 15em;
-
         }
 
         #section2Work>img {
@@ -186,20 +188,31 @@
         #section3aboutText {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-row: 1fr 1fr;
+            grid-row: 1fr 1fr 1fr;
             margin: 0;
             padding: 0;
         }
 
-        #section3aboutText>h5 {
+        #section3aboutText>h4 {
             grid-area: 1 / 2;
-            align-self: end;
+            align-self: start;
             padding: 0;
+            margin-top: 4em;
         }
 
         #section3aboutText>ul {
-            grid-area: 1 / 2;
-            margin: 2em 0 0 0;
+            grid-area: 2 / 2;
+            margin: -6em 0 0 0;
+            padding: 0;
+        }
+
+        #section3aboutText >  a {
+            grid-area: 3 / 2;
+        }
+
+        #section3aboutTextHR {
+            grid-area: 1 / 1;
+            align-self: end;
             padding: 0;
         }
 
@@ -207,27 +220,32 @@
             font-size: 24px;
             padding-left: -1em;
             list-style: none;
+            margin-bottom: 1em;
         }
 
         #button2 {
             font-size: 24px;
-            border: solid 2px white;
+            border: solid 2px #222;
             background-color: rgba(255, 255, 255, 0.295);
             margin-top: 3em;
             padding: .5em 1em;
             transition: .3s ease-out;
+            border-radius: 8px;
+           
         }
 
         #button2 {
-            color: white;
+            color: #222;
+            
         }
 
         #button2:hover {
-            background-color: white;
+            background-color: rgba(34, 34, 34, 0.754);
+            border: solid 2px #deddd3;
         }
 
         #button2:hover {
-            color: #86CBD1;
+            color: #deddd3;
         }
 
         #chatJoke {
@@ -238,6 +256,25 @@
             color: red;
         }
 
+        #topButton {
+            background-color: #222;
+            width: 5%;
+            padding: .5rem;
+            padding-right: 1rem;
+            color: #deddd3;
+            cursor: pointer;
+            transition: .3s;
+            margin-top: -2.5em;
+            position: relative;
+            z-index: 99;
+            text-align: right;
+            border-radius: 0em 2em 2em 0em;
+        }
+
+        #topButton:hover {
+            color: #deddd3;
+            background-color: #e34545;
+        }
         @keyframes fade-in {
             0% {
                 opacity: 0;
@@ -791,7 +828,7 @@
 <body>
     <header>
         <div id="headerDesktop">
-            <a href="/"><img src="/assets/images/logos/darkLogo.png" alt="Andrew Haight logo" /></a>
+            <a href="/"><img src="/assets/images/logos/darkLogo.webp" alt="Andrew Haight logo" /></a>
             <nav>
                 <ul>
                     <!-- <li><a href="#section2Work">WORK</a></li>
@@ -822,17 +859,14 @@
                 </h4>
             </div>
             <div id="section1Image">
-                <img src="./assets/images/Group 72.png" alt="">
+                <img src="./assets/images/redFaceGirl.webp" alt="Illustration by Andrew Haight">
             </div>
         </div>
 
         <div class="animate__animated animate__fadeIn" id="section1Intro">
             <h1 class="animate__animated animate__pulse">HI THERE, I'M ANDREW</h1>
             <p>I'm a <span>UX Designer</span> and <span>Developer</span>.</p>
-            <!-- <a href="./work.html"><button class="animate__animated animate__pulse" id="button1">SEE MY
-                    WORK</button></a> -->
-            <a href="#section3about"><button class="animate__animated animate__pulse" id="button1Mobile">ABOUT
-                    ME</button></a>
+           
 
         </div>
 
@@ -858,7 +892,7 @@
                             Page</a></li>
                 </ul>
             </div>
-            <img src="./assets/images/workImageTemp.png" alt="">
+            <img src="./assets/images/workImageTemp.webp" alt="Image of computers on a desk">
         </div>
 
         <!-- SECTION 3 - ABOUT -->
@@ -867,73 +901,72 @@
             <div id="section3aboutText">
                 <div id="section3aboutTextHR">
                     <h1>About</h1>
-                    <!-- <hr>
-                    <hr> -->
                     <div id="chatJoke">
-                        <h5>Let's get acquainted! ✌️</h5>
-                        <h5><a href="#">👉andrew@athaight.com</a></h5>
+                        <h2>Let's get acquainted! ✌️</h2>
+                        <h3><a href="mailto:andrew@athaight.com">👉andrew@athaight.com</a></h3>
                     </div>
                 </div>
+                <h4>Here’s the main take-aways about me</h4>
                 <ul>
-                    <h5>Here’s the main take-aways about me</h5>
                     <li>🤔 I constantly wonder how and why things are what they are. </li>
-                    <br>
                     <li>🔥 My superpowers are collaboration, abstract thinking,
                         and adaptation.</li>
-                    <br>
                     <li>👂 I heard once that you need to get comfortable being uncomfortable. That’s perfect.</li>
-                    <br>
                     <li>🎨 I love creativity. Since I was a kid I’ve loved drawing, painting, and creating stories. I
                         relish ideation and creative thinking.</li>
+                    </ul>
                     <a href="./about.html"><button id="button2">Want to know more?</button></a>
-                </ul>
             </div>
         </div>
 
-
-
-        <!-- CHAT CONTACT -->
-
-
-
-
     </main>
-
+    <div id="topButton">top</div>
     <footer>
         <a href="https://www.linkedin.com/in/athaight/" target="__blank"><img
-                src="./assets/images/socialLogos/LinkedIn.png" alt=""></a>
-        <a href="https://medium.com/@athaight" target="__blank"><img src="./assets/images/socialLogos/Medium.png"
-                alt=""></a>
-        <a href="https://twitter.com/athaight" target="__blank"><img src="./assets/images/socialLogos/Twitter.png"
-                alt=""></a>
+                src="./assets/images/socialLogos/linkedIn.webp" alt="LinkedIn.com"></a>
+        <a href="https://medium.com/@athaight" target="__blank"><img src="./assets/images/socialLogos/medium.webp"
+                alt="Medium.com"></a>
+        <a href="https://twitter.com/athaight" target="__blank"><img src="./assets/images/socialLogos/twitter.webp"
+                alt="Twitter.com"></a>
         <a href="https://www.instagram.com/skripptor/?hl=en" target="__blank"><img
-                src="./assets/images/socialLogos/Instagram.png" alt=""></a>
+                src="./assets/images/socialLogos/instagram.webp" alt="Instagram.com"></a>
     </footer>
 
     <script>
+        function showButton() {
+            var button = $('#topButton'), //button that scrolls user to top
+                view = $(window),
+                timeoutKey = -1;
 
-        // Create the observer
-
-
-        // Tell the observer which elements to track
-        observer.observe(document.querySelector('.square'));
-
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                const square = entry.target.querySelector('.square');
-
-                if (entry.isIntersecting) {
-                    square.classList.add('square-animation');
-                    return; // if we added the class, exit the function
+            $(document).on('scroll', function () {
+                if (timeoutKey) {
+                    window.clearTimeout(timeoutKey);
                 }
+                timeoutKey = window.setTimeout(function () {
 
-                // We're not intersecting, so remove the class!
-                square.classList.remove('square-animation');
+                    if (view.scrollTop() < 100) {
+                        button.fadeOut();
+                    }
+                    else {
+                        button.fadeIn();
+                    }
+                }, 100);
             });
+        }
+
+        $('#topButton').on('click', function () {
+            $('html, body').stop().animate({
+                scrollTop: 0
+            }, 500, 'linear');
+            return false;
         });
 
-        observer.observe(document.querySelector('.square-wrapper'));
+        //call function on document ready
+        $(function () {
+            showButton();
+        });
     </script>
+      <script type="text/javascript" src="vanilla-tilt.js"></script>
 </body>
 
 
